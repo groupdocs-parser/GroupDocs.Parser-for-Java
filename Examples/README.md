@@ -1,11 +1,12 @@
-## GroupDocs.Parser for Java Examples
+## GroupDocs.Parser for Java Examples 
 
 This package contains Example Project for [GroupDocs.Parser for Java](https://products.groupdocs.com/parser/java) and sample input documents used in the examples.
 
 <p align="center">
   <a title="Download complete GroupDocs.Parser for Java Example source code" href="https://codeload.github.com/groupdocs-parser/GroupDocs.Parser-for-Java/zip/master">
 	<img src="https://raw.github.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" />
-  </a>
+  
+</a>
 </p>
 
 ## How to Run the Examples?
