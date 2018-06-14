@@ -18,7 +18,7 @@ Directory | Description
 
 + **Website:** [www.groupdocs.com](http://www.groupdocs.com)
 + **Product Home:** [GroupDocs.Parser for Java](https://products.groupdocs.com/parser/java)
-+ **Download** [Download GroupDocs.Parser for Java](https://artifact.groupdocs.com/repo/com/groupdocs/groupdocs-parser/)
++ **Download:** [Download GroupDocs.Parser for Java](https://artifact.groupdocs.com/repo/com/groupdocs/groupdocs-parser/)
 + **API Reference:** [GroupDocs.Parser for Java API Reference Guide](https://apireference.groupdocs.com/java/parser)
 + **Documentation:** [GroupDocs.Parser for Java Documentation](https://docs.groupdocs.com/display/parserjava/Home)
 + **Free Support:** [GroupDocs.Parser for Java Free Support Forum](https://forum.groupdocs.com/c/parser)
