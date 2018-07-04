@@ -20,9 +20,13 @@ import com.groupdocs.parser.MarkdownDocumentFormatter;
 import com.groupdocs.parser.MediaTypeDetector;
 import com.groupdocs.parser.MediaTypeNames;
 import com.groupdocs.parser.MetadataNames;
+import com.groupdocs.parser.PdfTextExtractor;
 import com.groupdocs.parser.PersonalStorageContainer;
+import com.groupdocs.parser.Rectangle;
 import com.groupdocs.parser.SearchHighlightOptions;
 import com.groupdocs.parser.SearchOptions;
+import com.groupdocs.parser.TextArea;
+import com.groupdocs.parser.TextAreaSearchOptions;
 import com.groupdocs.parser.TextExtractor;
 import com.groupdocs.parser.WordsFormattedTextExtractor;
 import com.groupdocs.parser.WordsMediaTypeDetector;
@@ -33,6 +37,7 @@ public class TextExtraction {
 	private final static String DOC_FILE_PATH = "sample.docx";
 	private final static String EXCEL_FILE_PATH = "sample.xlsx";
 	private final static String OST_FILE_PATH = "sample.ost";
+	private final static String PDF_FILE_PATH = "sample.pdf";
 	// ExEnd:SourceDocumentFilePath
 
 	/**
@@ -807,7 +812,7 @@ public class TextExtraction {
 		WordsTextExtractor extractor = null;
 		try {
 			// Create a text extractor for the password-protected document
-			extractor = new WordsTextExtractor("document.doc", loadOptions);
+			extractor = new WordsTextExtractor(Common.mapSourceFilePath(DOC_FILE_PATH), loadOptions);
 			// Extract all the text from the document
 			System.out.println(extractor.extractAll());
 		} catch (InvalidPasswordException ex) {
@@ -815,5 +820,37 @@ public class TextExtraction {
 			System.out.println("Invalid password.");
 		}
 		// ExEnd:extractTextFromPasswordProtectedDocument
+	}
+	
+	/**
+	 * Extracts text area from PDF document. 
+	 * 
+	 */
+	public static void extractTextAreaFromDocument() {
+		// ExStart:extractTextAreaFromDocument_18.7
+		try {
+			// Create a text extractor
+			PdfTextExtractor extractor = new PdfTextExtractor(Common.mapSourceFilePath(PDF_FILE_PATH));
+
+			// Create search options
+			TextAreaSearchOptions searchOptions = new TextAreaSearchOptions();
+			// Set a regular expression to search 'Invoice # XXX' text
+			searchOptions.setExpression("\\s?INVOICE\\s?#\\s?[0-9]+");
+			// Limit the search with a rectangle
+			searchOptions.setRectangle(new Rectangle(10, 10, 300, 150));
+
+			// Get text areas
+			java.util.List<TextArea> texts = extractor.getDocumentContent().getTextAreas(0, searchOptions);
+
+			// Iterate over a list
+			for (TextArea area : texts) {
+			    // Print a text
+			    System.out.println(area.getText());
+			}
+		} catch (Exception ex) {
+			// Print the message if the password is incorrect (or empty)
+			System.out.println("Invalid password.");
+		}
+		// ExEnd:extractTextAreaFromDocument_18.7
 	}
 }
