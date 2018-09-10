@@ -15,6 +15,7 @@ import com.groupdocs.parser.examples.TextFormatters.HTML;
 import com.groupdocs.parser.examples.TextFormatters.Markdown;
 import com.groupdocs.parser.examples.TextFormatters.PlainText;
 import com.groupdocs.parser.examples.Tools.EncodingDetector;
+import com.groupdocs.parser.examples.Tools.Indexer;
 import com.groupdocs.parser.examples.Tools.Loggers;
 import com.groupdocs.parser.examples.Tools.MediaTypeDetectors;
 
@@ -92,6 +93,7 @@ public class MainClass {
 		//// Working with PDF documents
 		// PDFDocuments.extractTextAsWhole();
 		// PDFDocuments.extractTextByLines();
+		//PDFDocuments.extractDataFromPDFForms();
 
 		//// Working with OneNote documents
 		// OneNoteDocuments.extractTextAsWhole();
@@ -144,20 +146,30 @@ public class MainClass {
 		// MediaTypeDetectors.detectMediaTypeByContent();
 		// MediaTypeDetectors.detectMediaTypeByExtension();
 		// MediaTypeDetectors.IsMediaTypeSupportedByDetector();
-
+		
+		// This feature allows providing a password for protected documents on-demand
+		//ExStart:requestPasswordForProtectedDocument_usage_18.9
+		// Indexer indexer = new Indexer();
+		// indexer.process(new java.io.File(Common.STORAGE_PATH.toString()));
+		//ExEnd:requestPasswordForProtectedDocument_usage_18.9
+		
 		//// Containers
 		// Containers.createEmailConnectionInfo();
 		// Containers.enumerateAllEntitiesOfGroupOfContainers();
 		// Containers.extractMessagesFromOST();
 		// Containers.getListOfEmailsFromEWS();
 		// Containers.retrieveAnEmailFromEWS();
+		//Containers.extractTextFromDatabase();
 
 		//// Structured handlers
 		// StructuredHandlers.Headers hd = new Headers();
-		// hd.extractHeader(new java.io.FileInputStream(Common.mapSourceFilePath("sample.docx")));
-	
-		// StructuredHandlers.Hyperlinks hl = new StructuredHandlers.Hyperlinks();
-		// hl.extract(new java.io.FileInputStream(Common.mapSourceFilePath("sample.docx")));
+		// hd.extractHeader(new
+		//// java.io.FileInputStream(Common.mapSourceFilePath("sample.docx")));
+
+		// StructuredHandlers.Hyperlinks hl = new
+		// StructuredHandlers.Hyperlinks();
+		// hl.extract(new
+		// java.io.FileInputStream(Common.mapSourceFilePath("sample.docx")));
 
 		System.out.println("Operation Completed...");
 	}

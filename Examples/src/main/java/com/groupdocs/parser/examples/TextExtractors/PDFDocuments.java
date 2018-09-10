@@ -54,4 +54,33 @@ public class PDFDocuments {
 		}
 	}
 
+	/**
+	 * Extracts data from PDF forms.
+	 * 
+	 */
+	public static void extractDataFromPDFForms() {
+		try {
+			// ExStart:extractDataFromPDFForms_18.9
+			// Create a text extractor for PDF documents
+			PdfTextExtractor extractor = new PdfTextExtractor(Common.mapSourceFilePath(FILE_PATH));
+			try {
+				// Extract forms data
+				java.util.Dictionary<String, String> fields = extractor.getFormData();
+				// Iterate over fields
+				java.util.Enumeration<String> e = fields.keys();
+				while (e.hasMoreElements()) {
+					String key = e.nextElement();
+					// Print field name and value
+					System.out.println(String.format("%s: %s", key, fields.get(key)));
+				}
+			} finally {
+				extractor.dispose();
+			}
+			// ExEnd:extractDataFromPDFForms_18.9
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+			exp.printStackTrace();
+		}
+	}
+
 }
