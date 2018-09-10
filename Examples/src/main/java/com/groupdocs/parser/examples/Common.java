@@ -96,4 +96,15 @@ public class Common {
 
 	}
 
+	// gets connection string
+	public static String getConnectionString(String inputFileName) {
+		try {
+			String connectionString = "jdbc:sqlite:" + STORAGE_PATH + "/" + inputFileName;
+			return connectionString;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return e.getMessage();
+		}
+	}
+
 }

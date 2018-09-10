@@ -1,6 +1,9 @@
 package com.groupdocs.parser.examples.TextExtractors;
 
 import com.groupdocs.parser.MarkdownDocumentFormatter;
+import com.groupdocs.parser.Rectangle;
+import com.groupdocs.parser.TextArea;
+import com.groupdocs.parser.TextAreaSearchOptions;
 import com.groupdocs.parser.WordsFormattedTextExtractor;
 import com.groupdocs.parser.WordsTextExtractor;
 import com.groupdocs.parser.examples.Common;
@@ -71,6 +74,38 @@ public class TextDocuments {
 				System.out.println(extractor.extractAll());
 			}
 			// ExEnd:extractFormattedTextWordTextExtractor
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+			exp.printStackTrace();
+		}
+	}
+
+	/**
+	 * Extracts a text area from a text document.
+	 * 
+	 */
+	public static void extractTextAreaFromTextDocument() {
+		try {
+			// ExStart:extractTextAreaFromTextDocument_18.9
+			// Create a text extractor
+			try (WordsTextExtractor extractor = new WordsTextExtractor(Common.mapSourceFilePath(FILE_PATH))) {
+				// Create search options
+				TextAreaSearchOptions searchOptions = new TextAreaSearchOptions();
+				// Set a regular expression to search 'Invoice # XXX' text
+				searchOptions.setExpression("\\s?INVOICE\\s?#\\s?[0-9]+");
+				// Limit the search with a rectangle
+				searchOptions.setRectangle(new Rectangle(10, 10, 300, 150));
+
+				// Get text areas
+				java.util.List<TextArea> texts = extractor.getDocumentContent().getTextAreas(0, searchOptions);
+
+				// Iterate over a list
+				for (TextArea area : texts) {
+					// Print a text
+					System.out.println(area.getText());
+				}
+			}
+			// ExEnd:extractTextAreaFromTextDocument_18.9
 		} catch (Exception exp) {
 			System.out.println("Exception: " + exp.getMessage());
 			exp.printStackTrace();

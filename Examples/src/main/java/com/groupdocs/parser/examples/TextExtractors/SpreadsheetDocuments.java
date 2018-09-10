@@ -4,6 +4,9 @@ import com.groupdocs.parser.CellsFormattedTextExtractor;
 import com.groupdocs.parser.CellsSheetInfo;
 import com.groupdocs.parser.CellsTextExtractor;
 import com.groupdocs.parser.MarkdownDocumentFormatter;
+import com.groupdocs.parser.Rectangle;
+import com.groupdocs.parser.TextArea;
+import com.groupdocs.parser.TextAreaSearchOptions;
 import com.groupdocs.parser.examples.Common;
 
 public class SpreadsheetDocuments {
@@ -150,6 +153,37 @@ public class SpreadsheetDocuments {
 				}
 			}
 			// ExEnd:extractSelectedColumnsByRowsCellsTextExtractor
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+			exp.printStackTrace();
+		}
+	}
+	/**
+	 * Extracts a text area from a spreadsheet document.
+	 * 
+	 */
+	public static void extractTextAreaFromSpreadsheetDocument() {
+		try {
+			// ExStart:extractTextAreaFromSpreadsheetDocument_18.9
+			// Create a text extractor for spreadsheets
+			try (CellsTextExtractor extractor = new CellsTextExtractor(Common.mapSourceFilePath(FILE_PATH))) {
+				// Create search options
+				TextAreaSearchOptions searchOptions = new TextAreaSearchOptions();
+				// Set a regular expression to search 'Invoice # XXX' text
+				searchOptions.setExpression("\\s?INVOICE\\s?#\\s?[0-9]+");
+				// Limit the search with a rectangle
+				searchOptions.setRectangle(new Rectangle(10, 10, 300, 150));
+				  
+				// Get text areas
+				java.util.List<TextArea> texts = extractor.getDocumentContent().getTextAreas(0, searchOptions);
+				  
+				// Iterate over a list
+				for (TextArea area : texts) {
+				    // Print a text
+				    System.out.println(area.getText());
+				}
+			}
+			// ExEnd:extractTextAreaFromSpreadsheetDocument_18.9
 		} catch (Exception exp) {
 			System.out.println("Exception: " + exp.getMessage());
 			exp.printStackTrace();

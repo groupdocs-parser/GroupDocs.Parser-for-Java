@@ -1,10 +1,12 @@
 package com.groupdocs.parser.examples;
 
+import java.io.BufferedReader;
 import java.io.InputStream;
 
 import com.groupdocs.parser.CellsMediaTypeDetector;
 import com.groupdocs.parser.Container;
 import com.groupdocs.parser.ContainerEnumerator;
+import com.groupdocs.parser.DbContainer;
 import com.groupdocs.parser.EmailConnectionInfo;
 import com.groupdocs.parser.EmailContainer;
 import com.groupdocs.parser.EmailTextExtractor;
@@ -22,7 +24,7 @@ public class Containers {
 	// ExStart:SourceOSTDocumentFilePath
 	private final static String OST_FILE_PATH = "sample.ost";
 	private final static String ZIP_FILE_PATH = "sample.zip";
-
+	private final static String DB_FILE_PATH = "sample.sqlite";
 	// ExEnd:SourceOSTZIPDocumentFilePath
 	/**
 	 * Creates containers
@@ -347,4 +349,52 @@ public class Containers {
 			exp.printStackTrace();
 		}
 	}
+
+	/**
+	 * Reads text from database
+	 * 
+	 */
+	public static void extractTextFromDatabase() {
+		try {
+			// ExStart:extractTextFromDatabase_18.9
+			String connectionString = Common.getConnectionString(DB_FILE_PATH);
+			DbContainer container = new DbContainer(java.sql.DriverManager.getConnection(connectionString));
+			try  {
+				// Iterate over entities
+				for (Container.Entity entity : container.getEntities()) {
+					// Print a table name
+					System.out.println(entity.getName());
+					// Print a media type
+					System.out.println(entity.getMediaType());
+					// Create a stream reader for CSV document: OpenStream
+					// method converts a table to the CSV file and returns it as
+					// Stream
+					java.io.InputStreamReader reader = new java.io.InputStreamReader(entity.openStream());
+					try {
+						BufferedReader br = new BufferedReader(reader);
+
+						// Read a line
+						String line = br.readLine();
+						// Loop to the end of the file
+						while (line != null) {
+							// Print a line from the document
+							System.out.println(line);
+							// Read the next line
+							line = br.readLine();
+						}
+					} finally {
+						reader.close();
+					}
+
+				}
+			} finally {
+				container.dispose();
+			}
+			// ExEnd:extractTextFromDatabase_18.9
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+			exp.printStackTrace();
+		}
+	}
+
 }
