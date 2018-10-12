@@ -76,6 +76,7 @@ public class MainClass {
 		// TextDocuments.extractFormattedText();
 		// TextDocuments.extractTextAsWhole();
 		// TextDocuments.extractTextByLines();
+		// TextDocuments.extractImages();
 
 		//// Working with spreadsheet documents
 		// SpreadsheetDocuments.extractFormattedText();
@@ -84,16 +85,19 @@ public class MainClass {
 		// SpreadsheetDocuments.extractSheetByRows();
 		// SpreadsheetDocuments.extractTextAsWhole();
 		// SpreadsheetDocuments.extractTextByLines();
+		// SpreadsheetDocuments.extractImages();
 
 		//// Working with presentation documents
 		// PresentationDocuments.extractFormattedText();
 		// PresentationDocuments.extractTextAsWhole();
 		// PresentationDocuments.extractTextByLines();
+		// PresentationDocuments.extractImages();
 
 		//// Working with PDF documents
 		// PDFDocuments.extractTextAsWhole();
 		// PDFDocuments.extractTextByLines();
-		//PDFDocuments.extractDataFromPDFForms();
+		// PDFDocuments.extractDataFromPDFForms();
+		// PDFDocuments.extractImages();
 
 		//// Working with OneNote documents
 		// OneNoteDocuments.extractTextAsWhole();
@@ -128,8 +132,7 @@ public class MainClass {
 		// MarkdownDocuments.extractSingleLineAsFormattedText();
 		// MarkdownDocuments.extractAllCharactersAsFormattedText();
 		// MarkdownDocuments.extractFormattedTextUsingDocumentFormatter();
-		// MarkdownDocuments.extractStructuredText();
-		// endregion
+		// MarkdownDocuments.extractStructuredText();		 
 
 		//// Text formatters
 		// HTML.extractTextUsingHTMLDocumentFormatter();
@@ -146,20 +149,21 @@ public class MainClass {
 		// MediaTypeDetectors.detectMediaTypeByContent();
 		// MediaTypeDetectors.detectMediaTypeByExtension();
 		// MediaTypeDetectors.IsMediaTypeSupportedByDetector();
-		
-		// This feature allows providing a password for protected documents on-demand
-		//ExStart:requestPasswordForProtectedDocument_usage_18.9
+
+		// This feature allows providing a password for protected documents
+		// on-demand
+		// ExStart:requestPasswordForProtectedDocument_usage_18.9
 		// Indexer indexer = new Indexer();
 		// indexer.process(new java.io.File(Common.STORAGE_PATH.toString()));
-		//ExEnd:requestPasswordForProtectedDocument_usage_18.9
-		
+		// ExEnd:requestPasswordForProtectedDocument_usage_18.9
+
 		//// Containers
 		// Containers.createEmailConnectionInfo();
 		// Containers.enumerateAllEntitiesOfGroupOfContainers();
 		// Containers.extractMessagesFromOST();
 		// Containers.getListOfEmailsFromEWS();
 		// Containers.retrieveAnEmailFromEWS();
-		//Containers.extractTextFromDatabase();
+		// Containers.extractTextFromDatabase();
 
 		//// Structured handlers
 		// StructuredHandlers.Headers hd = new Headers();

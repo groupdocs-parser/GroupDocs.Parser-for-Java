@@ -107,4 +107,17 @@ public class Common {
 		}
 	}
 
+	// saves the source stream into destination stream
+	public static void copyStream(java.io.InputStream source, java.io.OutputStream dest) throws java.io.IOException {
+		byte[] buffer = new byte[4096];
+
+		int r = 0;
+		do {
+			r = source.read(buffer);
+			if (r > 0) {
+				dest.write(buffer);
+			}
+		} while (r > 0);
+	}
+
 }

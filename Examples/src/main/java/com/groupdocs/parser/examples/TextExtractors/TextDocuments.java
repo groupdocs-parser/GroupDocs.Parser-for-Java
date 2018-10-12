@@ -1,5 +1,8 @@
 package com.groupdocs.parser.examples.TextExtractors;
 
+import com.groupdocs.parser.CellsTextExtractor;
+import com.groupdocs.parser.ImageArea;
+import com.groupdocs.parser.ImageAreaSearchOptions;
 import com.groupdocs.parser.MarkdownDocumentFormatter;
 import com.groupdocs.parser.Rectangle;
 import com.groupdocs.parser.TextArea;
@@ -106,6 +109,39 @@ public class TextDocuments {
 				}
 			}
 			// ExEnd:extractTextAreaFromTextDocument_18.9
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+			exp.printStackTrace();
+		}
+	}
+
+	/**
+	 * Extracts images from text document.
+	 * 
+	 */
+	public static void extractImages() {
+		try {
+			// ExStart:extractImages_textdocuments_18.10
+			// Create a text extractor for text documents
+			try (WordsTextExtractor extractor = new WordsTextExtractor(Common.mapSourceFilePath(FILE_PATH))) {
+				// Create search options
+				ImageAreaSearchOptions searchOptions = new ImageAreaSearchOptions();
+				// Limit the search with the rectangle: position (0; 0), size
+				// (300; 300)
+				searchOptions.setRectangle(new Rectangle(0, 0, 300, 300));
+
+				// Get images from the first page
+				java.util.List<ImageArea> imageAreas = extractor.getDocumentContent().getImageAreas(0, searchOptions);
+
+				// Iterate over the images
+				for (int i = 0; i < imageAreas.size(); i++) {
+					try (java.io.OutputStream fs = new java.io.FileOutputStream(String.format("%d.jpg", i))) {
+						// Save the image to the file
+						Common.copyStream(imageAreas.get(i).getRawStream(), fs);
+					}
+				}
+			}
+			// ExEnd:extractImages_textdocuments_18.10
 		} catch (Exception exp) {
 			System.out.println("Exception: " + exp.getMessage());
 			exp.printStackTrace();
