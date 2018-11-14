@@ -23,7 +23,7 @@ public class MainClass {
 	public static void main(String[] args) throws Throwable {
 
 		// Uncomment following code if you have license file
-		Common.applyLicenseFromStream();
+		//Common.applyLicenseFromStream();
 
 		// Using metered license
 		// Common.useDynabicMeteredAccount();

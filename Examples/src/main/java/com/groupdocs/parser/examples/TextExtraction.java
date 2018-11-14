@@ -5,12 +5,15 @@ import java.io.FileNotFoundException;
 import com.groupdocs.parser.CellsMediaTypeDetector;
 import com.groupdocs.parser.CellsTextExtractor;
 import com.groupdocs.parser.CompositeMediaTypeDetector;
+import com.groupdocs.parser.DocumentInfo;
 import com.groupdocs.parser.EncodingDetector;
 import com.groupdocs.parser.ExtractMode;
 import com.groupdocs.parser.Extractor;
 import com.groupdocs.parser.ExtractorFactory;
 import com.groupdocs.parser.HighlightDirection;
-import com.groupdocs.parser.HighlightOptions; 
+import com.groupdocs.parser.HighlightOptions;
+import com.groupdocs.parser.IDocumentContentExtractor;
+import com.groupdocs.parser.IFastTextExtractor;
 import com.groupdocs.parser.IPageTextExtractor;
 import com.groupdocs.parser.ITextExtractorWithFormatter;
 import com.groupdocs.parser.InvalidPasswordException;
@@ -134,7 +137,8 @@ public class TextExtraction {
 			// Create load options
 			LoadOptions loadOptions = new LoadOptions("text/plain", java.nio.charset.Charset.forName("UTF-8"));
 			// Create a text extractor from the stream with load options
-			CellsTextExtractor extractor2 = new CellsTextExtractor(Common.mapSourceFilePath(EXCEL_FILE_PATH), loadOptions);
+			CellsTextExtractor extractor2 = new CellsTextExtractor(Common.mapSourceFilePath(EXCEL_FILE_PATH),
+					loadOptions);
 			// Extract a text
 			System.out.println(extractor.extractAll());
 
@@ -145,7 +149,6 @@ public class TextExtraction {
 		}
 	}
 
-	
 	/**
 	 * Extracts text from a document using Extractor class.
 	 * 
@@ -259,6 +262,7 @@ public class TextExtraction {
 			exp.printStackTrace();
 		}
 	}
+
 	/**
 	 * Extracts text from a document using text mode.
 	 * 
@@ -279,6 +283,7 @@ public class TextExtraction {
 			exp.printStackTrace();
 		}
 	}
+
 	/**
 	 * Detects source document's media type and extracts text.
 	 * 
@@ -821,9 +826,9 @@ public class TextExtraction {
 		}
 		// ExEnd:extractTextFromPasswordProtectedDocument
 	}
-	
+
 	/**
-	 * Extracts text area from PDF document. 
+	 * Extracts text area from PDF document.
 	 * 
 	 */
 	public static void extractTextAreaFromDocument() {
@@ -844,8 +849,8 @@ public class TextExtraction {
 
 			// Iterate over a list
 			for (TextArea area : texts) {
-			    // Print a text
-			    System.out.println(area.getText());
+				// Print a text
+				System.out.println(area.getText());
 			}
 		} catch (Exception ex) {
 			// Print the message if the password is incorrect (or empty)
@@ -853,4 +858,109 @@ public class TextExtraction {
 		}
 		// ExEnd:extractTextAreaFromDocument_18.7
 	}
+
+	/**
+	 * Gets supported extractors for document
+	 * 
+	 */
+	public static void getDocumentInfoForSupportedExtractors() {
+		try {
+			// ExStart:GetDocumentInfoForSupportedExtractors_18.11
+			// Create a factory
+			ExtractorFactory factory = new ExtractorFactory();
+
+			// Get the document info
+			DocumentInfo info = factory.getDocumentInfo(Common.mapSourceFilePath(DOC_FILE_PATH));
+			System.out.println("This document contains:");
+
+			// Check if a user can extract a plain text from a document
+			if (info.hasText()) {
+				System.out.println("text");
+			}
+
+			// Check if a user can extract a formatted text from a document
+			if (info.hasFormattedText()) {
+				System.out.println("formatted text");
+			}
+
+			// Check if a user can extract metadata from a document
+			if (info.hasMetadata()) {
+				System.out.println("metadata");
+			}
+
+			// Check if the document contains other documents
+			if (info.isContainer()) {
+				System.out.println("other documents");
+			}
+			// ExEnd:GetDocumentInfoForSupportedExtractors_18.11
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+			exp.printStackTrace();
+		}
+	}
+
+	/**
+	 * Extracts a text from a file or stream using IFastTextExtractor
+	 * 
+	 */
+	public static void extractTextUsingIFastTextExtractor() {
+		try {
+			// ExStart:extractTextUsingIFastTextExtractor_18.11
+			try (PdfTextExtractor extractor = new PdfTextExtractor(Common.mapSourceFilePath(PDF_FILE_PATH))) {
+				// Check if extractor supports IFastTextExtractor interface
+				if (extractor instanceof IFastTextExtractor) {
+					// Set the mode of text extraction
+					((IFastTextExtractor) extractor).setExtractMode(ExtractMode.Simple);
+				}
+				// Extract a text
+				System.out.println(extractor.extractAll());
+			}
+			// ExEnd:extractTextUsingIFastTextExtractor_18.11
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+			exp.printStackTrace();
+		}
+	}
+	
+	/**
+	 * Extracts a text from a file using IDocumentContentExtractor
+	 * 
+	 */
+	public static void extractTextFromDocumentUsingIDocumentContentExtractor() {
+		try {
+			// ExStart:ExtractTextFromDocumentUsingIDocumentContentExtractor_caller_18.11
+			try (CellsTextExtractor extractor = new CellsTextExtractor(Common.mapSourceFilePath(EXCEL_FILE_PATH))) {
+				extractTextUsingIDocumentContentExtractor(extractor);
+			}
+			// ExEnd:ExtractTextFromDocumentUsingIDocumentContentExtractor_caller_18.11
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+			exp.printStackTrace();
+		}
+	}
+	/**
+	 * Extracts text areas from the document using IDocumentContentExtractor
+	 * 
+	 */
+	public static void extractTextUsingIDocumentContentExtractor(TextExtractor extractor) {
+		try {
+			// ExStart:extractTextUsingIDocumentContentExtractor_18.11
+			// Check if extractor supports IDocumentContentExtractor interface
+		    if (extractor instanceof IDocumentContentExtractor) {
+		        IDocumentContentExtractor contentExtractor = (IDocumentContentExtractor) extractor;
+		        // Iterate over pages
+		        for (int i = 0; i < contentExtractor.getDocumentContent().getPageCount(); i++) {
+		            // Iterate over text areas of the page
+		            for (TextArea textArea : contentExtractor.getDocumentContent().getTextAreas(i)) {
+		                System.out.println(textArea.getText());
+		            }
+		        }
+		    }
+			// ExEnd:extractTextUsingIDocumentContentExtractor_18.11
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+			exp.printStackTrace();
+		}
+	}
+
 }
