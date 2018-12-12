@@ -134,5 +134,29 @@ public class MetadataExtraction {
 			exp.printStackTrace();
 		}
 	}
+	
+	/**
+	 * Extracts metadata using Default Extractor
+	 * 
+	 */
+	public static void extractMetadataUsingDefaultExtractor() {
+		try {
+			// ExStart:extractMetadataUsingDefaultExtractor_18.12
+			// Extract metadata from the file
+		    MetadataCollection metadata = Extractor.DEFAULT.extractMetadata(Common.mapSourceFilePath(FILE_PATH));
+		    // Print extracted metadata
+		    for (String key : metadata.getKeys()) {
+		        // Print a metadata key
+		        System.out.print(key);
+		        System.out.print(": ");
+		        // Print a metadata value
+		        System.out.println(metadata.get_Item(key));
+		    }
+			// ExEnd:extractMetadataUsingDefaultExtractor_18.12
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+			exp.printStackTrace();
+		}
+	}
 
 }

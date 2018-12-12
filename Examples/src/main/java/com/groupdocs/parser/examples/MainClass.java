@@ -14,6 +14,7 @@ import com.groupdocs.parser.examples.TextExtractors.TextDocuments;
 import com.groupdocs.parser.examples.TextFormatters.HTML;
 import com.groupdocs.parser.examples.TextFormatters.Markdown;
 import com.groupdocs.parser.examples.TextFormatters.PlainText;
+import com.groupdocs.parser.examples.Tools.Detector;
 import com.groupdocs.parser.examples.Tools.EncodingDetector;
 import com.groupdocs.parser.examples.Tools.Indexer;
 import com.groupdocs.parser.examples.Tools.Loggers;
@@ -23,7 +24,7 @@ public class MainClass {
 	public static void main(String[] args) throws Throwable {
 
 		// Uncomment following code if you have license file
-		//Common.applyLicenseFromStream();
+		// Common.applyLicenseFromStream();
 
 		// Using metered license
 		// Common.useDynabicMeteredAccount();
@@ -70,6 +71,7 @@ public class MainClass {
 		// MetadataExtraction.extractMetadataUsingComplexMetadataExtractor();
 		// MetadataExtraction.extractMetadataUsingExtractorFactory();
 		// MetadataExtraction.extractMetadataUsingMetadataExtractor();
+		// MetadataExtraction.extractMetadataUsingDefaultExtractor();
 
 		//// region Text extractors
 		//// Working with text documents
@@ -98,6 +100,8 @@ public class MainClass {
 		// PDFDocuments.extractTextByLines();
 		// PDFDocuments.extractDataFromPDFForms();
 		// PDFDocuments.extractImages();
+		// PDFDocuments.extractTablesManually();
+		// PDFDocuments.extractTablesUsingTableAreaDetector();
 
 		//// Working with OneNote documents
 		// OneNoteDocuments.extractTextAsWhole();
@@ -132,7 +136,7 @@ public class MainClass {
 		// MarkdownDocuments.extractSingleLineAsFormattedText();
 		// MarkdownDocuments.extractAllCharactersAsFormattedText();
 		// MarkdownDocuments.extractFormattedTextUsingDocumentFormatter();
-		// MarkdownDocuments.extractStructuredText();		 
+		// MarkdownDocuments.extractStructuredText();
 
 		//// Text formatters
 		// HTML.extractTextUsingHTMLDocumentFormatter();
@@ -149,6 +153,10 @@ public class MainClass {
 		// MediaTypeDetectors.detectMediaTypeByContent();
 		// MediaTypeDetectors.detectMediaTypeByExtension();
 		// MediaTypeDetectors.IsMediaTypeSupportedByDetector();
+		// ExStart:Detector_usage_18.12
+		// Detector detector = new Detector();
+		// detector.detect(new java.io.File(Common.STORAGE_PATH.toString()).list(null));
+		// ExEnd:Detector_usage_18.12
 
 		// This feature allows providing a password for protected documents
 		// on-demand
