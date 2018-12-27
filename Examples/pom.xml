@@ -49,12 +49,12 @@
 			<artifactId>sqlite-jdbc</artifactId>
 			<version>3.23.1</version>
 		</dependency>
-	</dependencies>
+	</dependencies> 
 	<repositories>
-		<repository>
+		<repository> 
 			<id>GroupDocsJavaAPI</id>
 			<name>GroupDocs Java API</name>
-			<url>http://artifact.groupdocs.com/repo/</url>
+			<url>http://repository.groupdocs.com/repo/</url>
 		</repository>
 	</repositories>
 	<build>

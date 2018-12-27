@@ -2,6 +2,7 @@ package com.groupdocs.parser.examples.Tools;
 
 import com.groupdocs.parser.CellsMediaTypeDetector;
 import com.groupdocs.parser.CompositeMediaTypeDetector;
+import com.groupdocs.parser.LoadOptions;
 import com.groupdocs.parser.MediaTypeDetector;
 import com.groupdocs.parser.MediaTypeNames;
 import com.groupdocs.parser.NoteMediaTypeDetector;
@@ -103,6 +104,35 @@ public class MediaTypeDetectors {
 			// Print the detected media type (if detected)
 			System.out.println(mediaType == null ? "Can't detect a media type" : mediaType);
 			// ExEnd:detectMediaTypeUsingCompositeMediaTypeDetector_18.12
+		} catch (Exception exp) {
+			System.out.println("Exception: " + exp.getMessage());
+			exp.printStackTrace();
+		}
+	}
+	
+	/**
+	 * Detects media type of password-protected Office Open XML documents
+	 * 
+	 */
+	public static void detectMediaTypeOfPasswordProtectedOfficeOpenXMLDocuments() {
+		try {
+			// ExStart:detectMediaTypeOfPasswordProtectedOfficeOpenXMLDocuments_18.12
+			// Create load options
+		    LoadOptions loadOptions = new LoadOptions();
+		    // Set a password
+		    loadOptions.setPassword("password");
+		  
+		    // Get a default composite media type detector
+		    MediaTypeDetector detector = CompositeMediaTypeDetector.DEFAULT;
+		  
+		    // Create a stream to detect media type by content (not file extension)
+		    try (java.io.InputStream stream = new java.io.FileInputStream(Common.mapSourceFilePath(FILE_PATH))) {
+		        // Detect a media type
+		        String mediaType = detector.detect(stream, loadOptions);
+		        // Print a detected media type
+		        System.out.println(mediaType);
+		    }
+			// ExEnd:detectMediaTypeOfPasswordProtectedOfficeOpenXMLDocuments_18.12
 		} catch (Exception exp) {
 			System.out.println("Exception: " + exp.getMessage());
 			exp.printStackTrace();
