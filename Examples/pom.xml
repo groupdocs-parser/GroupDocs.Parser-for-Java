@@ -42,7 +42,7 @@
 		<dependency>
 			<groupId>com.groupdocs</groupId>
 			<artifactId>groupdocs-parser</artifactId>
-			<version>18.12</version>  
+			<version>19.5</version>  
 		</dependency>
 		<dependency>
 			<groupId>org.xerial</groupId>

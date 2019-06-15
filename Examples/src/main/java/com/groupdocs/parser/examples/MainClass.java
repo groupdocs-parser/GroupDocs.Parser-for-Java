@@ -24,7 +24,7 @@ public class MainClass {
 	public static void main(String[] args) throws Throwable {
 
 		// Uncomment following code if you have license file
-		// Common.applyLicenseFromStream();
+		 Common.applyLicenseFromStream();
 
 		// Using metered license
 		// Common.useDynabicMeteredAccount();
@@ -102,6 +102,13 @@ public class MainClass {
 		// PDFDocuments.extractImages();
 		// PDFDocuments.extractTablesManually();
 		// PDFDocuments.extractTablesUsingTableAreaDetector();
+		
+		//Data Extractor
+		//// Working with PDF documents
+		// PDFDocuments.extractDataFromDocumentByFieldName();
+		// PDFDocuments.extractDataTableFromDocument();
+		// PDFDocuments.moveTableLayout();
+		// PDFDocuments.detectTableInRectangularAreaUsingColumnSeparators();
 
 		//// Working with OneNote documents
 		// OneNoteDocuments.extractTextAsWhole();
