@@ -16,7 +16,7 @@ public class Common {
 
 	// public static final String ATTACHMENTS_PATH =
 	// getProjectBaseDir().resolve("Data/Attachments/").toString();
-	public static final String LICENSE_PATH = "D:\\GroupDocs.Total.Java.lic";
+	public static final String LICENSE_PATH = "E://GroupDocs.Total.Java.lic";
 	public static final String PUBLIC_KEY = "Public key for your account";
 	public static final String PRIVATE_KEY = "Private key for your account";
 
