@@ -17,7 +17,7 @@ Directory | Description
 
 ## How to Run the Examples
 
-+ You can either clone the repository using your favorite GitHub client or download the ZIP file from the above button.
++ You can either clone the repository try your favorite GitHub client or download the ZIP file from the above button.
 + Extract the contents of the ZIP file to any folder on your computer.
 + Open Java IDE and import the project to get started with it.
 + On the first run, the dependencies will automatically be downloaded.
