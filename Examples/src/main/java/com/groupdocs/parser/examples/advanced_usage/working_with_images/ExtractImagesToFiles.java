@@ -1,5 +1,5 @@
 // <copyright company="Aspose Pty Ltd">
-//   Copyright (C) 2011-2019 GroupDocs. All Rights Reserved.
+//   Copyright (C) 2011-2020 GroupDocs. All Rights Reserved.
 // </copyright>
 package com.groupdocs.parser.examples.advanced_usage.working_with_images;
 
@@ -30,30 +30,17 @@ public class ExtractImagesToFiles {
                 return;
             }
 
+            // Create the options to save images in PNG format
+            ImageOptions options = new ImageOptions(ImageFormat.Png);
+
             int imageNumber = 0;
             // Iterate over images
-            for (PageImageArea image : images) {
-                // Open the image stream
-                try (InputStream imageStream = image.getImageStream()) {
-                    // Create the file to save image
-                    try (OutputStream destStream = new FileOutputStream(imageNumber + image.getFileType().getExtension())) {
-                        byte[] buffer = new byte[4096];
-                        int readed = 0;
+            for (PageImageArea image : images)
+            {
+                // Save the image to the png file
+                image.save(Constants.getOutputFilePath(String.format("%d.png", imageNumber)), options);
 
-                        do {
-                            // Read data from the image stream
-                            readed = imageStream.read(buffer, 0, buffer.length);
-
-                            if (readed > 0) {
-                                // Write data to the file stream
-                                destStream.write(buffer, 0, readed);
-                            }
-                        }
-                        while (readed > 0);
-                    }
-
-                    imageNumber++;
-                }
+                imageNumber++;
             }
         }
     }
