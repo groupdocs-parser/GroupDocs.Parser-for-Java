@@ -5,7 +5,7 @@
 
     <groupId>GroupDocs.Parser-for-Java</groupId>
     <artifactId>GroupDocs.Parser-for-Java</artifactId>
-    <version>19.11</version>
+    <version>20.1</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -64,7 +64,5 @@
                 <filtering>true</filtering>
             </resource>
         </resources>
-
     </build>
-
 </project>
