@@ -15,6 +15,8 @@ import com.groupdocs.parser.examples.advanced_usage.working_with_text.working_wi
 import com.groupdocs.parser.examples.quick_start.*;
 import com.groupdocs.parser.examples.basic_usage.*;
 
+import java.io.Console;
+
 public class RunExamples {
     public static void main(String[] args) throws Exception {
         System.out.println("Open RunExamples.cs. \n In Main() method uncomment the example that you want to run.");
@@ -45,7 +47,12 @@ public class RunExamples {
         // Advanced Usage
 
 //        Logging.run();
-//        ExtractDatabase.run();
+//        ExtractDataFromDatabases.run();
+//        try {
+//            ExtractDataFromDatabasesWithDbConnection.Run();
+//        } catch (Exception ex) {
+//            System.out.println(ex.getMessage());
+//        }
 
         // Loading
 
@@ -132,6 +139,7 @@ public class RunExamples {
 //        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.excel.ExtractText.run();
 //        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.excel.ExtractTextAsHtml.run();
 //        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.excel.ExtractTextFromSheet.run();
+//        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.excel.ExtractTextFromSheetInRawMode.run();
 //        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.excel.SearchTextByKeyword.run();
 //        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.excel.SearchTextByRegularExpression.run();
 
@@ -142,6 +150,7 @@ public class RunExamples {
 //        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.power_point.ExtractText.run();
 //        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.power_point.ExtractTextAsHtml.run();
 //        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.power_point.ExtractTextFromSlide.run();
+//        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.power_point.ExtractTextFromSlideInRawMode.run();
 //        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.power_point.SearchTextByKeyword.run();
 //        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.power_point.SearchTextByRegularExpression.run();
 
@@ -152,6 +161,7 @@ public class RunExamples {
 //        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.pdf.ExtractText.run();
 //        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.pdf.ParseDataFromDocuments.run();
 //        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.pdf.ExtractTextFromPage.run();
+//        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.pdf.ExtractTextFromPageInRawMode.run();
 //        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.pdf.SearchTextByKeyword.run();
 //        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.pdf.SearchTextByRegularExpression.run();
 //        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.pdf.ExtractAttachmentsFromPdfPortfolios.run();

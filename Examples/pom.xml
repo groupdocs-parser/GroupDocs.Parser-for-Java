@@ -5,7 +5,7 @@
 
     <groupId>GroupDocs.Parser-for-Java</groupId>
     <artifactId>GroupDocs.Parser-for-Java</artifactId>
-    <version>20.1</version>
+    <version>20.5</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -42,7 +42,7 @@
         <dependency>
             <groupId>com.groupdocs</groupId>
             <artifactId>groupdocs-parser</artifactId>
-            <version>20.3</version>
+            <version>20.5</version>
         </dependency>
         <dependency>
             <groupId>org.xerial</groupId>

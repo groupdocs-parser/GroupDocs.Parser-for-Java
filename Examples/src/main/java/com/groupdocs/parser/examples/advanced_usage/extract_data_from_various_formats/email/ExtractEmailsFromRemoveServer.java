@@ -16,18 +16,14 @@ import java.io.IOException;
  **/
 public class ExtractEmailsFromRemoveServer {
     public static void run() throws IOException {
-        StringBuilder sb = new StringBuilder();
-        sb.append("mode = exchange");
-        sb.append('\n');
-        sb.append("MailboxUri = https://outlook.office365.com/ews/exchange.asmx");
-        sb.append('\n');
-        sb.append("Username = email@server");
-        sb.append('\n');
-        sb.append("Password = password");
+        // Create the connection object for Exchange Web Services protocol
+        EmailConnection connection = new EmailEwsConnection(
+                "https://outlook.office365.com/ews/exchange.asmx",
+                "email@server",
+                "password");
 
         // Create an instance of Parser class to extract emails from the remote server
-        // As filePath connection parameters are passed; LoadOptions is set to Email file format
-        try (Parser parser = new Parser(sb.toString(), new LoadOptions(FileFormat.Email))) {
+        try (Parser parser = new Parser(connection)) {
             // Check if container extraction is supported
             if (!parser.getFeatures().isContainer()) {
                 System.out.println("Container extraction isn't supported.");

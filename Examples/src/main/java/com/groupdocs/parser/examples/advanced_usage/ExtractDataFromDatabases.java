@@ -12,9 +12,9 @@ import com.groupdocs.parser.examples.Constants;
 import java.io.IOException;
 
 /**
- * This example shows how to extract data from Sqlite database.
+ * This example shows how to extract data from Sqlite database with connection string.
  **/
-public class ExtractDatabase {
+public class ExtractDataFromDatabases {
     public static void run() throws IOException {
         String connectionString = String.format("jdbc:sqlite:%s", Constants.SampleDatabase);
         // Create an instance of Parser class to extract tables from the database
