@@ -1,6 +1,6 @@
 ---
-id: extract-text-from-microsoft-office-powerpoint-presentations
-url: parser/java/extract-text-from-microsoft-office-powerpoint-presentations
+id: extract-data-from-microsoft-office-powerpoint
+url: parser/java/extract-data-from-microsoft-office-powerpoint
 title: Extract text from Microsoft Office PowerPoint presentations
 weight: 1
 description: ""
@@ -106,7 +106,7 @@ try (Parser parser = new Parser(Constants.SamplePptx)) {
 
 ```
 
-GroupDocs.Parser also allows to extract a text from Microsoft Office PowerPoint presentations as HTML, Markdown and formatted plain text. For more details, see [Extract Formatted Text]({{< ref "parser/java/developer-guide/advanced-usage/extract-data-from-various-formats/extract-data-from-microsoft-office-powerpoint-presentations/extract-text-from-microsoft-office-powerpoint-presentations.md" >}}).
+GroupDocs.Parser also allows to extract a text from Microsoft Office PowerPoint presentations as HTML, Markdown and formatted plain text. For more details, see [Extract Formatted Text]({{< ref "parser/java/developer-guide/advanced-usage/extract-data-from-various-formats/extract-data-from-microsoft-office-powerpoint/extract-metadata-from-powerpoint.md" >}}).
 
 Here are the steps to extract a text from Microsoft Office PowerPoint presentation as HTML:
 

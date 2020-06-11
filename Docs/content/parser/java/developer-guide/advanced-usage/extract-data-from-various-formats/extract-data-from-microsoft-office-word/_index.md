@@ -1,6 +1,6 @@
 ---
-id: extract-data-from-microsoft-office-word-documents
-url: parser/java/extract-data-from-microsoft-office-word-documents
+id: extract-data-from-microsoft-office-word
+url: parser/java/extract-data-from-microsoft-office-word
 title: Extract data from Microsoft Office Word documents
 weight: 1
 description: ""

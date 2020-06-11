@@ -1,6 +1,6 @@
 ---
-id: extract-data-from-microsoft-office-excel-spreadsheets
-url: parser/java/extract-data-from-microsoft-office-excel-spreadsheets
+id: extract-data-from-microsoft-office-excel
+url: parser/java/extract-data-from-microsoft-office-excel
 title: Extract data from Microsoft Office Excel spreadsheets
 weight: 2
 description: ""

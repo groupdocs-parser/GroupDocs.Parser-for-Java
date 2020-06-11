@@ -61,7 +61,7 @@ try (Parser parser = new Parser(Constants.SampleDocxWithToc)) {
 }
 ```
 
-GroupDocs.Parser also allows to extract a text from Microsoft Office Word documents as HTML, Markdown and formatted plain text. For more details, see [Extract Formatted Text]({{< ref "parser/java/developer-guide/advanced-usage/extract-data-from-various-formats/extract-data-from-microsoft-office-word-documents/extract-text-from-microsoft-office-word-documents.md" >}}).
+GroupDocs.Parser also allows to extract a text from Microsoft Office Word documents as HTML, Markdown and formatted plain text. For more details, see [Extract Formatted Text]({{< ref "parser/java/developer-guide/advanced-usage/extract-data-from-various-formats/extract-data-from-microsoft-office-word/extract-text-from-microsoft-office-word-documents.md" >}}).
 
 Here are the steps to extract a text from Microsoft Office Word document as HTML:
 
