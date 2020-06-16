@@ -1,6 +1,6 @@
 ---
-id: extract-data-from-microsoft-office-powerpoint
-url: parser/java/extract-data-from-microsoft-office-powerpoint
+id: extract-text-from-microsoft-office-powerpoint
+url: parser/java/extract-text-from-microsoft-office-powerpoint
 title: Extract text from Microsoft Office PowerPoint presentations
 weight: 1
 description: ""
