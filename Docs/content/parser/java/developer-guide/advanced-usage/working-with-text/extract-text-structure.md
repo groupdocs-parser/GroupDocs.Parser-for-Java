@@ -1,11 +1,13 @@
-GroupDocs.Parser for Java : Extract text structure  
-
-# GroupDocs.Parser for Java : Extract text structure
-
-div.rbtoc1591867472358 { padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; }div.rbtoc1591867472358 ul { list-style-type: disc; list-style-image: none; margin-left: 0px; }div.rbtoc1591867472358 li { margin-left: 0px; padding-left: 0px; }
-
-# Extract text structure
-
+---
+id: extract-text-structure
+url: parser/java/extract-text-structure
+title: Extract text structure
+weight: 6
+description: ""
+keywords: 
+productName: GroupDocs.Parser for Java
+hideChildren: False
+---
 GroupDocs.Parser provides the functionality to extract the text structure from documents by the GetStructure method:
 
 ```csharp
@@ -14,7 +16,7 @@ XmlReader GetStructure()
 
 This method returns XML representation of a document. A document has the following structure:
 
-![](attachments/85820654/88342741.png)
+![](parser/java/images/extract-text-structure.png)
 
 | Tag | Description |
 | --- | --- |
@@ -54,7 +56,7 @@ Tags have the following relations:
 
 The **p** and **li** tags can contain **hyperlink, strong, em** tags and the value that represents a text:
 
-![](attachments/85820654/88342740.png)![](attachments/85820654/88342742.png)
+![](parser/java/images/extract-text-structure_1.png))![](parser/java/images/extract-text-structure_2.png)
 
 | Tag | Description |
 | --- | --- |
@@ -74,11 +76,11 @@ Word processing documents have a more complex table cell and paragraph can conta
 
 A table cell can contain any number of paragraphs, lists and tables:
 
-![](attachments/85820654/88342747.png)
+![](parser/java/images/extract-text-structure_3.png)
 
 A shape can contain a single hyperlink (empty tag) for the entire shape and any number of paragraphs, lists or tables:
 
-![](attachments/85820654/88342744.png)
+![](parser/java/images/extract-text-structure_4.png)
 
 ### Presentations
 
@@ -86,17 +88,17 @@ Presentations have a more complex table cell and section can contain any number 
 
 A table cell can contain any number of paragraphs or lists:
 
-![](attachments/85820654/88342746.png)
+![](parser/java/images/extract-text-structure_5.png)
 
 A shape can contain a single hyperlink (empty tag) for the entire shape and any number of paragraphs or lists:
 
-![](attachments/85820654/88342739.png)
+![](parser/java/images/extract-text-structure_6.png)
 
 ### Spreadsheets
 
 Spreadsheets have the following document structure:
 
-![](attachments/85820654/88342745.png)
+![](parser/java/images/extract-text-structure_7.png)
 
 It's more simple than others. A section can contain any number of shapes and only one table. A shape can contain a single hyperlink (empty tag) for the entire shape and any numbers of paragraphs.
 
@@ -144,7 +146,7 @@ private static void readNode(Node node) {
 
 The following document:
 
-![](attachments/85820654/88342743.png)
+![](parser/java/images/extract-text-structure_8.png)
 
 has the following text structure:
 
