@@ -58,9 +58,9 @@ This enhancement allows getting the information of supported extractors for a do
 
 Usage:
 
-**Java**
 
-```csharp
+
+```java
 void printDocumentInfo(String fileName) {
     ExtractorFactory factory = new ExtractorFactory();
     // Get the document info
@@ -101,9 +101,9 @@ No API changes.
 
 #### Usage
 
-**Java**
 
-```csharp
+
+```java
 // Create a text extractor
 PdfTextExtractor extractor = new PdfTextExtractor("invoice.pdf");
   
@@ -144,7 +144,7 @@ Added support for **IFastTextExtractor **interface to the following classes:
 
 **IFastTextExtractor** interface has only one property:
 
-```csharp
+```java
 ExtractMode ExtractMode { get; set; }
 ```
 
@@ -157,9 +157,9 @@ This property gets or sets a value indicating the mode of text extraction. `Ext
 
 Usage:
 
-**Java**
 
-```csharp
+
+```java
 void extractText(TextExtractor extractor) {
     // Check if extractor supports IFastTextExtractor interface
     if (extractor instanceof IFastTextExtractor) {
@@ -192,7 +192,7 @@ Added support for **IDocumentContentExtractor** interface to the following cla
 
 **IDocumentContentExtractor** interface has only one property:
 
-```csharp
+```java
 DocumentContent DocumentContent { get; }
 ```
 
@@ -200,9 +200,9 @@ This property gets the access to the document's content.
 
 Usage:
 
-**Java**
 
-```csharp
+
+```java
 void extractText(TextExtractor extractor) {
     // Check if extractor supports IDocumentContentExtractor interface
     if (extractor instanceof IDocumentContentExtractor) {

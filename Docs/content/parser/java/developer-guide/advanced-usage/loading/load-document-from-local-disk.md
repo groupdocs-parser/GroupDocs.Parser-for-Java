@@ -12,7 +12,7 @@ GroupDocs.Parser provides the functionality to extract data from documents on th
 
 The following example shows how to load the document from the local disk:
 
-```csharp
+```java
 // Set the filePath
 String filePath = Constants.SamplePdf;
 // Create an instance of Parser class with the filePath

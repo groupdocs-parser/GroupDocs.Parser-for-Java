@@ -20,7 +20,7 @@ Here are the steps to extract a text from HTML document:
 
 The following example demonstrates how to extract a text from HTML document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleHtml)) {
     // Extract a text into the reader

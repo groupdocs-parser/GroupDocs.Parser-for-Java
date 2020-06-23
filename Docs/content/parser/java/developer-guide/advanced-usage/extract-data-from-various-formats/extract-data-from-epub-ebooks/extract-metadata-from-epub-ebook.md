@@ -31,7 +31,7 @@ Here are the steps to extract metadata from EPUB e-book:
 
 The following example demonstrates how to extract metadata from EPUB e-book:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleEpub)) {
     // Extract metadata from the e-book

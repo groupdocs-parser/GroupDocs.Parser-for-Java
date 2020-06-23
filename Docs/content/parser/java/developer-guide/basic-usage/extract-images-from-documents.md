@@ -18,7 +18,7 @@ In this article you can see how to extract images from any supported format with
 
 To extract images from documents simply call the `**[getImages](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getImages())**()` method:
 
-```csharp
+```java
 Iterable<PageImageArea> getImages();
 
 ```
@@ -45,7 +45,7 @@ Here are the steps to extract images from the whole document:
 
 The following example shows how to extract all images from the whole document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleImagesPdf)) {
     // Extract images

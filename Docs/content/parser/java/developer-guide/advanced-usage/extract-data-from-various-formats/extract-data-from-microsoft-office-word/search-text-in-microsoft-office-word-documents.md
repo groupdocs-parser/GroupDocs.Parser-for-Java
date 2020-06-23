@@ -20,7 +20,7 @@ Here are the steps to search a keyword in Microsoft Office Word document:
 
 The following example shows how to find a keyword in Microsoft Office Word document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleDocx)) {
     // Search a keyword:
@@ -46,7 +46,7 @@ Here are the steps to search with a regular expression in Microsoft Office Word 
 
 The following example shows how to search with a regular expression in Microsoft Office Word document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleDocx)) {
     // Search with a regular expression with case matching

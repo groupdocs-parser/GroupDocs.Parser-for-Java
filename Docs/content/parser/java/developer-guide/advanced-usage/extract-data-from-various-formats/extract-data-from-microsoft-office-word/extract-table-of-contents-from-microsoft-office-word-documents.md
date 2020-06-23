@@ -38,7 +38,7 @@ Here are the steps to extract a text by an item of table of contents:
 
 The following example shows how to extract a text by an item of table of contents:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleDocxWithToc)) {
     // Get table of contents

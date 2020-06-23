@@ -20,7 +20,7 @@ Here are the steps to extract a text from an email:
 
 The following example demonstrates how to extract a text from the email:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleMsg)) {
     // Extract a text into the reader
@@ -42,7 +42,7 @@ Here are the steps to extract a text from an email as HTML:
 
 The following example shows how to extract a text from an email as HTML:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleMsg)) {
     // Extract a formatted text into the reader

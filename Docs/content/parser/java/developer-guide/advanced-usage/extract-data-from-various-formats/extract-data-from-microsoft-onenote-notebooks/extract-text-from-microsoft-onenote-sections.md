@@ -21,7 +21,7 @@ Here are the steps to extract a text from Microsoft OneNote Section:
   
 The following example demonstrates how to extract a text from Microsoft OneNote Section:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleOne)) {
     // Extract a text into the reader
@@ -41,7 +41,7 @@ Here are the steps to extract a text from the page of Microsoft OneNote Section:
 
 The following example demonstrates how to extract a text from the page of Microsoft OneNote Section:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleOne)) {
     // Get the document info

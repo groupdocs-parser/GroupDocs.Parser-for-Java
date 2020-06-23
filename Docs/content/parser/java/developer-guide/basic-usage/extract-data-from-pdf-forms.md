@@ -14,7 +14,7 @@ GroupDocs.Parser allows to parse form data from PDF documents.
 
 To extract PDF form data please call the `**[parseForm](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#parseForm())**()`method:
 
-```csharp
+```java
 DocumentData parseForm()
 
 ```
@@ -30,7 +30,7 @@ Here are the steps to parse form of the document:
 
 The following example shows how to parse a form of the document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleFormsPdf)) {
     // Extract data from PDF document

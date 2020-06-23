@@ -10,7 +10,7 @@ hideChildren: False
 ---
 The following example shows how to extract plain formatted text:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleDocx)) {
     // Extract a formatted text into the reader

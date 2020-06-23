@@ -29,7 +29,7 @@ Extracted data are stored in the instance of `[DocumentData](https://apireferenc
 
 Field data are stored in `**[getPageArea](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/FieldData#getPageArea())**()` property. Depending on the type of the value it can contain the instance of [`PageTextArea`](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea "class in com.groupdocs.parser.data") or [`PageTableArea`](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTableArea "class in com.groupdocs.parser.data") classes:
 
-```csharp
+```java
 // Get the field data
 FieldData field = data.get(i);
 // Check if the field data contains a text
@@ -72,7 +72,7 @@ There are two ways to work with fields data.
 
 The following example shows how to iterate via extracted field data:
 
-```csharp
+```java
 // Print all extracted data
 for (int i = 0; i < data.getCount(); i++) {
     // Print field name
@@ -91,7 +91,7 @@ for (int i = 0; i < data.getCount(); i++) {
 
 The following example shows how to get field by the name:
 
-```csharp
+```java
 // Print prices
 System.out.println("Prices:");
 for (FieldData field : data.getFieldsByName("Price")) {
@@ -109,7 +109,7 @@ This functionality allows to iterate all data fields and select the most suitabl
 
 The following example shows how to work with extracted tables:
 
-```csharp
+```java
 // Parse the document by the template
 DocumentData data = parser.parseByTemplate(template);
 // Print all extracted data

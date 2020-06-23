@@ -20,7 +20,7 @@ Here are the steps to extract images from Microsoft Office Word document to PNG-
 
 The following example demonstrates how to extract images from Microsoft Office Word document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleWithImagesDocx)) {
     // Extract images from document

@@ -35,7 +35,7 @@ Here is brief comparison of how to extract data using the old and new API.
 
 **Old coding style**
 
-```csharp
+```java
 // Create an extractor factory
 ExtractorFactory factory = new ExtractorFactory();
 // Create a text extractor
@@ -54,7 +54,7 @@ try (TextExtractor extractor = factory.createTextExtractor(filePath)) {
 
 **New coding style**
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(filePath)) {
     // Extract a text to the reader
@@ -83,7 +83,7 @@ try (Parser parser = new Parser(filePath)) {
 
 **Old coding style**
 
-```csharp
+```java
 // Create an extractor factory
 ExtractorFactory factory = new ExtractorFactory();
 // Create a text extractor
@@ -101,7 +101,7 @@ try (TextExtractor extractor = factory.createTextExtractor(filePath)) {
 
 **New coding style**
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(filePath)) {
     // Extract the first page text to the reader
@@ -121,7 +121,7 @@ try (Parser parser = new Parser(filePath)) {
 
 **Old coding style**
 
-```csharp
+```java
 // Create an extractor factory
 ExtractorFactory factory = new ExtractorFactory();
 // Create a text extractor
@@ -145,7 +145,7 @@ try (TextExtractor extractor = factory.createTextExtractor(filePath)) {
 
 **New coding style**
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(filePath)) {
     // Search "keyword" in the document
@@ -166,14 +166,14 @@ try (Parser parser = new Parser(filePath)) {
 
 **Old coding style**
 
-```csharp
+```java
 // Detect and print file type
 System.out.println(CompositeMediaTypeDetector.DEFAULT.detect(filePath));
 ```
 
 **New coding style**
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(filePath)) {
     // Detect and print file type
@@ -187,7 +187,7 @@ try (Parser parser = new Parser(filePath)) {
 
 **Old coding style**
 
-```csharp
+```java
 // Create an extractor factory
 ExtractorFactory factory = new ExtractorFactory();
 // Create a metadata extractor
@@ -203,7 +203,7 @@ for (String key : metadata.getKeys()) {
 
 **New coding style**
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(filePath)) {
     // Extract metadata
@@ -224,7 +224,7 @@ try (Parser parser = new Parser(filePath)) {
 
 **Old coding style**
 
-```csharp
+```java
 // Create an extractor factory
 ExtractorFactory factory = new ExtractorFactory();
 // Create a text extractor
@@ -264,7 +264,7 @@ class Handler extends StructuredHandler {
 
 **New coding style**
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(filePath)) {
     // Extract text structure to the XML reader

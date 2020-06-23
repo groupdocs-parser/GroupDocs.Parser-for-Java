@@ -10,7 +10,7 @@ hideChildren: False
 ---
 GroupDocs.Parser provides the functionality to extract images from document page area by the by the `**[getImages](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getImages(com.groupdocs.parser.options.PageAreaOptions))**([PageAreaOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/PageAreaOptions "class in com.groupdocs.parser.options") options)` and `**[getImages](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getImages(int,%20com.groupdocs.parser.options.PageAreaOptions))**(int pageIndex, [PageAreaOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/PageAreaOptions "class in com.groupdocs.parser.options") options)` methods:
 
-```csharp
+```java
 Iterable<PageImageArea> getImages(PageAreaOptions options);
 Iterable<PageImageArea> getImages(int pageIndex, PageAreaOptions options);
 
@@ -53,7 +53,7 @@ Here are the steps to extract images from the upper-left corner:
 
 The following example shows how to extract only images from the upper-left corner:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleImagesPdf)) {
     // Create the options which are used for images extraction

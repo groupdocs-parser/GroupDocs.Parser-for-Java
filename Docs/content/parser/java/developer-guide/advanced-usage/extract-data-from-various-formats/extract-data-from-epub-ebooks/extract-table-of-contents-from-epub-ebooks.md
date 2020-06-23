@@ -20,7 +20,7 @@ Here are the steps to extract extract table of contents from EPUB e-book:
 
 The following example shows how to extract table of contents from EPUB e-book:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleEpub)) {
     // Get table of contents

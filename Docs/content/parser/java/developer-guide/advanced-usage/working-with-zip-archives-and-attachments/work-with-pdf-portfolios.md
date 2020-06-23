@@ -19,7 +19,7 @@ Here are the steps to extract an email text from PDF Portfolios:
 
 The following example shows how to extract a text from PDF Portfolios:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SamplePdfPortfolio)) {
     // Extract attachments from the container

@@ -12,7 +12,7 @@ There might be cases when the document is presented only as a stream (without a 
 
 The following example shows how to load the document from the stream:
 
-```csharp
+```java
 // Create the stream
 try (InputStream stream = new FileInputStream(Constants.SamplePdf)) {
     // Create an instance of Parser class with the stream

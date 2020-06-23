@@ -20,7 +20,7 @@ Here are the steps to search a keyword in Microsoft OneNote section:
 
 The following example shows how to find a keyword in Microsoft OneNote section:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleOne)) {
     // Search a keyword:
@@ -44,7 +44,7 @@ Here are the steps to search with a regular expression in Microsoft OneNote sect
 
 The following example shows how to search with a regular expression in Microsoft OneNote section:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleOne)) {
     // Search with a regular expression with case matching

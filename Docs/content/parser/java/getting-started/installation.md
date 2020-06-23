@@ -16,7 +16,7 @@ GroupDocs hosts all Java APIs on [GroupDocs Repository](https://repository.grou
 
 First, you need to specify GroupDocs repository configuration/location in your Maven `pom.xml` as follows:
 
-```csharp
+```java
 <repositories>
     <repository>
         <id>GroupDocsJavaAPI</id>
@@ -30,7 +30,7 @@ First, you need to specify GroupDocs repository configuration/location in your M
 
 Then define GroupDocs.Parser for Java API dependency in your `pom.xml` as follows:
 
-```csharp
+```java
 <dependencies>
     <dependency>
         <groupId>com.groupdocs</groupId>

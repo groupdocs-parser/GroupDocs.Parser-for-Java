@@ -10,7 +10,7 @@ hideChildren: False
 ---
 GroupDocs.Parser provides the functionality to extract images from document page by the `**[getImages](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getImages(int))**(int pageIndex)` method:
 
-```csharp
+```java
 Iterable<PageImageArea> getImages(int pageIndex);
 
 ```
@@ -45,7 +45,7 @@ Here are the steps to extract images from the document page:
 
 The following example shows how to extract images from a document page:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleImagesPdf)) {
     // Check if the document supports images extraction

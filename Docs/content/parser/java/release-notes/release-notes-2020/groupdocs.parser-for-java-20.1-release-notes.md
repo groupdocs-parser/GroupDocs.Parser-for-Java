@@ -49,7 +49,7 @@ There are the following features in this release:
     
     The following example shows how to extract images to files:
     
-    ```csharp
+    ```java
     // Create an instance of Parser class
     try (Parser parser = new Parser(Constants.SampleZip)) {
         // Extract images from document
@@ -98,7 +98,7 @@ There are the following features in this release:
     
     Example:
     
-    ```csharp
+    ```java
     // Create an instance of Parser class
     try (Parser parser = new Parser(Constants.SampleZip)) {
         // Extract images from document
@@ -149,7 +149,7 @@ There are the following features in this release:
     
     The following example shows how to extract table of contents from word processing document:
     
-    ```csharp
+    ```java
     // Create an instance of Parser class
     try (Parser parser = new Parser(filePath)) {
         // Check if text extraction is supported
@@ -196,7 +196,7 @@ There are the following features in this release:
     
     The following example shows how to extract table of contents from PDF document:
     
-    ```csharp
+    ```java
     // Create an instance of Parser class
     try (Parser parser = new Parser(filePath)) {
         // Check if text extraction is supported
@@ -243,7 +243,7 @@ There are the following features in this release:
     
     The following example shows how to extract a text by an item of table of contents:
     
-    ```csharp
+    ```java
     // Create an instance of Parser class
     try (Parser parser = new Parser(Constants.SampleDocxWithToc)) {
         // Get table of contents

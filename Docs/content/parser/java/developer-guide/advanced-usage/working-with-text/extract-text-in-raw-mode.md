@@ -18,7 +18,7 @@ You can extract the whole document text or only a document page.
 
 To extract a text from the document in the Raw mode, GetText(TextOptions) and GetText(int, TextOptions) methods of Parser class are used:
 
-```csharp
+```java
 TextReader getText(TextOptions options);
 TextReader getText(int pageIndex, TextOptions options);
 
@@ -48,7 +48,7 @@ Here are the steps to extract a raw text from the document:
 
 The following example shows how to extract a raw text from a document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SamplePdf)) {
     // Extract a raw text into the reader
@@ -74,7 +74,7 @@ Here are the steps to extract a raw text from the document page:
 
 The following example shows how to extract a raw text from a document page:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SamplePdf)) {
     // Check if the document supports text extraction

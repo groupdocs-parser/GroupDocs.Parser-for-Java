@@ -27,7 +27,7 @@ Here are the steps to extract metadata from an email:
 
 The following example demonstrates how to extract metadata from an email:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleMsg)) {
     // Extract metadata from the email

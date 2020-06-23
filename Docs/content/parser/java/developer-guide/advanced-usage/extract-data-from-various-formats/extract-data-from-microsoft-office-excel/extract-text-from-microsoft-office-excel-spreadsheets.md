@@ -20,7 +20,7 @@ Here are the steps to extract a text from Microsoft Office Excel spreadsheets:
 
 The following example demonstrates how to extract a text from Microsoft Office Excel spreadsheets:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleXlsx)) {
     // Extract a text into the reader
@@ -38,7 +38,7 @@ Here are the steps to extract a text from the sheet of Microsoft Office Excel sp
 *   Call `**[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText(int))**(int pageIndex)` method with the sheet index and obtain `[TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data")` object;
 *   Read a text from *reader*.
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleXlsx)) {
     // Get the spreadsheet info
@@ -69,7 +69,7 @@ Here are the steps to extract a raw text from the sheet of Microsoft Office Exce
 *   Call `**[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText(int,%20com.groupdocs.parser.options.TextOptions))**(int pageIndex, [TextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextOptions "class in com.groupdocs.parser.options") options)` method with the sheet index and obtain `[TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data")` object;
 *   Read a text from *reader*.
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleXlsx)) {
     // Get the document info
@@ -105,7 +105,7 @@ Here are the steps to extract a text from Microsoft Office Excel spreadsheet as 
 
 The following example shows how to extract a text from Microsoft Office Excel spreadsheet as HTML:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleXlsx)) {
     // Extract a formatted text into the reader

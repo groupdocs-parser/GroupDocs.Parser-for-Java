@@ -20,7 +20,7 @@ Here are the steps to extract a text from PDF document:
 
 The following example demonstrates how to extract a text from PDF document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SamplePdf)) {
     // Extract a text into the reader
@@ -40,7 +40,7 @@ Here are the steps to extract a text from the page of PDF document:
 
 The following example demonstrates how to extract a text from the page of PDF document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SamplePdf)) {
     // Get the document info
@@ -73,7 +73,7 @@ Here are the steps to extract a raw text from the page of PDF document:
 
 The following example demonstrates how to extract a raw text from the page of PDF document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SamplePdf)) {
     // Check if the document supports text extraction

@@ -14,7 +14,7 @@ hideChildren: False
 
 GroupDocs.Parser provides the functionality to extract items from containers by the `**[getContainer](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getContainer())**()` method:
 
-```csharp
+```java
 Iterable<ContainerItem> getContainer()
 
 ```
@@ -42,7 +42,7 @@ Here are the steps to extract container from the document:
 
 The following example shows how to extract attachments from a container:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleZip)) {
     // Extract attachments from the container

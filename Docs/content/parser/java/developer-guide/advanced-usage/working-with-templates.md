@@ -14,7 +14,7 @@ Document template is set by [`Template`](https://apireference.groupdocs.com/jav
 
 The template field is set by [`TemplateField`](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateField "class in com.groupdocs.parser.templates") class with the following constructor:
 
-```csharp
+```java
 TemplateField(TemplatePosition position, String name, Integer pageIndex)
 
 ```
@@ -35,7 +35,7 @@ TemplateField(TemplatePosition position, String name, Integer pageIndex)
 
 This is simplest way to define the field position. It requires to set a rectangular area on the page that bounds the field value. All the text that is contained (even partially) into the rectangular area will be extracted as a value:
 
-```csharp
+```java
 // Create a fixed template field with "Address" name which is bounded by a rectangle at the position (35, 160) and with the size (110, 20)
 TemplateField templateField = new TemplateField(
     new TemplateFixedPosition(new Rectangle(new Point(35, 160), new Size(110, 20))),
@@ -63,7 +63,7 @@ Date: 06/02/2019 |
 
 This way to define the field position allows to find a field value by a regular expression. For example, if the document contains "Invoice Number INV-12345" then template field can be defined in the following way:
 
-```csharp
+```java
 // Create a regex template field with "InvoiceNumber" name
 TemplateField templateField = new TemplateField(
     new TemplateRegexPosition("Invoice Number\\s+[A-Z0-9\\-]+"), 
@@ -73,7 +73,7 @@ TemplateField templateField = new TemplateField(
 
 In this case as a value the entire string is extracted. To extract only a part of the string the regular expression group "value" is used:
 
-```csharp
+```java
 // Create a regex template field with "InvoiceNumber" name with "value" group
 TemplateField templateField = new TemplateField(
     new TemplateRegexPosition("Invoice Number\\s+(?<value>[A-Z0-9\\-]+)"),
@@ -89,7 +89,7 @@ Regular expression fields can be used as linked fields.
 
 This way to define the field position allows to find a field value by extracting a rectangular area around the linked field. For example, if it's known that the field with an invoice number is placed on the right of "Invoice number" string the following code is used:
 
-```csharp
+```java
 // Create a regex template field to find "Invoice Number" text
 TemplateField invoice = new TemplateField(new TemplateRegexPosition("Invoice Number"), "Invoice");
 // Create a related template field associated with "Invoice" field and extract the value on the right of it
@@ -105,7 +105,7 @@ TemplateField invoiceNumber = new TemplateField(
 
 To simplify the setting of the size of template field `**[isAutoScale](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateLinkedPosition#isAutoScale())**()` property is used. The size of template field is scaled according to the related field if `**[isAutoScale](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateLinkedPosition#isAutoScale())**()` is set to true. This is useful when the font size is not known in advance, but the proportions of the size of the value (the ratio of height to width) are approximately known:
 
-```csharp
+```java
 // Create a regex template field to find "Invoice Number" text
 TemplateField invoice = new TemplateField(new TemplateRegexPosition("Invoice Number"), "Invoice");
 // Create a related template field associated with "Invoice" field and extract the value on the right of it
@@ -121,7 +121,7 @@ TemplateField invoiceNumber = new TemplateField(
 
 The field value can be extracted from either side of the related field. The side of the value extraction is set by `**[getEdges](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateLinkedPosition#getEdges())**()` property. The size of rectangular area is set by `**[getSearchArea](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateLinkedPosition#getSearchArea())**()` property. The position of rectangular area depends on the side of the value extraction:
 
-```csharp
+```java
 Left: (LinkedField.Rectangle.Left - SearchAreaSize.Width; LinkedField.Rectangle.Top)
 Top: (LinkedField.Rectangle.Left; LinkedField.Rectangle.Top - SearchAreaSize.Height)
 Right: (LinkedField.Rectangle.Right; LinkedField.Rectangle.Top)
@@ -131,7 +131,7 @@ Bottom: (LinkedField.Rectangle.Left; LinkedField.Rectangle.Bottom)
 
 The related field can be any field which was previously defined in the template:
 
-```csharp
+```java
 // Create a regex template field
 TemplateField fromField = new TemplateField(new TemplateRegexPosition("From"), "From", 0);
 // Create a related template field linked to "From" regex field and placed under it
@@ -159,14 +159,14 @@ A value of the field depends on the related field. The field is always empty if 
 
 An instance of [`Template`](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/Template "class in com.groupdocs.parser.templates") class is created by the constructor:
 
-```csharp
+```java
 Template(IEnumerable<TemplateItem> items)
 
 ```
 
 This constructor accepts a collection of template items:
 
-```csharp
+```java
 // Create an array of template fields
 TemplateItem[] fields = new TemplateItem[]
 {
@@ -191,7 +191,7 @@ The field name is case-insensitive (Field and FIELD - the same names) and must b
 
 Template table is set by [`TemplateTable`](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateTable "class in com.groupdocs.parser.templates") class with the following constructors:
 
-```csharp
+```java
 TemplateTable(TemplateTableLayout layout, String name, Integer pageIndex)
 TemplateTable(TemplateTableParameters parameters, String name, Integer pageIndex)
 
@@ -201,7 +201,7 @@ Template table can be set by detector parameters or table layout. If the page in
 
 [`TemplateTableParameters`](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateTableParameters "class in com.groupdocs.parser.templates") class has the following constructors:
 
-```csharp
+```java
 TemplateTableParameters(Rectangle rectangle, Iterable<Double> verticalSeparators)
 TemplateTableParameters(Rectangle rectangle, Iterable<Double> verticalSeparators, Boolean hasMergedCells, Integer minRowCount, Integer minColumnCount, Integer minVerticalSpace)
 
@@ -209,7 +209,7 @@ TemplateTableParameters(Rectangle rectangle, Iterable<Double> verticalSeparators
 
 Each of parameters is optional. The most easy way to define a table is to set the rectangular area of the table and columns separators:
 
-```csharp
+```java
 TemplateTableParameters parameters = new TemplateTableParameters(
     new Rectangle(new Point(175, 350), new Size(400, 200)),
     java.util.Arrays.asList(new Double[] { 185.0, 370.0, 425.0, 485.0, 545.0 }));
@@ -218,7 +218,7 @@ TemplateTableParameters parameters = new TemplateTableParameters(
 
 If a template table is set by detector parameters, the table is detected automatically:
 
-```csharp
+```java
 TemplateTableParameters parameters = new TemplateTableParameters(
     new Rectangle(new Point(175, 350), new Size(400, 200)),
     java.util.Arrays.asList(new Double[] { 185.0, 370.0, 425.0, 485.0, 545.0 }));
@@ -232,7 +232,7 @@ Template template = new Template(java.util.Arrays.asList(new TemplateItem[] { ta
 
 Template table is set by table layout if the table can't be detected automatically:
 
-```csharp
+```java
 TemplateTableLayout layout = new TemplateTableLayout(
     java.util.Arrays.asList(new Double[] { 50.0, 95.0, 275.0 }),
     java.util.Arrays.asList(new Double[] { 325.0, 340.0, 365.0 }));
@@ -244,7 +244,7 @@ Template template = new Template(java.util.Arrays.asList(new TemplateItem[] { ta
 
 These collections represent bounds of columns and rows. For example, for 2x2 table there are 3 vertical and 3 horizontal separators:
 
-```csharp
+```java
 ---------
 |   |   |
 ---------
@@ -267,7 +267,7 @@ This example shows the template which is used to parse the following invoice:
 
 ![](parser/java/images/working-with-templates_6.jpg)
 
-```csharp
+```java
 // Create detector parameters for "Details" table
 TemplateTableParameters detailsTableParameters = new TemplateTableParameters(new Rectangle(new Point(35, 320), new Size(530, 55)), null);
 // Create detector parameters for "Summary" table

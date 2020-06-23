@@ -10,7 +10,7 @@ hideChildren: False
 ---
 GroupDocs.Parser allows to get the list of all the supported file formats by the ``**`**[getSupportedFileTypes](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileType#getSupportedFileTypes())**`**`()` `` static method:
 
-```csharp
+```java
 Iterable<FileType> FileType.getSupportedFileTypes();
 
 ```
@@ -31,7 +31,7 @@ Here are the steps to get all the supported file formats:
 
 The following example shows how to print all the supported file types:
 
-```csharp
+```java
 // Get a collection of supported file formats
 Iterable<FileType> supportedFileTypes = FileType.getSupportedFileTypes();
 // Iterate over collection and print file format information

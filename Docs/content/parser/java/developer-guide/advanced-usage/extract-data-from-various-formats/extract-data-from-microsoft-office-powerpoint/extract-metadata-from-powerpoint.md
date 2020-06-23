@@ -41,7 +41,7 @@ Here are the steps to extract metadata from Microsoft Office PowerPoint presenta
 
 The following example demonstrates how to extract metadata from PowerPoint presentation:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SamplePptx)) {
     // Extract metadata from the presentation

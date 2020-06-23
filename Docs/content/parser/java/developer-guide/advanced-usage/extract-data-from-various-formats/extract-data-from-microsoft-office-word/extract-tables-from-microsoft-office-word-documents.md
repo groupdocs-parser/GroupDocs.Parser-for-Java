@@ -20,7 +20,7 @@ Here are the steps to extract tables from Microsoft Office Word documents:
 
 The following example demonstrates how to extract tables from Microsoft Office Word document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleDocx)) {
     // Extract text structure to the XML reader

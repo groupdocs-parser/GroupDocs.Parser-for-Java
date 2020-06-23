@@ -20,7 +20,7 @@ Here are the steps to search a keyword in PDF document:
 
 The following example shows how to find a keyword in PDF document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SamplePdf)) {
     // Search a keyword:
@@ -44,7 +44,7 @@ Here are the steps to search with a regular expression in PDF document:
 
 The following example shows how to search with a regular expression in PDF document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SamplePdf)) {
     // Search with a regular expression with case matching

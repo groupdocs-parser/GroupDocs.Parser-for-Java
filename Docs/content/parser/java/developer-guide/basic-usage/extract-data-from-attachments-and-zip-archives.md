@@ -14,7 +14,7 @@ It is easy to extract data, text, images and use any GroupDocs.Parser feature fo
 
 To extract documents from ZIP files and get attachments from containers simply call the `**[getContainer](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getContainer())**()` method:
 
-```csharp
+```java
 Iterable<ContainerItem> getContainer()
 
 ```
@@ -44,7 +44,7 @@ Here are the steps to extract a text from from zip entities:
 
 The following example shows how to extract a text from from zip entities:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleZip)) {
     // Extract attachments from the container

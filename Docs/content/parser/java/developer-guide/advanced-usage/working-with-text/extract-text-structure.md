@@ -10,7 +10,7 @@ hideChildren: False
 ---
 GroupDocs.Parser provides the functionality to extract the text structure from documents by the GetStructure method:
 
-```csharp
+```java
 XmlReader GetStructure()
 ```
 
@@ -113,7 +113,7 @@ Here are the steps to extract hyperlinks from the document:
 
 The following example shows how to extract hyperlinks from the document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleHyperlinksDocx)) {
     // Extract text structure to the XML reader
@@ -150,7 +150,7 @@ The following document:
 
 has the following text structure:
 
-```csharp
+```java
 <?xml version="1.0"?>
 <document>
   <section>

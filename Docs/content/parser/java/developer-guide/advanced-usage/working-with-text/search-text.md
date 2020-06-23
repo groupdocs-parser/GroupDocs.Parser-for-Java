@@ -10,7 +10,7 @@ hideChildren: False
 ---
 GroupDocs.Parser provides the functionality to search a text from documents by the `**[search](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#search(java.lang.String))**([String](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true "class or interface in java.lang") keyword)` and `**[search](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#search(java.lang.String,%20com.groupdocs.parser.options.SearchOptions))**([String](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true "class or interface in java.lang") keyword, [SearchOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/SearchOptions "class in com.groupdocs.parser.options") options)` methods:
 
-```csharp
+```java
 Iterable<SearchResult> search(String keyword);
 Iterable<SearchResult> search(String keyword, SearchOptions options);
 
@@ -37,7 +37,7 @@ Here are the steps to search a keyword in the document:
 
 The following example shows how to find a keyword in a document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SamplePdf)) {
     // Search a keyword:
@@ -81,7 +81,7 @@ Here are the steps to search with a regular expression in the document:
 
 The following example shows how to search with a regular expression in a document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SamplePdf)) {
     // Search with a regular expression with case matching
@@ -113,7 +113,7 @@ Here are the steps to search a text with a highlights:
 
 The following example shows how to search a text with the highlights:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SamplePdf)) {
     HighlightOptions highlightOptions = new HighlightOptions(15);
@@ -144,7 +144,7 @@ Here are the steps to search a text with page numbers:
 
 The following example shows how to search a text with page numbers:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SamplePdf)) {
     // Search a keyword with page numbers

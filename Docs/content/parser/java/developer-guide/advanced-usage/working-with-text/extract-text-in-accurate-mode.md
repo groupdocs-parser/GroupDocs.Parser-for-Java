@@ -16,7 +16,7 @@ You can extract the whole document text or only a document page.
 
 To extract a text from the document in the Accurate mode, `**[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText())**()` and `**[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText(int))**(int pageIndex)` methods of Parser class are used:
 
-```csharp
+```java
 TextReader getText();
 TextReader getText(int pageIndex);
 
@@ -42,7 +42,7 @@ Here are the steps to extract a text from the document:
 
 The following example shows how to extract a text from a document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SamplePdf)) {
     // Extract a text into the reader
@@ -65,7 +65,7 @@ Here are the steps to extract a text from the document page:
 
 The following example shows how to extract a text from the document page:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SamplePdf)) {
     // Check if the document supports text extraction

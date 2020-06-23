@@ -10,7 +10,7 @@ hideChildren: False
 ---
 To extract hyperlinks from Microsoft Office Word document `**[getStructure](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getStructure())**()` method is used. This method returns XML representation of the document. Hyperlinks are represented by "hyperlink" tag; "link" attribute contains hyperlink's URL. For more details, see [Extract text structure]({{< ref "parser/java/developer-guide/advanced-usage/extract-data-from-various-formats/extract-data-from-microsoft-office-word/extract-hyperlinks-from-microsoft-office-word-documents.md" >}}). Hyperlink can contain a text:
 
-```csharp
+```java
 <hyperlink link="www.google.com">google.com</hyperlink>
 ```
 
@@ -24,7 +24,7 @@ Here are the steps to extract hyperlinks from Microsoft Office Word documents:
 
 The following example demonstrates how to extract hyperlinks from Microsoft Office Word document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleHyperlinksDocx)) {
     // Extract text structure to the XML reader

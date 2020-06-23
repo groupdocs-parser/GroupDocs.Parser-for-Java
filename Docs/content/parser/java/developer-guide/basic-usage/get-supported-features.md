@@ -37,7 +37,7 @@ Here are the steps for check if feature is supported:
 
 The following example shows how to check if text extraction feature is supported:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleZip)) {
     // Check if text extraction is supported for the document
@@ -54,7 +54,7 @@ try (Parser parser = new Parser(Constants.SampleZip)) {
 
 If the feature isn't supported, the method returns *null* instead of the value. So if checking of `[Features](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/Features "class in com.groupdocs.parser.options")` properties is omitted, result is checked for *null*:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleZip)) {
     // Extract a text into the reader

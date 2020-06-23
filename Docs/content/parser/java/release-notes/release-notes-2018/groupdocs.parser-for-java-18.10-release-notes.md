@@ -48,9 +48,9 @@ This feature allows extracting images from documents.
 
 To extract images from the page **getImageAreas** methods are used:
 
-**Java**
 
-```csharp
+
+```java
 class DocumentContent {
   public IList<ImageArea> getImageAreas(int pageIndex);
   public IList<ImageArea> getImageAreas(int pageIndex, ImageAreaSearchOptions searchOptions);
@@ -72,9 +72,9 @@ The method with one parameter returns all images from the page with zero-based p
 
 #### Usage
 
-**Java**
 
-```csharp
+
+```java
 private static void extractImages() throws java.io.IOException {
     // Create a text extractor
     WordsTextExtractor extractor = new WordsTextExtractor("cv.docx");
@@ -124,9 +124,9 @@ No public API changes
 
 To extract images from the page **getImageAreas** methods are used:
 
-**Java**
 
-```csharp
+
+```java
 private static void extractImages() throws java.io.IOException {
     // Create a text extractor
     PdfTextExtractor extractor = new PdfTextExtractor("cv.pdf");
@@ -176,9 +176,9 @@ No public API changes
 
 To extract images from the sheet **getImageAreas** methods are used:
 
-**Java**
 
-```csharp
+
+```java
 private static void extractImages() throws java.io.IOException {
     // Create a text extractor
     CellsTextExtractor extractor = new CellsTextExtractor("catalog.xlsx");
@@ -228,9 +228,9 @@ No public API changes
 
 To extract images from the page **getImageAreas** methods are used:
 
-**Java**
 
-```csharp
+
+```java
 private static void extractImages() throws java.io.IOException {
     // Create a text extractor
     WordsTextExtractor extractor = new WordsTextExtractor("cv.docx");
@@ -280,9 +280,9 @@ No public API changes
 
 To extract images from the slide **getImageAreas** methods are used:
 
-**Java**
 
-```csharp
+
+```java
 private static void extractImages() throws java.io.IOException {
     // Create a text extractor
     SlidesTextExtractor extractor = new SlidesTextExtractor("presentation.pptx");

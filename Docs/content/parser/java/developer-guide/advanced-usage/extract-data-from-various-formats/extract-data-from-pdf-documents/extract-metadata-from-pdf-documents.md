@@ -31,7 +31,7 @@ Here are the steps to extract metadata from PDF document:
 
 The following example demonstrates how to extract metadata from PDF document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SamplePdf)) {
     // Extract metadata from the document

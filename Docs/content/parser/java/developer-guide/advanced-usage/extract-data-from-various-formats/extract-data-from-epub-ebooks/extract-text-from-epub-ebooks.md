@@ -20,7 +20,7 @@ Here are the steps to extract a text from EPUB e-book:
 
 The following example demonstrates how to extract a text from EPUB e-book:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleEpub)) {
     // Extract a text into the reader
@@ -41,7 +41,7 @@ Here are the steps to extract a text from the page of EPUB e-book:
 
 The following example demonstrates how to extract a text from the page of EPUB e-book:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleEpub)) {
     // Get the e-book info
@@ -70,7 +70,7 @@ Here are the steps to extract a text from EPUB e-book as HTML:
 
 The following example shows how to extract a text from EPUB e-book as HTML:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleEpub)) {
     // Extract a formatted text into the reader

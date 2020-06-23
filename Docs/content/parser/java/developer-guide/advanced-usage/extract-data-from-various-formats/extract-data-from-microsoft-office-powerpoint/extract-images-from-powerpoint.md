@@ -20,7 +20,7 @@ Here are the steps to extract images from Microsoft Office PowerPoint presentat
 
 The following example demonstrates how to extract images from Microsoft Office PowerPoint presentation:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleWithImagesPptx)) {
     // Extract images from presentation

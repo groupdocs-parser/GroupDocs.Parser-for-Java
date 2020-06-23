@@ -20,7 +20,7 @@ Here are the steps to extract images from PDF document to PNG-files:
 
 The following example demonstrates how to extract images from PDF document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleImagesPdf)) {
     // Extract images from document

@@ -42,7 +42,7 @@ Here are the steps to extract metadata from Microsoft Office Word document:
 
 The following example demonstrates how to extract metadata from Microsoft Office Word document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleDocx)) {
     // Extract metadata from the document

@@ -17,7 +17,7 @@ Here are the steps to extract images to files:
 
 The following example shows how to save images to files:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleZip)) {
     // Extract images from document

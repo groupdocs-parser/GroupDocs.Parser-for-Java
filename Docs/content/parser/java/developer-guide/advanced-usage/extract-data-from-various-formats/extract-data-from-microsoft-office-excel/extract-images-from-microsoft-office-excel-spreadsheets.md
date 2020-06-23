@@ -20,7 +20,7 @@ Here are the steps to extract images from Microsoft Office Excel spreadsheet to
 
 The following example demonstrates how to extract images from Microsoft Office Excel spreadsheet:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleWithImagesXlsx)) {
     // Extract images from spreadsheet

@@ -10,7 +10,7 @@ hideChildren: False
 ---
 GroupDocs.Parser provides the functionality to extract a highlight (a part of the text which is usually used to explain the context of the found text in the search functionality) from documents by the `**[getHighlight](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getHighlight(int,%20boolean,%20com.groupdocs.parser.options.HighlightOptions))**(int position, boolean isDirect, [HighlightOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/HighlightOptions "class in com.groupdocs.parser.options") options)` method:
 
-```csharp
+```java
 HighlightItem getHighlight(int position, boolean isDirect, HighlightOptions options)
 
 ```
@@ -19,7 +19,7 @@ The *position* parameter defines the start position from which the highlight is 
 
 `[HighlightOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/HighlightOptions "class in com.groupdocs.parser.options")` class has the following constructors:
 
-```csharp
+```java
 // Highlight is limited to maxLength text length.
 HighlightOptions(int maxLength)
 // Highlight is limited to the start (or the end) of a text line (or maxLength text length - if set).
@@ -48,7 +48,7 @@ Here are the steps to extract highlight from the document:
 
 The following example shows how to extract a highlight that contains 3 words:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SamplePdf)) {
     // Extract a highlight:

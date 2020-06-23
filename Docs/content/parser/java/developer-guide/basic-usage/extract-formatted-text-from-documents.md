@@ -16,14 +16,14 @@ This feature allows to extract text with integrated HTML tags, or Markdown synta
 
 To extract a formatted text from documents simply call the `**[getFormattedText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getFormattedText(com.groupdocs.parser.options.FormattedTextOptions))**([FormattedTextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FormattedTextOptions "class in com.groupdocs.parser.options") options)` method:
 
-```csharp
+```java
 TextReader getFormattedText(FormattedTextOptions options);
 
 ```
 
 This method returns an instance of `[TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data")` class with an extracted text. `[FormattedTextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FormattedTextOptions "class in com.groupdocs.parser.options")` has the following constructor:
 
-```csharp
+```java
 FormattedTextOptions(FormattedTextMode mode)
 
 ```
@@ -53,7 +53,7 @@ Here are the steps to extract a HTML formatted text from the document:
 
 The following example shows how to extract a document text as HTML text:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleDocx)) {
     // Extract a formatted text into the reader

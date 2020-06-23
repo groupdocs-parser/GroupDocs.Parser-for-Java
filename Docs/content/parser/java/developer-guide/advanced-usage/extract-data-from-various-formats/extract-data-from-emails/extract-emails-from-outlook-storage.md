@@ -30,7 +30,7 @@ Here are the steps to extract an email text from outlook storage:
 
 The following example shows how to extract a text from emails in outlook storage:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleOutlook)) {
     // Extract attachments from the container

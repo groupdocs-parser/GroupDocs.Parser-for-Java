@@ -18,7 +18,7 @@ This article demonstrates how to implement the simplest scenario - extract text 
 
 To extract text from documents simply call the `**[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText())**()` method:
 
-```csharp
+```java
 TextReader getText();
 
 
@@ -42,7 +42,7 @@ Here are the steps to extract a text from the document:
 
 The following example shows how to extract a text from a document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SamplePdf)) {
     // Extract a text into the reader

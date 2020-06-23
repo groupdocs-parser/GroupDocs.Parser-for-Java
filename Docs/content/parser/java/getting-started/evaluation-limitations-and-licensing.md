@@ -7,10 +7,7 @@ description: ""
 keywords: 
 productName: GroupDocs.Parser for Java
 hideChildren: False
----
-  
-  
-
+---  
 {{< alert style="info" >}}You can use GroupDocs.Parser without the license. The usage and functionalities are pretty much same as the licensed one but you will face few limitations while using the non-licensed API.{{< /alert >}}
 
 ## Evaluation Limitations
@@ -44,7 +41,7 @@ The license can be loaded from a file or stream object. The easiest way to set a
 The code below will explain how to set product license.  
   
 
-```csharp
+```java
 // For complete examples and data files, please go to https://github.com/groupdocs-search/GroupDocs.Parser-for-Java
  
 //initialize License
@@ -59,7 +56,7 @@ lic.setLicense("GroupDocs.Parser.lic");
 The following example shows how to load a license from a stream.  
   
 
-```csharp
+```java
 // For complete examples and data files, please go to https://github.com/groupdocs-search/GroupDocs.Parser-for-Java
 Path fileLocation = Paths.get("GroupDocs.Parser.lic");
  
@@ -92,7 +89,7 @@ Here are the simple steps to use the Metered class.
   
 Following is the sample code demonstrating how to use Metered class.
 
-```csharp
+```java
 // For complete examples and data files, please go to https://github.com/groupdocs-search/GroupDocs.Search-for-Java
  
 String PublicKey = ""; // Your public license key

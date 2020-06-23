@@ -52,18 +52,18 @@ No public API changes.
 
 This code works only with Java 8u101 or above:
 
-**Java**
 
-```csharp
+
+```java
 Metered metered = new Metered();
 metered.setMeteredKey(PUBLIC_KEY, PRIVATE_KEY);
 ```
 
 This code works with Java 7 or above:
 
-**Java**
 
-```csharp
+
+```java
 License lic = new License();
 lic.setLicense(LICENSE_PATH);
 ```
@@ -94,9 +94,9 @@ To extract a text from databases **DbContainer** class is used. **DbContainer
 
 Using DbContainer as a container:
 
-**Java**
 
-```csharp
+
+```java
 // Create a container
 DbContainer container = new DbContainer(java.sql.DriverManager.getConnection(connectionString));
 try {
@@ -141,9 +141,9 @@ This feature allows extracting data from PDF Forms.
 
 #### Usage
 
-**Java**
 
-```csharp
+
+```java
 // Create a text extractor
 PdfTextExtractor extractor = new PdfTextExtractor(fileName);
 try {
@@ -173,9 +173,9 @@ Added **DocumentContent** property to **WordsTextExtractor** class.
 
 #### Usage
 
-**Java**
 
-```csharp
+
+```java
 // Create a text extractor
 WordsTextExtractor extractor = new WordsTextExtractor("invoice.docx");
  
@@ -208,9 +208,9 @@ Added **DocumentContent** property to **CellsTextExtractor** class.
 
 #### Usage
 
-**Java**
 
-```csharp
+
+```java
 // Create a text extractor
 CellsTextExtractor extractor = new CellsTextExtractor("invoice.xlsx");
  
@@ -243,9 +243,9 @@ Added **DocumentContent** property to **SlidesTextExtractor** class.
 
 #### Usage
 
-**Java**
 
-```csharp
+
+```java
 // Create a text extractor
 SlidesTextExtractor extractor = new SlidesTextExtractor("presentation.pptx");
  
@@ -282,9 +282,9 @@ Added **PasswordProvider** property to **LoadOptions** class.
 
 `IPasswordProvider` interface has only one method:
 
-**Java**
 
-```csharp
+
+```java
 void onPasswordRequest(object sender, PasswordRequest request);
 ```
 
@@ -297,9 +297,9 @@ This method is called when the extractor or container meets a password-protected
 
 A user has two ways to provide a password for the document. When the password is known, `Password` property of *`LoadOptions`* class is used. If it is not known whether it is protected or not before opening the document, `PasswordProvider` property of *`LoadOptions`* class is used.
 
-**Java**
 
-```csharp
+
+```java
 class Indexer {
     // A name of the current processed file
     private String currentFileName;

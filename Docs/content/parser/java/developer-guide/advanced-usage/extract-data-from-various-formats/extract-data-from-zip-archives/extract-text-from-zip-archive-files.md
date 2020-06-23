@@ -28,7 +28,7 @@ Here are the steps to extract an email text from Zip archives:
 
 The following example shows how to extract a text from Zip archives:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleZip)) {
     // Extract attachments from the container

@@ -23,7 +23,7 @@ Here are the steps to specify the document format for Markup document.
 
 The following example shows how to specify the document format for Markup document:  
 
-```csharp
+```java
 try (InputStream stream = new FileInputStream(Constants.SampleMd)) {
     // Create an instance of Parser class for markdown document
     try (Parser parser = new Parser(stream, new LoadOptions(FileFormat.Markup))) {

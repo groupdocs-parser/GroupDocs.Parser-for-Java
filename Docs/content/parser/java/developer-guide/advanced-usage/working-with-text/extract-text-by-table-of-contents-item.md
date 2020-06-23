@@ -12,7 +12,7 @@ GroupDocs.Parser provides the functionality to extract a text by an item of tabl
 
 Text is extracted by `**[extractText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TocItem#extractText())**()`  method:
 
-```csharp
+```java
 // Print the text of the chapter
 try(TextReader reader = tocItem.extractText()) {
     System.out.println("----");
@@ -47,7 +47,7 @@ Here are the steps to extract a text by an item of table of contents:
 *   Check if collection isn't *null* (table of contents extraction is supported for the document);
 *   Iterate through the *collection* and extract a text
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleDocxWithToc)) {
     // Get table of contents

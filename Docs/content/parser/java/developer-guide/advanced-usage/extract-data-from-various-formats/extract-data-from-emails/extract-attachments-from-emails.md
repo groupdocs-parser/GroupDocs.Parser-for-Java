@@ -31,7 +31,7 @@ Here are the steps to extract an email text from email attachments:
 
 The following example shows how to extract a text from email attachments:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleMsg)) {
     // Extract attachments from the container

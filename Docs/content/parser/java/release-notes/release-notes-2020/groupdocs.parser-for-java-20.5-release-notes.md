@@ -43,7 +43,7 @@ IDocumentInfo interface was updated with changes as follows:
 
 The following example shows how to extract a raw text from a document page:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(filePath)) {
     // Check if the document supports text extraction
@@ -89,7 +89,7 @@ Parser class was updated with changes as follows:
 
 The following example shows how to extract data from Sqlite database:
 
-```csharp
+```java
 // Create DbConnection object
 java.sql.Connection connection = java.sql.DriverManager.getConnection(String.format("jdbc:sqlite:%s", Constants.SampleDatabase));
 // Create an instance of Parser class to extract tables from the database
@@ -137,7 +137,7 @@ Parser class was updated with changes as follows:
 
 The following example shows how to extract emails from Exchange Server:
 
-```csharp
+```java
 // Create the connection object for Exchange Web Services protocol
 EmailConnection connection = new EmailEwsConnection(
         "https://outlook.office365.com/ews/exchange.asmx",

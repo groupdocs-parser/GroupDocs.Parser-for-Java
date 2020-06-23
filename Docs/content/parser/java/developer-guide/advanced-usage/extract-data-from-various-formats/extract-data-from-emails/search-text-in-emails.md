@@ -20,7 +20,7 @@ Here are the steps to search a keyword in the email:
 
 The following example shows how to find a keyword in the email:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleMsg)) {
     // Search a keyword:
@@ -44,7 +44,7 @@ Here are the steps to search with a regular expression in the email:
 
 The following example shows how to search with a regular expression in the email:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleMsg)) {
     // Search with a regular expression with case matching

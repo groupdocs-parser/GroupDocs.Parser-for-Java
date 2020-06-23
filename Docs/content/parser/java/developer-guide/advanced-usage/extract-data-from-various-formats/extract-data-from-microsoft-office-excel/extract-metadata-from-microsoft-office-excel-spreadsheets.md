@@ -42,7 +42,7 @@ Here are the steps to extract metadata from Microsoft Office Excel spreadsheet:
 
 The following example demonstrates how to extract metadata from Excel spreadsheet:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleXlsx)) {
     // Extract metadata from the spreadsheet

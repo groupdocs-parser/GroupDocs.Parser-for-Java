@@ -20,7 +20,7 @@ Here are the steps to search a keyword in HTML document:
 
 The following example shows how to find a keyword in HTML document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleHtml)) {
     // Search a keyword:
@@ -44,7 +44,7 @@ Here are the steps to search with a regular expression in HTML document:
 
 The following example shows how to search with a regular expression in HTML document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleHtml)) {
     // Search with a regular expression with case matching

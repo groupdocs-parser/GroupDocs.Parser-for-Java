@@ -16,7 +16,7 @@ GroupDocs.Parser provides the functionality to extract emails from remote server
 
 To create an instance of `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` class to extract emails from a remote server the following constructor is used:
 
-```csharp
+```java
 Parser(String filePath, LoadOptions loadOptions);
 
 ```
@@ -31,7 +31,7 @@ Here are the steps to extract emails from the remote server:
 
 The following example shows how to extract emails from Exchange Server:
 
-```csharp
+```java
 StringBuilder sb = new StringBuilder();
 sb.append("mode = exchange");
 sb.append('\n');

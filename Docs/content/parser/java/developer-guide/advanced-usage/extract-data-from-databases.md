@@ -12,7 +12,7 @@ GroupDocs.Parser provides the functionality to extract data from databases via J
 
 To create an instance of `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` class to extract data from a database the following constructor is used:
 
-```csharp
+```java
 Parser(String filePath, LoadOptions loadOptions);
 
 ```
@@ -30,7 +30,7 @@ Here are the steps to extract emails from Sqlite database:
 
 The following example shows how to extract data from Sqlite database:
 
-```csharp
+```java
 String connectionString = String.format("jdbc:sqlite:%s", Constants.SampleDatabase);
 // Create an instance of Parser class to extract tables from the database
 // As filePath connection parameters are passed; LoadOptions is set to Database file format

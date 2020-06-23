@@ -10,7 +10,7 @@ hideChildren: False
 ---
 GroupDocs.Parser provides the functionality to extract text areas from documents by the following methods:
 
-```csharp
+```java
 Iterable<PageTextArea> getTextAreas();
 Iterable<PageTextArea> getTextAreas(PageTextAreaOptions options);
 Iterable<PageTextArea> getTextAreas(int pageIndex);
@@ -42,7 +42,7 @@ Here are the steps to extract text areas from the whole document:
 
 The following example shows how to extract all text areas from the whole document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleImagesPdf)) {
     // Extract text areas
@@ -73,7 +73,7 @@ Here are the steps to extract text areas from the document page:
 
 The following example shows how to extract text areas from a document page:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleImagesPdf)) {
     // Check if the document supports text areas extraction
@@ -124,7 +124,7 @@ Here are the steps to extract text areas from the upper-left corner:
 
 The following example shows how to extract only text areas with digits from the upper-left corner:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleImagesPdf)) {
     // Create the options which are used for text area extraction

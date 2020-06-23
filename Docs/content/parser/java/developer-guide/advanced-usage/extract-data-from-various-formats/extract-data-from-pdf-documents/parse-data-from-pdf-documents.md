@@ -19,7 +19,7 @@ Here are the steps to extract data from PDF Form:
 
 The following example shows the use case when a user fills in PDF form and send it by email (for example). The software opens this PDF and extracts the preliminary record:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleCarWashPdf)) {
     // Extract data from PDF document
@@ -76,7 +76,7 @@ Here are the steps to parse data from PDF document by the user-generated templat
 
 The following example shows how to parse data from PDF document by the user-generated template:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleInvoicePdf)) {
     // Parse the document by the template

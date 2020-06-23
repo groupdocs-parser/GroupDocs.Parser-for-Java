@@ -14,7 +14,7 @@ GroupDocs.Parser allows to extract basic metadata from documents of various form
 
 To extract metadata from documents simply call the `**[getMetadata](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getMetadata())**()`method:
 
-```csharp
+```java
 Iterable<MetadataItem> getMetadata();
 
 ```
@@ -37,7 +37,7 @@ Here are the steps to extract metadata from the document:
 
 The following example shows how to extract metadata from a document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleDocx)) {
     // Extract metadata from the document

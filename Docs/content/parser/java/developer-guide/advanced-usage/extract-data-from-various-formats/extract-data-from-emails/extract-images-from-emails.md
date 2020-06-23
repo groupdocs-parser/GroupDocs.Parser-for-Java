@@ -20,7 +20,7 @@ Here are the steps to extract images from an email to PNG-files:
 
 The following example demonstrates how to extract images from an email:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleMsg)) {
     // Extract images from the email

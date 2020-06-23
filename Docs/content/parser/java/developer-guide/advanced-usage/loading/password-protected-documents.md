@@ -18,7 +18,7 @@ The following are the steps to work with password protected documents.
 
 The following code sample shows how to process password protected documents.
 
-```csharp
+```java
 try {
     String password = "123456";
     // Create an instance of Parser class with the password:

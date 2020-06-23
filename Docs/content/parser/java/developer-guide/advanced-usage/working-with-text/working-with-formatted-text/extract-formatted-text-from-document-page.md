@@ -10,14 +10,14 @@ hideChildren: False
 ---
 GroupDocs.Parser provides the functionality to extract a formatted text from document page by the **getFormattedText** method:
 
-```csharp
+```java
 TextReader getFormattedText(int pageIndex, FormattedTextOptions options);
 
 ```
 
 The method returns an instance of *TextReader* class with an extracted text. *FormattedTextOptions* has the following constructor:
 
-```csharp
+```java
 FormattedTextOptions(FormattedTextMode mode)
 
 ```
@@ -47,7 +47,7 @@ Here are the steps to extract a HTML formatted page text from the document:
 
 The following example shows how to extract a document page text as Markdown text:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleDocx)) {
     // Check if the document supports formatted text extraction

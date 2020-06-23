@@ -51,18 +51,18 @@ This feature allows extracting tables from PDF documents.
 
 For extracting tables from PDF document, **TableAreaParser**class is used. The instance of **TableAreaParser**class is available via property with the same name in **PdfTextExtractor** class:
 
-**Java**
 
-```csharp
+
+```java
 PdfTextExtractor extractor = new PdfTextExtractor("document.pdf"); 
 TableAreaParser parser = extractor.getTableAreaParser();
 ```
 
 **ParseTableArea** method is used to extract a table from the document page:
 
-**Java**
 
-```csharp
+
+```java
 TableArea parseTableArea(int pageIndex, TableAreaLayout tableAreaLayout)
 ```
 
@@ -107,9 +107,9 @@ These collections represent bounds of columns and rows. For example, for 2x2 t
 
 Usage:
 
-**Java**
 
-```csharp
+
+```java
 void parse(String fileName) throws java.lang.Exception {
     // Create a text extractor
     try (PdfTextExtractor extractor = new PdfTextExtractor(fileName)) {
@@ -163,18 +163,18 @@ void parse(String fileName) throws java.lang.Exception {
 
 A user can create **TableAreaLayout** object manually or by using **TableAreaDetector** class. The instance of **TableAreaDetector** class is available via property with the same name in **PdfTextExtractor** class:
 
-**Java**
 
-```csharp
+
+```java
 PdfTextExtractor extractor = new PdfTextExtractor("document.pdf");
 TableAreaDetector detector = extractor.getTableAreaDetector();
 ```
 
 **TableAreaDetector** class is created to find table bounds in automatic mode. **detectLayouts** method searches tables on the page of the document and returns a collection of table layouts:
 
-**Java**
 
-```csharp
+
+```java
 IList<TableAreaLayout> detectLayouts(int pageIndex, params TableAreaDetectorParameters[] parameters)
 ```
 
@@ -192,9 +192,9 @@ This method accepts the zero-based page index and optional parameters. These par
 
 By setting parameters a user can tune detector's behavior. For example, limit the page area to search a table and disable searching complex tables (with merged cells):
 
-**Java**
 
-```csharp
+
+```java
 void detectAndParse(String fileName) throws java.lang.Exception {
     // Create a text extractor
     try (PdfTextExtractor extractor = new PdfTextExtractor(fileName)) {
@@ -275,9 +275,9 @@ No API changes.
 
 #### Usage
 
-**Java**
 
-```csharp
+
+```java
 void extractText(String fileName) {
     // Extract a text from the file
     String text = Extractor.DEFAULT.extractText(fileName);
@@ -325,9 +325,9 @@ This feature allows detecting password-protected Office Open XML documents by co
 
 To detect media type of encrypted Office Open XML document **Detect(Stream, LoadOptions)** method is used:
 
-**Java**
 
-```csharp
+
+```java
 void detect(String fileName, String password) throws java.lang.Exception {
     // Create load options
     LoadOptions loadOptions = new LoadOptions();
@@ -349,9 +349,9 @@ void detect(String fileName, String password) throws java.lang.Exception {
 
 For batch document processing PasswordProvider is used:
 
-**Java**
 
-```csharp
+
+```java
 class Detector implements IPasswordProvider {
     private String currentFile;
  

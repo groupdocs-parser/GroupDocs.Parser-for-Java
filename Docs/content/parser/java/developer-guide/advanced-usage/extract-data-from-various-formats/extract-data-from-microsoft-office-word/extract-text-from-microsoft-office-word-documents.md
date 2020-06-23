@@ -20,7 +20,7 @@ Here are the steps to extract a text from Microsoft Office Word document:
 
 The following example demonstrates how to extract a text from Microsoft Office Word document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleDocx)) {
     // Extract a text into the reader
@@ -43,7 +43,7 @@ Here are the steps to extract a text from the page of Microsoft Office Word docu
 
 The following example demonstrates how to extract a text from the page of Microsoft Office Word document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleDocxWithToc)) {
     // Get the document info
@@ -71,7 +71,7 @@ Here are the steps to extract a text from Microsoft Office Word document as HTML
 
 The following example shows how to extract a text from Microsoft Office Word document as HTML:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleDocx)) {
     // Extract a formatted text into the reader

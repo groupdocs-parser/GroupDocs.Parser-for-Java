@@ -20,7 +20,7 @@ Here are the steps to search a keyword in Microsoft Office PowerPoint presentati
 
 The following example shows how to find a keyword in Microsoft Office PowerPoint presentation:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SamplePptx)) {
     // Search a keyword:
@@ -44,7 +44,7 @@ Here are the steps to search with a regular expression in Microsoft Office Power
 
 The following example shows how to search with a regular expression in Microsoft Office PowerPoint presentation:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SamplePptx)) {
     // Search with a regular expression with case matching

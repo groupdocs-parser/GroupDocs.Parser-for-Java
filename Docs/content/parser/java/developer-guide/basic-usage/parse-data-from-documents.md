@@ -18,7 +18,7 @@ Using this feature is straightforward. Simply define a template programmatically
 
 GroupDocs.Parser provides the functionality to extract basic metadata from documents by the `**[parseByTemplate](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#parseByTemplate(com.groupdocs.parser.templates.Template))**([Template](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/Template "class in com.groupdocs.parser.templates") template)` method:
 
-```csharp
+```java
 DocumentData parseByTemplate(Template template)
 ```
 
@@ -34,7 +34,7 @@ Here are the steps to parse data from the document by user-generated template:
 
 The following example shows how to parse data from the document by user-generated template :
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleInvoicePdf)) {
     // Parse the document by the template

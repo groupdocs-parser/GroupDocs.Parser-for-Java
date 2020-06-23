@@ -35,7 +35,7 @@ Here are the steps to detect the encoding of the document:
 
 The following example shows how to detect the encoding of the document:
 
-```csharp
+```java
 // Create an instance of LoadOptions class with the default ANSI encoding.
 // This encoding is returned for ANSI text documents.
 LoadOptions loadOptions = new LoadOptions(FileFormat.WordProcessing, null, null, Charset.forName("US-ASCII"));

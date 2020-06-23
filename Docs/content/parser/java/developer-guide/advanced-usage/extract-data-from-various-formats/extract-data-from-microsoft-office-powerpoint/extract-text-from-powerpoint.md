@@ -20,7 +20,7 @@ Here are the steps to extract a text from Microsoft Office PowerPoint presentati
 
 The following example demonstrates how to extract a text from Microsoft Office PowerPoint presentation:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SamplePptx)) {
     // Extract a text into the reader
@@ -41,7 +41,7 @@ Here are the steps to extract a text from the slide of Microsoft Office PowerPoi
 
 The following example demonstrates how to extract a text from the slide of Microsoft Office PowerPoint presentation:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SamplePptx)) {
     // Get the presentation info
@@ -74,7 +74,7 @@ Here are the steps to extract a raw text from the slide of Microsoft Office Powe
 
 The following example demonstrates how to extract a raw text from the slide of Microsoft Office PowerPoint presentation:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SamplePptx)) {
     // Check if the document supports text extraction
@@ -116,7 +116,7 @@ Here are the steps to extract a text from Microsoft Office PowerPoint presentat
 
 The following example shows how to extract a text from Microsoft Office PowerPoint presentation as HTML:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SamplePptx)) {
     // Extract a formatted text into the reader

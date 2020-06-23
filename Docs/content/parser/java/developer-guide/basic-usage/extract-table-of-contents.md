@@ -14,7 +14,7 @@ GroupDocs.Parser allows to extract table of contents from Microsoft Word (DOC, D
 
 To extract table of contents from documents, please use the `**[getToc](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getToc())**()`method:
 
-```csharp
+```java
 Iterable<TocItem> getToc()
 
 ```
@@ -37,7 +37,7 @@ Here are the steps to extract extract table of contents from the document:
 
 The following example shows how to extract table of contents from CHM file:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleChm)) {
     // Check if text extraction is supported

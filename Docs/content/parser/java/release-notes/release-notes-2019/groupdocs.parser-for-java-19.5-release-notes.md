@@ -96,7 +96,7 @@ There are the following features in this release:
     
     An instance of the class is created by the following constructors:
     
-    ```csharp
+    ```java
     // Creates a document template with fields
     DocumentTemplate(java.util.List<TemplateField> templateFields);
     // Creates a document template with fields and tables
@@ -115,7 +115,7 @@ There are the following features in this release:
     
     An instance of the class is created by the following constructors:
     
-    ```csharp
+    ```java
     TemplateField(String fieldName, TemplateFieldPosition fieldPosition)
     TemplateField(String fieldName, int pageIndex, TemplateFieldPosition fieldPosition)
     ```
@@ -142,7 +142,7 @@ There are the following features in this release:
     
     An instance of the class is created by the following static methods:
     
-    ```csharp
+    ```java
     // Creates a related template field position (scaling mode is enabled)
     TemplateFieldPosition createRegex(String regex);
     // Creates a regex template field position.
@@ -164,7 +164,7 @@ There are the following features in this release:
     
     This is simplest way to define the field position. It's required to set a rectangular area at the page that bounds field value. All the text that is contained (even partially) into the rectangular area will be extracted as a value:
     
-    ```csharp
+    ```java
     // Create a fixed template field with "Address" name which is bounded by a rectangle at the position (35, 160) and with the size (110, 20)
     TemplateField templateField = new TemplateField("Address", TemplateFieldPosition.createFixed(new Rectangle(35, 160, 110, 20)));
     ```
@@ -185,14 +185,14 @@ There are the following features in this release:
     
     This way to define the field position allows to find a field value by a regular expression. For example, if the document contains "Invoice Number   INV-12345" then template field can be defined in the following way:
     
-    ```csharp
+    ```java
     // Create a regex template field with "InvoiceNumber" name
     TemplateField templateField = new TemplateField("InvoiceNumber", TemplateFieldPosition.createRegex("Invoice Number\\s+[A-Z0-9\\-]+"));
     ```
     
     In this case as a value the entire string is extracted. To extract only a part of the string the regular expression group "value" is used:
     
-    ```csharp
+    ```java
     // Create a regex template field with "InvoiceNumber" name with "value" group
     TemplateField templateField = new TemplateField("InvoiceNumber", TemplateFieldPosition.createRegex("Invoice Number\\s+(?<value>[A-Z0-9\\-]+)"));
     ```
@@ -205,7 +205,7 @@ There are the following features in this release:
     
     This way to define the field position allows to find a field value by extracting a rectangular area around the related field. For example, if it's known that the field with an invoice number is placed on the right of "Invoice number" string the following code is used:
     
-    ```csharp
+    ```java
     // Create a regex template field to find "Invoice Number" text
     TemplateField invoice = new TemplateField("Invoice", TemplateFieldPosition.createRegex("Invoice Number"));
     // Create a related template field associated with "Invoice" field and extract the value on the right of it
@@ -218,7 +218,7 @@ There are the following features in this release:
     
     To simplify the setting of the size of template field CanScaleSearchAreaSize property is used. The size of template field is scaled according to the related field if CanScaleSearchAreaSize is set to true.This is useful when the font size is not known in advance, but the proportions of the size of the value (the ratio of height to width) are approximately known:
     
-    ```csharp
+    ```java
     TemplateField invoice = new TemplateField("Invoice", TemplateFieldPosition.createRegex("Invoice Number"));
     // Create a related template field associated with "Invoice" field with auto-scale
     TemplateField invoiceNumber = new TemplateField("InvoiceNumber", TemplateFieldPosition.createRelated("invoice", TemplateFieldRelatedPositionType.Right, new Size(100, 15), true));
@@ -237,7 +237,7 @@ There are the following features in this release:
     
     The related field can be any field which was previously defined in the template:
     
-    ```csharp
+    ```java
     // Create regex template field
     TemplateField fromField = new TemplateField("From", 0, TemplateFieldPosition.createRegex("From"));
     // Create related template field linked to "From" regex field and placed under it
@@ -261,13 +261,13 @@ There are the following features in this release:
     
     An instance of DocumentTemplate class is created by the constructor:
     
-    ```csharp
+    ```java
     DocumentTemplate(java.util.List<TemplateField> templateFields);
     ```
     
     This constructor accepts a collection of template fields:
     
-    ```csharp
+    ```java
     // Create an array of template fields
     TemplateField[] fields = new TemplateField[]
     {
@@ -303,7 +303,7 @@ There are the following features in this release:
     
     An instance of the class is created by the following constructors:
     
-    ```csharp
+    ```java
     TemplateTable(String tableName, TableAreaDetectorParameters detectorParameters)
     TemplateTable(String tableName, int pageIndex, TableAreaDetectorParameters detectorParameters)
     TemplateTable(String tableName, TableAreaLayout tableAreaLayout)
@@ -324,7 +324,7 @@ There are the following features in this release:
     
     If a template table is set by detector parameters, the table is detected automatically:
     
-    ```csharp
+    ```java
     // Create detector parameters
     TableAreaDetectorParameters detectorParameters = new TableAreaDetectorParameters();
     // Table is bounded by the rectangular area
@@ -349,7 +349,7 @@ There are the following features in this release:
     
     These collections represent bounds of columns and rows. For example, for 2x2 table there are 3 vertical and 3 horizontal separators:
     
-    ```csharp
+    ```java
     ---------
     |   |   |
     ---------
@@ -359,7 +359,7 @@ There are the following features in this release:
     
     In this case the document template has the following structure:
     
-    ```csharp
+    ```java
     // Create a table layout
     TableAreaLayout tableAreaLayout = new TableAreaLayout();
      
@@ -388,7 +388,7 @@ There are the following features in this release:
     
     For data extracting DocumentParser class is used. This class has only one method with different overloads:
     
-    ```csharp
+    ```java
     DocumentData parseByTemplate(String fileName, DocumentTemplate documentTemplate)
     DocumentData parseByTemplate(String fileName, DocumentTemplate documentTemplate, LoadOptions loadOptions)
     DocumentData parseByTemplate(java.io.InputStream stream, DocumentTemplate documentTemplate)
@@ -399,7 +399,7 @@ There are the following features in this release:
     
     To get the instance of DocumentParser class Default property is used:
     
-    ```csharp
+    ```java
     DocumentData data = DocumentParser.DEFAULT.parseByTemplate("invoice - John Smith, Jan-2019.pdf", template);
     ```
     
@@ -409,7 +409,7 @@ There are the following features in this release:
     
 ![](parser/java/images/groupdocs-parser-for-java-19-5-release-notes_6.jpg)
     
-    ```csharp
+    ```java
     // Create a collection of template fields
     TemplateField[] templateFields = new TemplateField[]
     {
@@ -504,7 +504,7 @@ There are the following features in this release:
     
     An instance of the class is created by the following constructors:
     
-    ```csharp
+    ```java
     // Creates an instance for the fixed or regex template fields
     DocumentDataField(String fieldName, int pageIndex, String value, Rectangle rectangle);
     // Creates an instance for the related template fields
@@ -517,7 +517,7 @@ There are the following features in this release:
     
     Iteration via all the fields:
     
-    ```csharp
+    ```java
     for (int i = 0; i < data.getCount(); i++) {
         System.out.print(data.get_Item(i).getFieldName() + ": ");
         System.out.println(data.get_Item(i).getValue());
@@ -526,7 +526,7 @@ There are the following features in this release:
     
     Find fields by a field name:
     
-    ```csharp
+    ```java
     // Get all the fields with "Address" name
     java.util.List<DocumentDataField> addressFields = data.getDataFieldsByName("Address");
     if (addressFields.size() == 0) {
@@ -562,7 +562,7 @@ There are the following features in this release:
     
     An instance of the class is created by the following constructors:
     
-    ```csharp
+    ```java
     // Creates an empty instance (when value isn't found)
     DocumentDataTable(String tableName, int pageIndex);
     // Creates an instance of the data table
@@ -571,7 +571,7 @@ There are the following features in this release:
     
     Method DocumentData.GetTables() is used to work with tables:
     
-    ```csharp
+    ```java
     // Get all the tables
     java.util.List<DocumentDataTable> dataTables = data.getDataTables();
     // Iterate over tables
@@ -618,7 +618,7 @@ There are the following features in this release:
     
     getTableRectangle method returns a rectangle that bounds the table.
     
-    ```csharp
+    ```java
     // Create a table layout
     TableAreaLayout templateLayout = new TableAreaLayout();
      
@@ -677,7 +677,7 @@ There are the following features in this release:
     
     This API provides the ability to detect tables in documents by setting table vertical separators:
     
-    ```csharp
+    ```java
     // Create PDF text extractor
     PdfTextExtractor extractor = new PdfTextExtractor(fileName);
     try
@@ -710,7 +710,7 @@ There are the following features in this release:
     
     For more accurate table detection a user can set a rectangular area that bounds the table:
     
-    ```csharp
+    ```java
     // Create PDF text extractor
     PdfTextExtractor extractor = new PdfTextExtractor(fileName);
     try
@@ -763,7 +763,7 @@ There are the following features in this release:
     
     Use TextProperties(Font font) or TextProperties(Font font, string style) constructors instead:
     
-    ```csharp
+    ```java
     TextProperties properties = new TextProperties(new Font(false, true));
      
     // instead of:
@@ -771,7 +771,7 @@ There are the following features in this release:
     TextProperties properties = new TextProperties(false, true);
     ```
     
-    ```csharp
+    ```java
     TextProperties properties = new TextProperties(new Font(false, true), "congue");
      
     // instead of:
@@ -781,7 +781,7 @@ There are the following features in this release:
     
     Use Font property instead of isBold() or isItalic() properties:
     
-    ```csharp
+    ```java
     TextProperties properties = new TextProperties(new Font(false, true), "congue");
      
     System.out.println("IsItalic " + (properties.getFont().isItalic() ? "yes" : "No"));

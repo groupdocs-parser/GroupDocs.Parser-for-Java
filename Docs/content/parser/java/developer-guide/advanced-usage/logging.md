@@ -23,7 +23,7 @@ Here are the steps to receive the information via `[ILogger](https://apireferen
 
 The following example shows how to receive the information via `[ILogger](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ILogger "interface in com.groupdocs.parser.options")` interface.
 
-```csharp
+```java
 try {
     // Create an instance of Logger class
     Logger logger = new Logger();

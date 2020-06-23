@@ -42,7 +42,7 @@ There are no changes in public API
 
 The following example shows how to extract hyperlinks from the document:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleHyperlinksDocx)) {
     // Extract text structure to the XML reader

@@ -10,7 +10,7 @@ hideChildren: False
 ---
 GroupDocs.Parser provides the functionality to get the basic document info by the `**[getDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getDocumentInfo())**()` method:
 
-```csharp
+```java
 IDocumentInfo getDocumentInfo();
 
 ```
@@ -31,7 +31,7 @@ Here are the steps to get document info:
 
 The following example shows how to get document info:
 
-```csharp
+```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleDocx)) {
     // Get the document info
