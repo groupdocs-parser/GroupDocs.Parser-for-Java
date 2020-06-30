@@ -29,11 +29,15 @@ public class Constants {
 
     public static final String SampleImagesPdf = getFilePath("images.pdf");
 
+    public static final String HyperlinksPdf = getFilePath("Hyperlinks.pdf");
+
     public static final String SampleFormsPdf = getFilePath("forms.pdf");
 
     public static final String SampleCarWashPdf = getFilePath("SampleCarWash.pdf");
 
     public static final String SampleInvoicePdf = getFilePath("invoice.pdf");
+
+    public static final String SampleInvoicePagesPdf = getFilePath("invoice_pages.pdf");
 
     public static final String SamplePassword = getFilePath("samplePassword.pdf");
 
