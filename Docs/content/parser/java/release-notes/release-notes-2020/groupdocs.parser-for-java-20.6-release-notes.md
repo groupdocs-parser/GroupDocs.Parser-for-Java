@@ -1,14 +1,14 @@
 ---
-id: groupdocs-parser-for-java-20-5-release-notes
-url: parser/java/groupdocs-parser-for-java-20-5-release-notes
-title: GroupDocs.Parser for Java 20.5 Release Notes
+id: groupdocs-parser-for-java-20-6-release-notes
+url: parser/java/groupdocs-parser-for-java-20-6-release-notes
+title: GroupDocs.Parser for Java 20.6 Release Notes
 weight: 3
 description: ""
 keywords: 
 productName: GroupDocs.Parser for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}This page contains release notes for GroupDocs.Parser for Java 20.5{{< /alert >}}
+{{< alert style="info" >}}This page contains release notes for GroupDocs.Parser for Java 20.6{{< /alert >}}
 
 ## Major Features
 
