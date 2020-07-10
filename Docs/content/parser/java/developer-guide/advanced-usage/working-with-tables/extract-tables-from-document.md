@@ -11,7 +11,7 @@ hideChildren: False
 
 GroupDocs.Parser provides the functionality to extract tables from documents by the [getTables](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser/Parser#getTables(com.groupdocs.parser.options.PageTableAreaOptions))([PageTableAreaOptions](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.options/PageTableAreaOptions) options) method:
 
-```
+```java
 Iterable<PageTableArea> getTables(PageTableAreaOptions options);
 ```
 

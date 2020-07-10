@@ -10,7 +10,7 @@ hideChildren: False
 ---
 GroupDocs.Parser provides the functionality to extract images from document page by the `**[getImages](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getImages(int))**(int pageIndex)` method:
 
-```java
+c
 Iterable<PageImageArea> getImages(int pageIndex);
 
 ```
