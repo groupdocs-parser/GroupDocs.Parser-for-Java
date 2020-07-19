@@ -8,18 +8,15 @@ keywords:
 productName: GroupDocs.Parser for Java
 hideChildren: False
 ---
-To extract a text from HTML documents `**[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText())**()` method is used. This method allows to extract a text from the entire document. Pagination and raw mode is not supported for emails.
-
+To extract a text from HTML documents [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText())() method is used. This method allows to extract a text from the entire document. Pagination and raw mode is not supported for emails.
 Here are the steps to extract a text from HTML document:
-
-*   Instantiate `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object for the initial document;
-*   Call `**[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText())**()` method and obtain `[TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data")` object;
+*   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
+*   Call [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText())() method and obtain [TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data") object;
 *   Read a text from *reader*.
-
-{{< alert style="warning" >}}getText() method returns null value if text extraction isn't supported for the document. For example, text extraction isn't supported for Zip archive. Therefore, for Zip archive getText() method returns null. For an HTML document getText() method returns an empty TextReader object (readToEnd() method returns an empty string).{{< /alert >}}
-
+{{< alert style="warning" >}}
+[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText())() method returns *null* value if text extraction isn't supported for the document. For example, text extraction isn't supported for Zip archive. Therefore, for Zip archive [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText())() method returns *null*. For an HTML document [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText())() method returns an empty [TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data") object ([readToEnd](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader#readToEnd())() method returns an empty string).
+{{< /alert >}}
 The following example demonstrates how to extract a text from HTML document:
-
 ```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleHtml)) {
