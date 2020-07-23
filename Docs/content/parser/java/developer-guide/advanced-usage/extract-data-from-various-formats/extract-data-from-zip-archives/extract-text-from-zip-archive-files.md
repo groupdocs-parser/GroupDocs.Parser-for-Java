@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Parser for Java
 hideChildren: False
 ---
-To extract files from ZIP archives `**[getContainer](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getContainer())**()` method is used. This method returns the collection of `[ContainerItem](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/ContainerItem "class in com.groupdocs.parser.data")` objects.
+To extract files from ZIP archives [getContainer](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getContainer())() method is used. This method returns the collection of [ContainerItem](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/ContainerItem "class in com.groupdocs.parser.data") objects.
 
 Zip Entry can contain the following metadata:
 
@@ -21,10 +21,10 @@ These metadata refer to a container element itself, not a document.
 
 Here are the steps to extract an email text from Zip archives:
 
-*   Instantiate `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object for the initial document;
-*   Call `**[getContainer](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getContainer())**()` method and obtain collection of `[ContainerItem](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/ContainerItem "class in com.groupdocs.parser.data")` objects;
+*   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
+*   Call [getContainer](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getContainer())() method and obtain collection of [ContainerItem](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/ContainerItem "class in com.groupdocs.parser.data") objects;
 *   Check if *collection* isn't *null* (container extraction is supported for the document);
-*   Iterate through the collection and obtain `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object to extract a text.
+*   Iterate through the collection and obtain [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object to extract a text.
 
 The following example shows how to extract a text from Zip archives:
 

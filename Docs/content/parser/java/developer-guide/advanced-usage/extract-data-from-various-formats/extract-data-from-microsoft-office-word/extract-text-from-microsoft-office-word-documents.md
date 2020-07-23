@@ -8,12 +8,12 @@ keywords:
 productName: GroupDocs.Parser for Java
 hideChildren: False
 ---
-To extract a text from Microsoft Office Word documents `**[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText())**()` and `**[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText(int))**(int pageIndex)` methods are used. These methods allow to extract a text from the entire document or a text from the selected page. `[TextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextOptions "class in com.groupdocs.parser.options")` parameter is ignored for Microsoft Office Words documents.
+To extract a text from Microsoft Office Word documents [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText())() and [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText(int))(int pageIndex) methods are used. These methods allow to extract a text from the entire document or a text from the selected page. [TextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextOptions "class in com.groupdocs.parser.options") parameter is ignored for Microsoft Office Words documents.
 
 Here are the steps to extract a text from Microsoft Office Word document:
 
-*   Instantiate `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object for the initial document;
-*   Call `**[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText())**()` method and obtain `[TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data")` object;
+*   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
+*   Call [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText())() method and obtain [TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data") object;
 *   Read a text from *reader*.
 
 {{< alert style="warning" >}}getText() method returns null value if text extraction isn't supported for the document. For example, text extraction isn't supported for Zip archive. Therefore, for Zip archive getText() method returns null. For empty Microsoft Office Word document getText() method returns an empty TextReader object (readToEnd() method returns an empty string).{{< /alert >}}
@@ -34,9 +34,9 @@ try (Parser parser = new Parser(Constants.SampleDocx)) {
 
 Here are the steps to extract a text from the page of Microsoft Office Word document:
 
-*   Instantiate `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object for the initial document;
-*   Call `**[getDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getDocumentInfo())**()` method and obtain `[IDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo "interface in com.groupdocs.parser.options")` object with `**[getPageCount](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo#getPageCount())**()` property;
-*   Call `**[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText(int))**(int pageIndex)` method with the page index and obtain `[TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data")` object;
+*   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
+*   Call [getDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getDocumentInfo())() method and obtain [IDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo "interface in com.groupdocs.parser.options") object with [getPageCount](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo#getPageCount())() property;
+*   Call [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText(int))(int pageIndex) method with the page index and obtain [TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data") object;
 *   Read a text from *reader*.
 
 {{< alert style="warning" >}}Text extraction from Microsoft Office Word document page is more resource consuming operation. Use text extraction from the entire document where it is applicable.{{< /alert >}}
@@ -65,8 +65,8 @@ GroupDocs.Parser also allows to extract a text from Microsoft Office Word docume
 
 Here are the steps to extract a text from Microsoft Office Word document as HTML:
 
-*   Instantiate `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object for the initial document;
-*   Call `**[getFormattedText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getFormattedText(com.groupdocs.parser.options.FormattedTextOptions))**([FormattedTextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FormattedTextOptions "class in com.groupdocs.parser.options") options)` method and obtain `[TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data")` object;
+*   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
+*   Call [getFormattedText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getFormattedText(com.groupdocs.parser.options.FormattedTextOptions))([FormattedTextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FormattedTextOptions "class in com.groupdocs.parser.options") options) method and obtain [TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data") object;
 *   Read a text from *reader*.
 
 The following example shows how to extract a text from Microsoft Office Word document as HTML:

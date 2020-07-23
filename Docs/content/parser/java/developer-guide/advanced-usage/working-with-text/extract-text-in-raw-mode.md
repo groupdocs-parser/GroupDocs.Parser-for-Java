@@ -29,20 +29,20 @@ Methods return an instance of *TextReader* class with an extracted text. The fir
 
 {{< alert style="warning" >}}Instead of the accurate mode, getRawPageCount property of DocumentInfo class is used to avoid extra calculations.{{< /alert >}}
 
-`[TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data")` class extends [*java.io.Reader*](http://docs.oracle.com/javase/7/docs/api/java/io/Reader.html?is-external=true) and adds the following members:
+[TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data") class extends [*java.io.Reader*](http://docs.oracle.com/javase/7/docs/api/java/io/Reader.html?is-external=true) and adds the following members:
 
 | Member | Description |
 | --- | --- |
-| `**[readLine](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader#readLine())**()` | Reads a line of characters from the text reader and returns the data as a string. |
-| `**[readToEnd](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader#readToEnd())**()` | Reads all characters from the current position to the end of the text reader and returns them as one string. |
+| [readLine](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader#readLine())() | Reads a line of characters from the text reader and returns the data as a string. |
+| [readToEnd](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader#readToEnd())() | Reads all characters from the current position to the end of the text reader and returns them as one string. |
 
 ## Extract text
 
 Here are the steps to extract a raw text from the document:
 
-*   Instantiate `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object for the initial document;
-*   Instantiate `[TextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextOptions "class in com.groupdocs.parser.options")` object with *true* parameter;
-*   Call `**[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText(com.groupdocs.parser.options.TextOptions))**([TextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextOptions "class in com.groupdocs.parser.options") options)` method with `[TextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextOptions "class in com.groupdocs.parser.options")` parameter and obtain `[TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data")` object;
+*   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
+*   Instantiate [TextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextOptions "class in com.groupdocs.parser.options") object with *true* parameter;
+*   Call [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText(com.groupdocs.parser.options.TextOptions))([TextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextOptions "class in com.groupdocs.parser.options") options) method with [TextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextOptions "class in com.groupdocs.parser.options") parameter and obtain [TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data") object;
 *   Check if *reader* isn't *null* (text extraction is supported for the document);
 *   Read a text from *reader*.
 
@@ -64,12 +64,12 @@ try (Parser parser = new Parser(Constants.SamplePdf)) {
 
 Here are the steps to extract a raw text from the document page:
 
-*   Instantiate `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object for the initial document;
-*   Instantiate `[TextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextOptions "class in com.groupdocs.parser.options")` object with *true* parameter;
-*   Call `**[getDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getDocumentInfo())**()` method and cast the result to `[DocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/DocumentInfo)` class;
-*   Call `**[isText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/Features#isText())**()` property to check if text extraction is supported for the document;
-*   Use `**[getRawPageCount](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/DocumentInfo#getRawPageCount())**()` instead of `**[getPageCount](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo#getPageCount())**()` to avoid extra calculations;
-*   Call `**[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText(int,%20com.groupdocs.parser.options.TextOptions))**(int pageIndex, [TextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextOptions "class in com.groupdocs.parser.options") options)` method with the page index and obtain `[TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data")` object;
+*   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
+*   Instantiate [TextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextOptions "class in com.groupdocs.parser.options") object with *true* parameter;
+*   Call [getDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getDocumentInfo())() method and cast the result to [DocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/DocumentInfo) class;
+*   Call [isText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/Features#isText())() property to check if text extraction is supported for the document;
+*   Use [getRawPageCount](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/DocumentInfo#getRawPageCount())() instead of [getPageCount](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo#getPageCount())() to avoid extra calculations;
+*   Call [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText(int,%20com.groupdocs.parser.options.TextOptions))(int pageIndex, [TextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextOptions "class in com.groupdocs.parser.options") options) method with the page index and obtain [TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data") object;
 *   Read a text from *reader*.
 
 The following example shows how to extract a raw text from a document page:

@@ -106,8 +106,8 @@ It's more simple than others. A section can contain any number of shapes and onl
 
 Here are the steps to extract hyperlinks from the document:
 
-*   Instantiate `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object for the initial document;
-*   Call `**[getStructure](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getStructure())**()` method and obtain [*org.w3c.dom.Document*](https://docs.oracle.com/javase/7/docs/api/org/w3c/dom/Document.html?is-external=true) object;
+*   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
+*   Call [getStructure](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getStructure())() method and obtain [*org.w3c.dom.Document*](https://docs.oracle.com/javase/7/docs/api/org/w3c/dom/Document.html?is-external=true) object;
 *   Check if *document* isn't *null* (text structure extraction is supported for the document);
 *   Process the XML document.
 

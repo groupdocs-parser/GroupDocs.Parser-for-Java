@@ -10,8 +10,8 @@ hideChildren: False
 ---
 Here are the steps to extract images to files:
 
-*   Instantiate `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object for the initial document;
-*   Call `**[getImages](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getImages())**()` method and obtain collection of `[PageImageArea](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageImageArea "class in com.groupdocs.parser.data")` objects;
+*   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
+*   Call [getImages](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getImages())() method and obtain collection of [PageImageArea](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageImageArea "class in com.groupdocs.parser.data") objects;
 *   Check if *collection* isn't *null* (images extraction is supported for the document);
 *   Iterate through the collection and save image contents to the file.
 

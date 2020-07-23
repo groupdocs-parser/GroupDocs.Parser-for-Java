@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Parser for Java
 hideChildren: False
 ---
-To extract metadata from Microsoft Office PowerPoint presentations `**[getMetadata](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getMetadata())**()` method is used. This method allows to extract the following metadata:
+To extract metadata from Microsoft Office PowerPoint presentations [getMetadata](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getMetadata())() method is used. This method allows to extract the following metadata:
 
 | Name | Description |
 | --- | --- |
@@ -33,8 +33,8 @@ To extract metadata from Microsoft Office PowerPoint presentations `**[getMetad
 
 Here are the steps to extract metadata from Microsoft Office PowerPoint presentation:
 
-*   Instantiate `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object for the initial presentation;
-*   Call `**[getMetadata](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getMetadata())**()` method and obtain collection of document metadata objects;
+*   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial presentation;
+*   Call [getMetadata](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getMetadata())() method and obtain collection of document metadata objects;
 *   Iterate through the collection and get metadata names and values.
 
 {{< alert style="warning" >}}getMetadata() method returns null value if metadata extraction isn't supported for the document. For example, metadata extraction isn't supported for TXT files. Therefore, for TXT file getMetadata() method returns null. If Microsoft Office PowerPoint presentation has no metadata, getMetadata() method returns an empty collection.{{< /alert >}}

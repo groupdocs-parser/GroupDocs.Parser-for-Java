@@ -8,27 +8,27 @@ keywords:
 productName: GroupDocs.Parser for Java
 hideChildren: False
 ---
-GroupDocs.Parser provides the functionality to extract images from document page by the `**[getImages](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getImages(int))**(int pageIndex)` method:
+GroupDocs.Parser provides the functionality to extract images from document page by the [getImages](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getImages(int))(int pageIndex) method:
 
 c
 Iterable<PageImageArea> getImages(int pageIndex);
 
 ```
 
-This method returns a collection of `[PageImageArea](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageImageArea "class in com.groupdocs.parser.data")` objects:
+This method returns a collection of [PageImageArea](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageImageArea "class in com.groupdocs.parser.data") objects:
 
 | Member | Description |
 | --- | --- |
-| `**[getPage](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageArea#getPage())**()` | The page that contains the text area. |
-| `**[getRectangle](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageArea#getRectangle())**()` | The rectangular area on the page that contains the text area. |
-| `**[getFileType](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageImageArea#getFileType())**()` | The format of the image. |
-| `**[getRotation](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageImageArea#getRotation())**()` | The rotation angle of the image. |
-| `**[getImageStream](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageImageArea#getImageStream())**()` | Returns the image stream. |
-| `**[getImageStream](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageImageArea#getImageStream(com.groupdocs.parser.options.ImageOptions))**([ImageOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ImageOptions "class in com.groupdocs.parser.options") options)` | Returns the image stream in a different format. |
-| `**[save](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageImageArea#save(java.lang.String))**([String](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true "class or interface in java.lang") filePath)` | Saves the image to the file. |
-| `**[save](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageImageArea#save(java.lang.String,%20com.groupdocs.parser.options.ImageOptions))**([String](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true "class or interface in java.lang") filePath, [ImageOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ImageOptions "class in com.groupdocs.parser.options") options)` | Saves the image to the file in a different format. |
+| [getPage](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageArea#getPage())() | The page that contains the text area. |
+| [getRectangle](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageArea#getRectangle())() | The rectangular area on the page that contains the text area. |
+| [getFileType](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageImageArea#getFileType())() | The format of the image. |
+| [getRotation](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageImageArea#getRotation())() | The rotation angle of the image. |
+| [getImageStream](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageImageArea#getImageStream())() | Returns the image stream. |
+| [getImageStream](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageImageArea#getImageStream(com.groupdocs.parser.options.ImageOptions))([ImageOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ImageOptions "class in com.groupdocs.parser.options") options) | Returns the image stream in a different format. |
+| [save](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageImageArea#save(java.lang.String))([String](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true "class or interface in java.lang") filePath) | Saves the image to the file. |
+| [save](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageImageArea#save(java.lang.String,%20com.groupdocs.parser.options.ImageOptions))([String](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true "class or interface in java.lang") filePath, [ImageOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ImageOptions "class in com.groupdocs.parser.options") options) | Saves the image to the file in a different format. |
 
-`[ImageOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ImageOptions "class in com.groupdocs.parser.options")` class is used to define the image format into which the image is converted. The following image formats are supported:
+[ImageOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ImageOptions "class in com.groupdocs.parser.options") class is used to define the image format into which the image is converted. The following image formats are supported:
 
 *   Bmp
 *   Gif
@@ -38,9 +38,9 @@ This method returns a collection of `[PageImageArea](https://apireference.groupd
 
 Here are the steps to extract images from the document page:
 
-*   Instantiate `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object for the initial document;
-*   Call `**[isImages](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/Features#isImages())**()`  property to check if images extraction is supported for the document;
-*   Call `**[getImages](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getImages(int))**(int pageIndex)` method with the page index and obtain collection of `[PageImageArea](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageImageArea "class in com.groupdocs.parser.data")` objects;
+*   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
+*   Call [isImages](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/Features#isImages())()  property to check if images extraction is supported for the document;
+*   Call [getImages](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getImages(int))(int pageIndex) method with the page index and obtain collection of [PageImageArea](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageImageArea "class in com.groupdocs.parser.data") objects;
 *   Iterate through the collection and get sizes, image types and image contents.
 
 The following example shows how to extract images from a document page:

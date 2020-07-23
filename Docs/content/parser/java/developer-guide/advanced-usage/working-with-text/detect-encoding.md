@@ -26,10 +26,10 @@ Encoding can be detected by BOM or by the content of the file (if BOM isn't pres
 
 Here are the steps to detect the encoding of the document:
 
-*   Instantiate `[LoadOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/LoadOptions "class in com.groupdocs.parser.options")` object with the default ANSI encoding;
-*   Instantiate `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object for the initial document;
-*   Call `**[getDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getDocumentInfo())**()` method and cast the result to `[TextDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextDocumentInfo)` [](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/DocumentInfo "class in com.groupdocs.parser.options")
-*   Read the `**[getCharset](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextDocumentInfo#getCharset())**()` property.
+*   Instantiate [LoadOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/LoadOptions "class in com.groupdocs.parser.options") object with the default ANSI encoding;
+*   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
+*   Call [getDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getDocumentInfo())() method and cast the result to [TextDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextDocumentInfo) [](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/DocumentInfo "class in com.groupdocs.parser.options")
+*   Read the [getCharset](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextDocumentInfo#getCharset())() property.
 
   
 

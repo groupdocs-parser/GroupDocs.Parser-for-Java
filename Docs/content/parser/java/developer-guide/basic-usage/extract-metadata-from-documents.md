@@ -12,24 +12,24 @@ GroupDocs.Parser allows to extract basic metadata from documents of various form
 
 # Extract metadata from documents
 
-To extract metadata from documents simply call the `**[getMetadata](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getMetadata())**()`method:
+To extract metadata from documents simply call the [getMetadata](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getMetadata())()method:
 
 ```java
 Iterable<MetadataItem> getMetadata();
 
 ```
 
-This method returns a collection of `[MetadataItem](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/MetadataItem "class in com.groupdocs.parser.data")` objects with following members:
+This method returns a collection of [MetadataItem](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/MetadataItem "class in com.groupdocs.parser.data") objects with following members:
 
 | Member | Description |
 | --- | --- |
-| `**[getName](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/MetadataItem#getName())**()` | The name of the metadata item |
-| `**[getValue](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/MetadataItem#getValue())**()` | The value of the metadata item |
+| [getName](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/MetadataItem#getName())() | The name of the metadata item |
+| [getValue](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/MetadataItem#getValue())() | The value of the metadata item |
 
 Here are the steps to extract metadata from the document:
 
-*   Instantiate `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object for the initial document;
-*   Call `**[getMetadata](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getMetadata())**()` method and obtain collection of document metadata objects;
+*   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
+*   Call [getMetadata](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getMetadata())() method and obtain collection of document metadata objects;
 *   Check if *collection* isn't *null* (metadata extraction is supported for the document);
 *   Iterate through the collection and get metadata names and values.  
       

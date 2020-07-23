@@ -8,26 +8,26 @@ keywords:
 productName: GroupDocs.Parser for Java
 hideChildren: False
 ---
-GroupDocs.Parser allows to get the list of all the supported file formats by the ``**`**[getSupportedFileTypes](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileType#getSupportedFileTypes())**`**`()` `` static method:
+GroupDocs.Parser allows to get the list of all the supported file formats by the `[getSupportedFileTypes](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileType#getSupportedFileTypes())****()` `` static method:
 
 ```java
 Iterable<FileType> FileType.getSupportedFileTypes();
 
 ```
 
-This method returns a collection of `[FileType](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileType "class in com.groupdocs.parser.options")` items with the following members:
+This method returns a collection of [FileType](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileType "class in com.groupdocs.parser.options") items with the following members:
 
 | Member | Description |
 | --- | --- |
-| `**[getFileFormat](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileType#getFileFormat())**()` | File type name e.g. "Microsoft Word Document". |
-| `**[getExtension](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileType#getExtension())**()` | Filename suffix (including the period ".") e.g. ".doc". |
+| [getFileFormat](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileType#getFileFormat())() | File type name e.g. "Microsoft Word Document". |
+| [getExtension](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileType#getExtension())() | Filename suffix (including the period ".") e.g. ".doc". |
 
-Also `[FileType](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileType "class in com.groupdocs.parser.options")` contains static fields that represent all the supported file formats.
+Also [FileType](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileType "class in com.groupdocs.parser.options") contains static fields that represent all the supported file formats.
 
 Here are the steps to get all the supported file formats:
 
-*   Call `**[getSupportedFileTypes](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileType#getSupportedFileTypes())**()` static method and obtain a collection of `[FileType](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileType "class in com.groupdocs.parser.options")` objects;
-*   Iterate through the collection and call  `**[getFileFormat](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileType#getFileFormat())**()` or `**[getExtension](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileType#getExtension())**()` of `[FileType](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileType "class in com.groupdocs.parser.options")`.
+*   Call [getSupportedFileTypes](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileType#getSupportedFileTypes())() static method and obtain a collection of [FileType](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileType "class in com.groupdocs.parser.options") objects;
+*   Iterate through the collection and call  [getFileFormat](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileType#getFileFormat())() or [getExtension](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileType#getExtension())() of [FileType](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileType "class in com.groupdocs.parser.options").
 
 The following example shows how to print all the supported file types:
 

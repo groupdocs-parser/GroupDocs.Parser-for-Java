@@ -12,9 +12,9 @@ GroupDocs.Parser provides the functionality to open the password-protected docum
 
 The following are the steps to work with password protected documents.
 
-*   Instantiate the `[LoadOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/LoadOptions "class in com.groupdocs.parser.options")` object;
-*   Set password in `**[LoadOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/LoadOptions#LoadOptions(java.lang.String))**([String](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true "class or interface in java.lang") password)` constructor;
-*   Create `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object and call any method.
+*   Instantiate the [LoadOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/LoadOptions "class in com.groupdocs.parser.options") object;
+*   Set password in [LoadOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/LoadOptions#LoadOptions(java.lang.String))([String](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true "class or interface in java.lang") password) constructor;
+*   Create [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object and call any method.
 
 The following code sample shows how to process password protected documents.
 

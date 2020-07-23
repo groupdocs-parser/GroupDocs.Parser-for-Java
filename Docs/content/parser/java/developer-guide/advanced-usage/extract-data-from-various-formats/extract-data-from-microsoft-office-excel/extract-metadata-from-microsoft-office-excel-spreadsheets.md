@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Parser for Java
 hideChildren: False
 ---
-To extract metadata from Microsoft Office Excel spreadsheets `**[getMetadata](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getMetadata())**()` method is used. This method allows to extract the following metadata:
+To extract metadata from Microsoft Office Excel spreadsheets [getMetadata](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getMetadata())() method is used. This method allows to extract the following metadata:
 
 | Name | Description |
 | --- | --- |
@@ -34,8 +34,8 @@ To extract metadata from Microsoft Office Excel spreadsheets `**[getMetadata](ht
 
 Here are the steps to extract metadata from Microsoft Office Excel spreadsheet:
 
-*   Instantiate `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object for the initial spreadsheet;
-*   Call `**[getMetadata](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getMetadata())**()` method and obtain collection of document metadata objects;
+*   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial spreadsheet;
+*   Call [getMetadata](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getMetadata())() method and obtain collection of document metadata objects;
 *   Iterate through the collection and get metadata names and values.
 
 {{< alert style="warning" >}}getMetadata() method returns null value if metadata extraction isn't supported for the document. For example, metadata extraction isn't supported for CSV files. Therefore, for CSV file getMetadata() method returns null. If Microsoft Office Excel spreadsheet has no metadata, getMetadata() method returns an empty collection.{{< /alert >}}

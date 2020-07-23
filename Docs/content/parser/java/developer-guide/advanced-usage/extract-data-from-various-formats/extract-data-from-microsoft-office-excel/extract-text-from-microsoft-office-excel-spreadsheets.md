@@ -8,12 +8,12 @@ keywords:
 productName: GroupDocs.Parser for Java
 hideChildren: False
 ---
-To extract a text from Microsoft Office Excel spreadsheets `**[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText())**()` and `**[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText(int))**(int pageIndex)` method is used. These methods allow to extract a text from the entire document or a text from the selected page.
+To extract a text from Microsoft Office Excel spreadsheets [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText())() and [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText(int))(int pageIndex) method is used. These methods allow to extract a text from the entire document or a text from the selected page.
 
 Here are the steps to extract a text from Microsoft Office Excel spreadsheets:
 
-*   Instantiate `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object for the initial spreadsheet;
-*   Call `**[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText())**()` method and obtain `[TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data")` object;
+*   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial spreadsheet;
+*   Call [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText())() method and obtain [TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data") object;
 *   Read a text from *reader*.
 
 {{< alert style="warning" >}}getText()method returns null value if text extraction isn't supported for the document. For example, text extraction isn't supported for Zip archive. Therefore, for Zip archive getText()method returns null. For empty Microsoft Office Excel spreadsheets getText()method returns an empty TextReader object (readToEnd() method returns an empty string).{{< /alert >}}
@@ -33,9 +33,9 @@ try (Parser parser = new Parser(Constants.SampleXlsx)) {
 
 Here are the steps to extract a text from the sheet of Microsoft Office Excel spreadsheet:
 
-*   Instantiate `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object for the initial spreadsheet;
-*   Call `**[getDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getDocumentInfo())**()` method and obtain `[IDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo "interface in com.groupdocs.parser.options")` object with `**[getPageCount](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo#getPageCount())**()` property;
-*   Call `**[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText(int))**(int pageIndex)` method with the sheet index and obtain `[TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data")` object;
+*   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial spreadsheet;
+*   Call [getDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getDocumentInfo())() method and obtain [IDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo "interface in com.groupdocs.parser.options") object with [getPageCount](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo#getPageCount())() property;
+*   Call [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText(int))(int pageIndex) method with the sheet index and obtain [TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data") object;
 *   Read a text from *reader*.
 
 ```java
@@ -56,17 +56,17 @@ try (Parser parser = new Parser(Constants.SampleXlsx)) {
 }
 ```
 
-Raw mode allows to increase the speed of text extraction due to poor formatting accuracy. `**[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText(com.groupdocs.parser.options.TextOptions))**([TextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextOptions "class in com.groupdocs.parser.options") options)` and `**[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText(int,%20com.groupdocs.parser.options.TextOptions))**(int pageIndex, [TextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextOptions "class in com.groupdocs.parser.options") options)` methods are used to extract a text in raw mode.
+Raw mode allows to increase the speed of text extraction due to poor formatting accuracy. [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText(com.groupdocs.parser.options.TextOptions))([TextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextOptions "class in com.groupdocs.parser.options") options) and [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText(int,%20com.groupdocs.parser.options.TextOptions))(int pageIndex, [TextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextOptions "class in com.groupdocs.parser.options") options) methods are used to extract a text in raw mode.
 
 {{< alert style="warning" >}}Some spreadsheets may have different sheet numbers in raw and accurate modes. Use getRawPageCount() instead of getPageCount() in raw mode.{{< /alert >}}
 
 Here are the steps to extract a raw text from the sheet of Microsoft Office Excel spreadsheet:
 
-*   Instantiate `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object for the initial spreadsheet;
-*   Instantiate `[TextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextOptions "class in com.groupdocs.parser.options")` object with *true* parameter;
-*   Call `**[getDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getDocumentInfo())**()` method and cast the result to `[DocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/DocumentInfo)` class;
-*   Use `**[getRawPageCount](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/DocumentInfo#getRawPageCount())**()` instead of `**[getPageCount](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo#getPageCount())**()` to avoid extra calculations;
-*   Call `**[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText(int,%20com.groupdocs.parser.options.TextOptions))**(int pageIndex, [TextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextOptions "class in com.groupdocs.parser.options") options)` method with the sheet index and obtain `[TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data")` object;
+*   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial spreadsheet;
+*   Instantiate [TextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextOptions "class in com.groupdocs.parser.options") object with *true* parameter;
+*   Call [getDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getDocumentInfo())() method and cast the result to [DocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/DocumentInfo) class;
+*   Use [getRawPageCount](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/DocumentInfo#getRawPageCount())() instead of [getPageCount](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo#getPageCount())() to avoid extra calculations;
+*   Call [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText(int,%20com.groupdocs.parser.options.TextOptions))(int pageIndex, [TextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextOptions "class in com.groupdocs.parser.options") options) method with the sheet index and obtain [TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data") object;
 *   Read a text from *reader*.
 
 ```java
@@ -99,8 +99,8 @@ GroupDocs.Parser also allows to extract a text from Microsoft Office Excel sprea
 
 Here are the steps to extract a text from Microsoft Office Excel spreadsheet as HTML:
 
-*   Instantiate `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object for the initial spreadsheet;
-*   Call `**[getFormattedText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getFormattedText(com.groupdocs.parser.options.FormattedTextOptions))**([FormattedTextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FormattedTextOptions "class in com.groupdocs.parser.options") options)` method and obtain `[TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data")` object;
+*   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial spreadsheet;
+*   Call [getFormattedText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getFormattedText(com.groupdocs.parser.options.FormattedTextOptions))([FormattedTextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FormattedTextOptions "class in com.groupdocs.parser.options") options) method and obtain [TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data") object;
 *   Read a text from *reader*.
 
 The following example shows how to extract a text from Microsoft Office Excel spreadsheet as HTML:

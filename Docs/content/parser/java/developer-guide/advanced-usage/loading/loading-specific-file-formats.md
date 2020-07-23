@@ -18,8 +18,8 @@ In some cases it's required to specify the document format manually to guarantee
 
 Here are the steps to specify the document format for Markup document.
 
-*   Instantiate the `[LoadOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/LoadOptions "class in com.groupdocs.parser.options")` object and pass the document format in `**[LoadOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/LoadOptions#LoadOptions(com.groupdocs.parser.options.FileFormat))**([FileFormat](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileFormat "enum in com.groupdocs.parser.options") fileFormat)` constructor;
-*   Create `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object and call any method.
+*   Instantiate the [LoadOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/LoadOptions "class in com.groupdocs.parser.options") object and pass the document format in [LoadOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/LoadOptions#LoadOptions(com.groupdocs.parser.options.FileFormat))([FileFormat](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileFormat "enum in com.groupdocs.parser.options") fileFormat) constructor;
+*   Create [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object and call any method.
 
 The following example shows how to specify the document format for Markup document:  
 

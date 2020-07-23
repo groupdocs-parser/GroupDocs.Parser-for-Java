@@ -8,16 +8,16 @@ keywords:
 productName: GroupDocs.Parser for Java
 hideChildren: False
 ---
-GroupDocs.Parser provides the functionality to extract a highlight (a part of the text which is usually used to explain the context of the found text in the search functionality) from documents by the `**[getHighlight](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getHighlight(int,%20boolean,%20com.groupdocs.parser.options.HighlightOptions))**(int position, boolean isDirect, [HighlightOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/HighlightOptions "class in com.groupdocs.parser.options") options)` method:
+GroupDocs.Parser provides the functionality to extract a highlight (a part of the text which is usually used to explain the context of the found text in the search functionality) from documents by the [getHighlight](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getHighlight(int,%20boolean,%20com.groupdocs.parser.options.HighlightOptions))(int position, boolean isDirect, [HighlightOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/HighlightOptions "class in com.groupdocs.parser.options") options) method:
 
 ```java
 HighlightItem getHighlight(int position, boolean isDirect, HighlightOptions options)
 
 ```
 
-The *position* parameter defines the start position from which the highlight is extracted. The *isDirect* parameter indicates whether highlight extraction is direct: *true* if the highlight is extracted by the right of the position; otherwise, *false*. `[HighlightOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/HighlightOptions "class in com.groupdocs.parser.options")` parameter is used to define the end of the highlight.
+The *position* parameter defines the start position from which the highlight is extracted. The *isDirect* parameter indicates whether highlight extraction is direct: *true* if the highlight is extracted by the right of the position; otherwise, *false*. [HighlightOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/HighlightOptions "class in com.groupdocs.parser.options") parameter is used to define the end of the highlight.
 
-`[HighlightOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/HighlightOptions "class in com.groupdocs.parser.options")` class has the following constructors:
+[HighlightOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/HighlightOptions "class in com.groupdocs.parser.options") class has the following constructors:
 
 ```java
 // Highlight is limited to maxLength text length.
@@ -31,20 +31,20 @@ HighlightOptions(Integer maxLength, Integer wordCount, boolean isLineLimited)
 
 ```
 
-`[HighlightItem](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/HighlightItem "class in com.groupdocs.parser.data")` class has the following members:
+[HighlightItem](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/HighlightItem "class in com.groupdocs.parser.data") class has the following members:
 
 | Member | Description |
 | --- | --- |
-| `**[getPosition](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/HighlightItem#getPosition())**()` | The position in the document text. |
-| `**[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/HighlightItem#getText())**()` | The highlight text. |
+| [getPosition](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/HighlightItem#getPosition())() | The position in the document text. |
+| [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/HighlightItem#getText())() | The highlight text. |
 
 Here are the steps to extract highlight from the document:
 
-*   Instantiate `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object for the initial document;
-*   Instantiate `[HighlightOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/HighlightOptions "class in com.groupdocs.parser.options")` object with the extraction parameters;
-*   Call `**[getHighlight](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getHighlight(int,%20boolean,%20com.groupdocs.parser.options.HighlightOptions))**(int position, boolean isDirect, [HighlightOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/HighlightOptions "class in com.groupdocs.parser.options") options)` method and obtain the `[HighlightItem](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/HighlightItem "class in com.groupdocs.parser.data")` object;
-*   Check if `[HighlightItem](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/HighlightItem "class in com.groupdocs.parser.data")` isn't *null* (highlight extraction is supported for the document);
-*   Call properties such as  `**[getPosition](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/HighlightItem#getPosition())**()` and `**[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/HighlightItem#getText())**()`.
+*   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
+*   Instantiate [HighlightOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/HighlightOptions "class in com.groupdocs.parser.options") object with the extraction parameters;
+*   Call [getHighlight](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getHighlight(int,%20boolean,%20com.groupdocs.parser.options.HighlightOptions))(int position, boolean isDirect, [HighlightOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/HighlightOptions "class in com.groupdocs.parser.options") options) method and obtain the [HighlightItem](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/HighlightItem "class in com.groupdocs.parser.data") object;
+*   Check if [HighlightItem](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/HighlightItem "class in com.groupdocs.parser.data") isn't *null* (highlight extraction is supported for the document);
+*   Call properties such as  [getPosition](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/HighlightItem#getPosition())() and [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/HighlightItem#getText())().
 
 The following example shows how to extract a highlight that contains 3 words:
 

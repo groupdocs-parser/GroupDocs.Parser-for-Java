@@ -8,26 +8,26 @@ keywords:
 productName: GroupDocs.Parser for Java
 hideChildren: False
 ---
-GroupDocs.Parser provides the functionality to get the basic document info by the `**[getDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getDocumentInfo())**()` method:
+GroupDocs.Parser provides the functionality to get the basic document info by the [getDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getDocumentInfo())() method:
 
 ```java
 IDocumentInfo getDocumentInfo();
 
 ```
 
-`[IDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo "interface in com.groupdocs.parser.options")` interface has the following members:
+[IDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo "interface in com.groupdocs.parser.options") interface has the following members:
 
 | Member | Description |
 | --- | --- |
-| `**[getFileType](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo#getFileType())**()` | The document type. |
-| `**[getPageCount](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo#getPageCount())**()` | The total number of document pages. |
-| `**[getSize](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo#getSize())**()` | The size of the document in bytes. |
+| [getFileType](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo#getFileType())() | The document type. |
+| [getPageCount](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo#getPageCount())() | The total number of document pages. |
+| [getSize](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo#getSize())() | The size of the document in bytes. |
 
 Here are the steps to get document info:
 
-*   Instantiate `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object for the initial document;
-*   Call `**[getDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getDocumentInfo())**()` method and obtain the object with `[IDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo "interface in com.groupdocs.parser.options")` interface;
-*   Call properties such as `**[getFileType](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo#getFileType())**()`, `**[getPageCount](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo#getPageCount())**()` or `**[getSize](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo#getSize())**()`.
+*   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
+*   Call [getDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getDocumentInfo())() method and obtain the object with [IDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo "interface in com.groupdocs.parser.options") interface;
+*   Call properties such as [getFileType](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo#getFileType())(), [getPageCount](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo#getPageCount())() or [getSize](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo#getSize())().
 
 The following example shows how to get document info:
 

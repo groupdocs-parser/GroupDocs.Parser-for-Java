@@ -30,18 +30,18 @@ FormattedTextOptions(FormattedTextMode mode)
 | Markdown | Markdown format. |
 | PlainText | Plain text format. |
 
-`[TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data")` class extends [*java.io.Reader*](http://docs.oracle.com/javase/7/docs/api/java/io/Reader.html?is-external=true) and adds the following members:
+[TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data") class extends [*java.io.Reader*](http://docs.oracle.com/javase/7/docs/api/java/io/Reader.html?is-external=true) and adds the following members:
 
 | Member | Description |
 | --- | --- |
-| `**[readLine](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader#readLine())**()` | Reads a line of characters from the text reader and returns the data as a string. |
-| `**[readToEnd](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader#readToEnd())**()` | Reads all characters from the current position to the end of the text reader and returns them as one string. |
+| [readLine](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader#readLine())() | Reads a line of characters from the text reader and returns the data as a string. |
+| [readToEnd](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader#readToEnd())() | Reads all characters from the current position to the end of the text reader and returns them as one string. |
 
 Here are the steps to extract a HTML formatted page text from the document:
 
-*   Instantiate `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object for the initial document;
-*   Instantiate `[FormattedTextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FormattedTextOptions "class in com.groupdocs.parser.options")` with HTML text mode;
-*   Call `**[getFormattedText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getFormattedText(int,%20com.groupdocs.parser.options.FormattedTextOptions))**(int pageIndex, [FormattedTextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FormattedTextOptions "class in com.groupdocs.parser.options") options)` method with the page index and obtain `[TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data")` object;
+*   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
+*   Instantiate [FormattedTextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FormattedTextOptions "class in com.groupdocs.parser.options") with HTML text mode;
+*   Call [getFormattedText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getFormattedText(int,%20com.groupdocs.parser.options.FormattedTextOptions))(int pageIndex, [FormattedTextOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FormattedTextOptions "class in com.groupdocs.parser.options") options) method with the page index and obtain [TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data") object;
 *   Check if *reader* isn't *null* (formatted text extraction is supported for the document);
 *   Read a text from *reader*.
 

@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Parser for Java
 hideChildren: False
 ---
-To extract hyperlinks from Microsoft Office Word document `**[getStructure](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getStructure())**()` method is used. This method returns XML representation of the document. Hyperlinks are represented by "hyperlink" tag; "link" attribute contains hyperlink's URL. For more details, see [Extract text structure]({{< ref "parser/java/developer-guide/advanced-usage/extract-data-from-various-formats/extract-data-from-microsoft-office-word/extract-hyperlinks-from-microsoft-office-word-documents.md" >}}). Hyperlink can contain a text:
+To extract hyperlinks from Microsoft Office Word document [getStructure](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getStructure())() method is used. This method returns XML representation of the document. Hyperlinks are represented by "hyperlink" tag; "link" attribute contains hyperlink's URL. For more details, see [Extract text structure]({{< ref "parser/java/developer-guide/advanced-usage/extract-data-from-various-formats/extract-data-from-microsoft-office-word/extract-hyperlinks-from-microsoft-office-word-documents.md" >}}). Hyperlink can contain a text:
 
 ```java
 <hyperlink link="www.google.com">google.com</hyperlink>
@@ -18,8 +18,8 @@ To extract hyperlinks from Microsoft Office Word document `**[getStructure](http
 
 Here are the steps to extract hyperlinks from Microsoft Office Word documents:
 
-*   Instantiate `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object for the initial document;
-*   Call `**[getStructure](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getStructure())**()` method and obtain [*org.w3c.dom.Document*](https://docs.oracle.com/javase/7/docs/api/org/w3c/dom/Document.html?is-external=true) object;
+*   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
+*   Call [getStructure](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getStructure())() method and obtain [*org.w3c.dom.Document*](https://docs.oracle.com/javase/7/docs/api/org/w3c/dom/Document.html?is-external=true) object;
 *   Iterate through the XML document.
 
 The following example demonstrates how to extract hyperlinks from Microsoft Office Word document:

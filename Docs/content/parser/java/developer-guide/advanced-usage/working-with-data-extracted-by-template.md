@@ -10,24 +10,24 @@ hideChildren: False
 ---
 ## DocumentData class
 
-Extracted data are stored in the instance of `[DocumentData](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/DocumentData "class in com.groupdocs.parser.data")` class:
+Extracted data are stored in the instance of [DocumentData](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/DocumentData "class in com.groupdocs.parser.data") class:
 
 | Member | Description |
 | --- | --- |
-| `**[getCount](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/DocumentData#getCount())**()` | The total number of the data fields. |
-| `**[get](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/DocumentData#get(int))**(int index)` | The data field. |
-| `**[getFieldsByName](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/DocumentData#getFieldsByName(java.lang.String))**([String](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true "class or interface in java.lang") fieldName)` | Returns the collection of data fields where the name is equal to fieldName |
+| [getCount](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/DocumentData#getCount())() | The total number of the data fields. |
+| [get](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/DocumentData#get(int))(int index) | The data field. |
+| [getFieldsByName](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/DocumentData#getFieldsByName(java.lang.String))([String](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true "class or interface in java.lang") fieldName) | Returns the collection of data fields where the name is equal to fieldName |
 
-`[FieldData](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/FieldData "class in com.groupdocs.parser.data")` class has the following members:
+[FieldData](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/FieldData "class in com.groupdocs.parser.data") class has the following members:
 
 | Member | Description |
 | --- | --- |
-| `**[getName](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/FieldData#getName())**()` | The field name. |
-| `**[getPageIndex](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/FieldData#getPageIndex())**()` | The page index. |
-| `**[getPageArea](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/FieldData#getPageArea())**()` | The value of the field. |
-| `**[getLinkedField](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/FieldData#getLinkedField())**()` | The linked field. |
+| [getName](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/FieldData#getName())() | The field name. |
+| [getPageIndex](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/FieldData#getPageIndex())() | The page index. |
+| [getPageArea](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/FieldData#getPageArea())() | The value of the field. |
+| [getLinkedField](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/FieldData#getLinkedField())() | The linked field. |
 
-Field data are stored in `**[getPageArea](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/FieldData#getPageArea())**()` property. Depending on the type of the value it can contain the instance of [`PageTextArea`](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea "class in com.groupdocs.parser.data") or [`PageTableArea`](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTableArea "class in com.groupdocs.parser.data") classes:
+Field data are stored in [getPageArea](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/FieldData#getPageArea())() property. Depending on the type of the value it can contain the instance of [`PageTextArea`](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea "class in com.groupdocs.parser.data") or [`PageTableArea`](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTableArea "class in com.groupdocs.parser.data") classes:
 
 ```java
 // Get the field data
@@ -45,12 +45,12 @@ if(field.getPageArea() instanceof PageTextArea)
 
 | Member | Description |
 | --- | --- |
-| `**[getRectangle](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageArea#getRectangle())**()` | The rectangular area that bounds the text area. |
-| `**[getPage](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageArea#getPage())**()` | The page information (page index and page size). |
-| `**[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea#getText())**()` | The value of the text area. |
-| `**[getBaseLine](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea#getBaseLine())**()` | The base line of the text area. |
-| `**[getTextStyle](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea#getTextStyle())**()` | The style of the text block (like font name, font size etc.) |
-| `**[getAreas](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea#getAreas())**()` | The collection of child text areas. |
+| [getRectangle](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageArea#getRectangle())() | The rectangular area that bounds the text area. |
+| [getPage](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageArea#getPage())() | The page information (page index and page size). |
+| [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea#getText())() | The value of the text area. |
+| [getBaseLine](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea#getBaseLine())() | The base line of the text area. |
+| [getTextStyle](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea#getTextStyle())() | The style of the text block (like font name, font size etc.) |
+| [getAreas](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea#getAreas())() | The collection of child text areas. |
 
 The text area can be single or composite. In the first case it contains a text which is bounded by a rectangular area. In the second case it contains other text areas; text and table properties are calculated by child text areas.
 
@@ -58,13 +58,13 @@ The text area can be single or composite. In the first case it contains a text w
 
 | Member | Description |
 | --- | --- |
-| `**[getRectangle](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageArea#getRectangle())**()` | The rectangular area that bounds text area. |
-| `**[getPage](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageArea#getPage())**()` | The page information (page index and page size) |
-| `**[getRowCount](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTableArea#getRowCount())**()` | The total number of the table rows. |
-| `**[getColumnCount](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTableArea#getColumnCount())**()` | The total number of the table columns. |
-| `**[getCell](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTableArea#getCell(int,%20int))**(int rowIndex, int columnIndex)` | The table cell by row and column indexes. |
-| `**[getRowHeight](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTableArea#getRowHeight(int))**(int rowIndex)` | Returns the row height. |
-| `**[getColumnWidth](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTableArea#getColumnWidth(int))**(int columnIndex)` | Returns the column width. |
+| [getRectangle](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageArea#getRectangle())() | The rectangular area that bounds text area. |
+| [getPage](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageArea#getPage())() | The page information (page index and page size) |
+| [getRowCount](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTableArea#getRowCount())() | The total number of the table rows. |
+| [getColumnCount](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTableArea#getColumnCount())() | The total number of the table columns. |
+| [getCell](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTableArea#getCell(int,%20int))(int rowIndex, int columnIndex) | The table cell by row and column indexes. |
+| [getRowHeight](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTableArea#getRowHeight(int))(int rowIndex) | Returns the row height. |
+| [getColumnWidth](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTableArea#getColumnWidth(int))(int columnIndex) | Returns the column width. |
 
 There are two ways to work with fields data.
 
