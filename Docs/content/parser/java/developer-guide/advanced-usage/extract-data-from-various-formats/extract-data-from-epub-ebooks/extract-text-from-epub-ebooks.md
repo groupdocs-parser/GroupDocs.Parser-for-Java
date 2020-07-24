@@ -59,7 +59,7 @@ try (Parser parser = new Parser(Constants.SampleEpub)) {
 
 ```
 
-GroupDocs.Parser also allows to extract a text from EPUB e-books as HTML, Markdown and formatted plain text. For more details, see [Extract Formatted Text]({{< ref "parser/java/developer-guide/advanced-usage/extract-data-from-various-formats/extract-data-from-epub-ebooks/extract-text-from-epub-ebooks.md" >}}).
+GroupDocs.Parser also allows to extract a text from EPUB e-books as HTML, Markdown and formatted plain text. For more details, see [Extract Formatted Text]({{< ref "parser/java/developer-guide/advanced-usage/working-with-text/working-with-formatted-text/extract-formatted-text-from-document.md" >}}).
 
 Here are the steps to extract a text from EPUB e-book as HTML:
 

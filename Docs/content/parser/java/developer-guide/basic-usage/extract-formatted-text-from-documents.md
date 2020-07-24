@@ -85,4 +85,4 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 Along with full featured Java library we provide simple, but powerful free Apps.
 
-You are welcome to extract data from PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Parser App](https://wiki.lisbon.dynabic.com/pages/viewpage.action?pageId=30050825).
+You are welcome to extract data from PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Parser App](https://products.groupdocs.app/parser).

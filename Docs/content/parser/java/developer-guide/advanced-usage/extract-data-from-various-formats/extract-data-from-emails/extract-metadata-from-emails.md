@@ -18,7 +18,7 @@ To extract metadata from emails [getMetadata](https://apireference.groupdocs.com
 | email-cc | The email "cc" field. May contain more than one address separated by semicolons. |
 
 Here are the steps to extract metadata from an email:
-*   Instantiate `[Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser)` object for the initial email;
+*   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial email;
 *   Call [getMetadata](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getMetadata())() method and obtain collection of document metadata objects;
 *   Iterate through the collection and get metadata names and values.
 

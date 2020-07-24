@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Parser for Java
 hideChildren: False
 ---
-GroupDocs.Parser provides Document Parser feature that allows you to extract data from documents of various formats including PDF, Microsoft Word, Excel, LibreOffice formats etc. (see [full supported list]({{< ref "parser/java/developer-guide/basic-usage/parse-data-from-documents.md" >}})).
+GroupDocs.Parser provides Document Parser feature that allows you to extract data from documents of various formats including PDF, Microsoft Word, Excel, LibreOffice formats etc. (see [full supported list]({{< ref "parser/java/getting-started/supported-document-formats.md" >}})).
 
 With Document Parsing feature you can easily solve business automation tasks with the data extracted from your documents.
 
@@ -130,4 +130,4 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 Along with full featured Java library we provide simple, but powerful free Apps.
 
-You are welcome to extract data from PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Parser App](https://wiki.lisbon.dynabic.com/pages/viewpage.action?pageId=30050825).
+You are welcome to extract data from PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Parser App](https://products.groupdocs.app/parser).

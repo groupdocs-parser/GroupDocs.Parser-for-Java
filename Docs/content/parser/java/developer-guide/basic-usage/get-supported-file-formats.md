@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Parser for Java
 hideChildren: False
 ---
-GroupDocs.Parser allows to get the list of all the supported file formats by the `[getSupportedFileTypes](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileType#getSupportedFileTypes())****()` `` static method:
+GroupDocs.Parser allows to get the list of all the supported file formats by the [getSupportedFileTypes](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileType#getSupportedFileTypes())() static method:
 
 ```java
 Iterable<FileType> FileType.getSupportedFileTypes();
@@ -60,4 +60,4 @@ You may easily run the code above and see the feature in action in our GitHub e
 
 Along with full featured Java library we provide simple, but powerful free Apps.
 
-You are welcome to extract data from PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Parser App]({{< ref "parser/java/developer-guide/basic-usage/get-supported-file-formats.md" >}}).
+You are welcome to extract data from PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Parser App](https://products.groupdocs.app/parser).

@@ -8,7 +8,7 @@ keywords:
 productName: GroupDocs.Parser for Java
 hideChildren: False
 ---
-To extract tables from Microsoft Office Word document [getStructure](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getStructure())() method is used. This method returns XML representation of the document. Tables are represented by "table" tag. For more details, see [Extract text structure]({{< ref "parser/java/developer-guide/advanced-usage/extract-data-from-various-formats/extract-data-from-microsoft-office-word/extract-tables-from-microsoft-office-word-documents.md" >}}).
+To extract tables from Microsoft Office Word document [getStructure](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getStructure())() method is used. This method returns XML representation of the document. Tables are represented by "table" tag. For more details, see [Extract text structure]({{< ref "parser/java/developer-guide/advanced-usage/working-with-text/extract-text-structure.md" >}}).
 
 {{< alert style="warning" >}}getStructure() method returns null value if text structure extraction isn't supported for the document. For example, text structure extraction isn't supported for TXT files. Therefore, for TXT file getStructure() method returns null. If Microsoft Office Word document has no text, getStructure()method returns an empty org.w3c.dom.Document object.{{< /alert >}}
 

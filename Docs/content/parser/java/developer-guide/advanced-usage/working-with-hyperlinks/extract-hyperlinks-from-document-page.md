@@ -1,71 +1,65 @@
 ---
 id: extract-hyperlinks-from-document-page
 url: parser/java/extract-hyperlinks-from-document-page
-title: Extract hyperlinks from document
+title: Extract hyperlinks from document page
 weight: 4
 description: ""
 keywords: 
 productName: GroupDocs.Parser for Java
 hideChildren: False
 ---
-
-GroupDocs.Parser provides the functionality to extract hyperlinks from document page by the [GetHyperlinks(Int32)](https://apireference.groupdocs.com/parser/net/groupdocs.parser.parser/gethyperlinks/methods/2) method:
+GroupDocs.Parser provides the functionality to extract hyperlinks from document page by the [getHyperlinks](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser/Parser#getHyperlinks(int))(int pageIndex) method:
 
 ```java
-IEnumerable<PageHyperlinkArea> GetHyperlinks(int pageIndex);
+Iterable<PageHyperlinkArea> getHyperlinks(int pageIndex);
 ```
 
-This method returns a collection of [PageHyperlinkArea](https://apireference.groupdocs.com/parser/net/groupdocs.parser.data/pagehyperlinkarea) object:
+This method returns a collection of [PageHyperlinkArea](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/PageHyperlinkArea) object:
 
 | Member                                                       | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Page](https://apireference.groupdocs.com/net/parser/groupdocs.parser.data/pagearea/properties/page) | The page that contains the text area.                        |
-| [Rectangle](https://apireference.groupdocs.com/net/parser/groupdocs.parser.data/pagearea/properties/rectangle) | The rectangular area on the page that contains the text area. |
-| [Text](https://apireference.groupdocs.com/parser/net/groupdocs.parser.data/pagehyperlinkarea/properties/text) | The hyperlink text.                                          |
-| [Url](https://apireference.groupdocs.com/parser/net/groupdocs.parser.data/pagehyperlinkarea/properties/url) | The hyperlink URL.                                           |
+| [getPage](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/PageArea#getPage())() | The page that contains the text area.                        |
+| [getRectangle](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/PageArea#getRectangle())() | The rectangular area on the page that contains the text area. |
+| [getText](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/PageHyperlinkArea#getText())() | The hyperlink text.                                          |
+| [getUrl](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/PageHyperlinkArea#getUrl())() | The hyperlink URL.                                           |
 
 Here are the steps to extract hyperlinks from the document page:
 
-- Instantiate [Parser](https://apireference.groupdocs.com/net/parser/groupdocs.parser/parser) object for the initial document;
+- Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
 - Check if the document supports hyperlink extraction;
-- Call [GetHyperlinks(Int32)](https://apireference.groupdocs.com/parser/net/groupdocs.parser.parser/gethyperlinks/methods/2) method with the page index and obtain collection of [PageHyperlinkArea](https://apireference.groupdocs.com/parser/net/groupdocs.parser.data/pagehyperlinkarea) objects;
+- Call [getHyperlinks](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser/Parser#getHyperlinks(int))(int pageIndex) method with the page index and obtain collection of [PageHyperlinkArea](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/PageHyperlinkArea) objects;
 - Iterate through the collection and get a hyperlink text and URL.
 
 The following example shows how to extract hyperlinks from the document page:
 
 ```java
 // Create an instance of Parser class
-using (Parser parser = new Parser(filePath))
-{
+try (Parser parser = new Parser(Constants.HyperlinksPdf)) {
     // Check if the document supports hyperlink extraction
-    if (!parser.Features.Hyperlinks)
-    {
-        Console.WriteLine("Document isn't supports hyperlink extraction.");
+    if (!parser.getFeatures().isHyperlinks()) {
+        System.out.println("Document isn't supports hyperlink extraction.");
         return;
     }
     // Get the document info
-    IDocumentInfo documentInfo = parser.GetDocumentInfo();
+    IDocumentInfo documentInfo = parser.getDocumentInfo();
     // Check if the document has pages
-    if (documentInfo.PageCount == 0)
-    {
-        Console.WriteLine("Document hasn't pages.");
+    if (documentInfo.getPageCount() == 0) {
+        System.out.println("Document hasn't pages.");
         return;
     }
     // Iterate over pages
-    for (int pageIndex = 0; pageIndex < documentInfo.PageCount; pageIndex++)
-    {
-        // Print a page number 
-        Console.WriteLine(string.Format("Page {0}/{1}", pageIndex + 1, documentInfo.PageCount));
+    for (int pageIndex = 0; pageIndex < documentInfo.getPageCount(); pageIndex++) {
+        // Print a page number
+        System.out.println(String.format("Page %d/%d", pageIndex + 1, documentInfo.getPageCount()));
         // Extract hyperlinks from the document page
-        IEnumerable<PageHyperlinkArea> hyperlinks = parser.GetHyperlinks(pageIndex);
+        Iterable<PageHyperlinkArea> hyperlinks = parser.getHyperlinks(pageIndex);
         // Iterate over hyperlinks
-        foreach (PageHyperlinkArea h in hyperlinks)
-        {
+        for (PageHyperlinkArea h : hyperlinks) {
             // Print the hyperlink text
-            Console.WriteLine(h.Text);
+            System.out.println(h.getText());
             // Print the hyperlink URL
-            Console.WriteLine(h.Url);
-            Console.WriteLine();
+            System.out.println(h.getUrl());
+            System.out.println();
         }
     }
 }
