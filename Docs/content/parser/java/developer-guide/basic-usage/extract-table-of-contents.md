@@ -12,26 +12,25 @@ GroupDocs.Parser allows to extract table of contents from Microsoft Word (DOC, D
 
 # Extract table of contents
 
-To extract table of contents from documents, please use the [getToc](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getToc())()method:
+To extract table of contents from documents, please use the [getToc](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getToc()) method:
 
 ```java
-Iterable<TocItem> getToc()
-
+Iterable<TocItem> getToc();
 ```
 
-[TocItem](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TocItem "class in com.groupdocs.parser.data") class has the following members:
+[TocItem](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TocItem) class has the following members:
 
 | Member | Description |
 | --- | --- |
-| [getDepth](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TocItem#getDepth())() | The depth level. |
-| [getPageIndex](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TocItem#getPageIndex())() | The page index. |
-| [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TocItem#getText())() | The text. |
-| [extractText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TocItem#extractText())() | Extracts a text from the document to which TocItem object refers. For detail, see [Extract Text By Table of Contents Item]({{< ref "parser/java/developer-guide/advanced-usage/working-with-text/extract-text-by-table-of-contents-item.md" >}}) |
+| [getDepth](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TocItem#getDepth()) | The depth level. |
+| [getPageIndex](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TocItem#getPageIndex()) | The page index. |
+| [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TocItem#getText()) | The text. |
+| [extractText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TocItem#extractText()) | Extracts a text from the document to which [TocItem](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TocItem) object refers. For detail, see [Extract text by table of contents item]({{< ref "parser/java/developer-guide/advanced-usage/working-with-text/extract-text-by-table-of-contents-item.md" >}}) |
 
 Here are the steps to extract extract table of contents from the document:
 
 *   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
-*   Call [getToc](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getToc())() method and obtain collection of [TocItem](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TocItem "class in com.groupdocs.parser.data") objects;
+*   Call [getToc](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getToc()) method and obtain collection of [TocItem](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TocItem) objects;
 *   Check if *collection* isn't *null* (table of contents  extraction is supported for the document);
 *   Iterate through the collection and get page index to extract a page text from the document.
 
@@ -78,10 +77,8 @@ To learn more about document data extraction features and get familiar how to ex
 
 You may easily run the code above and see the feature in action in our GitHub examples:
 
-*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)
-    
-*   [GroupDocs.Parser for Java examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java)
-    
+*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)    
+*   [GroupDocs.Parser for Java examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java)    
 
 ### Free online document parser App
 

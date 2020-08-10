@@ -15,28 +15,27 @@ Iterable<PageTextArea> getTextAreas();
 Iterable<PageTextArea> getTextAreas(PageTextAreaOptions options);
 Iterable<PageTextArea> getTextAreas(int pageIndex);
 Iterable<PageTextArea> getTextAreas(int pageIndex, PageTextAreaOptions options);
-
 ```
 
-The methods return a collection of [PageTextArea](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea "class in com.groupdocs.parser.data") objects:
+The methods return a collection of [PageTextArea](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea) objects:
 
 | Member | Description |
 | --- | --- |
-| [getPage](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageArea#getPage())() | The page that contains the text area. |
-| [getRectangle](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageArea#getRectangle())() | The rectangular area on the page that contains the text area. |
-| [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea#getText())() | The value of the text area. |
-| [getBaseLine](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea#getBaseLine())() | The base line of the text area. |
-| [getTextStyle](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea#getTextStyle())() | The text style of the text area. |
-| [getAreas](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea#getAreas())() | The collection of child text areas. |
+| [getPage](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageArea#getPage()) | The page that contains the text area. |
+| [getRectangle](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageArea#getRectangle()) | The rectangular area on the page that contains the text area. |
+| [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea#getText()) | The value of the text area. |
+| [getBaseLine](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea#getBaseLine()) | The base line of the text area. |
+| [getTextStyle](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea#getTextStyle()) | The text style of the text area. |
+| [getAreas](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea#getAreas()) | The collection of child text areas. |
 
-Text area represents a rectangular page area with a text. Text area can be simple or composite. The simple text area contains only a text and [getAreas](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea#getAreas())() property is always an empty collection (not null). The composite text area doesn't have its own text. Text property is calculated by its children texts which are contained in [getAreas](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea#getAreas())() property.
+Text area represents a rectangular page area with a text. Text area can be simple or composite. The simple text area contains only a text and [getAreas](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea#getAreas()) property is always an empty collection (not null). The composite text area doesn't have its own text. Text property is calculated by its children texts which are contained in [getAreas](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea#getAreas()) property.
 
 ## Extract text areas
 
 Here are the steps to extract text areas from the whole document:
 
 *   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
-*   Call [getTextAreas](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getTextAreas())() method and obtain collection of [PageTextArea](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea "class in com.groupdocs.parser.data") objects;
+*   Call [getTextAreas](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getTextAreas()) method and obtain collection of [PageTextArea](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea) objects;
 *   Check if *collection* isn't null (text areas extraction is supported for the document);
 *   Iterate through the collection and get rectangles and text.
 
@@ -58,7 +57,6 @@ try (Parser parser = new Parser(Constants.SampleImagesPdf)) {
         System.out.println(String.format("Page: %d, R: %s, Text: %s", a.getPage().getIndex(), a.getRectangle(), a.getText()));
     }
 }
-
 ```
 
 ## Extract text areas from a document page
@@ -66,8 +64,8 @@ try (Parser parser = new Parser(Constants.SampleImagesPdf)) {
 Here are the steps to extract text areas from the document page:
 
 *   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
-*   Call [isTextAreas](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/Features#isTextAreas())()  property to check if text areas extraction is supported for the document;
-*   Call [getTextAreas](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getTextAreas(int))(int pageIndex) method with the page index and obtain collection of [PageTextArea](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea "class in com.groupdocs.parser.data") objects;
+*   Call [isTextAreas](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/Features#isTextAreas())  property to check if text areas extraction is supported for the document;
+*   Call [getTextAreas(int)](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getTextAreas(int)) method with the page index and obtain collection of [PageTextArea](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea) objects;
 *   Check if *collection* isn't *null* (text areas extraction is supported for the document);
 *   Iterate through the collection and get rectangles and text.
 
@@ -104,21 +102,21 @@ try (Parser parser = new Parser(Constants.SampleImagesPdf)) {
 
 ## Extract text areas with options
 
-[PageTextAreaOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/PageTextAreaOptions "class in com.groupdocs.parser.options") parameter is used to customize text areas extraction process. This class has the following members:
+[PageTextAreaOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/PageTextAreaOptions) parameter is used to customize text areas extraction process. This class has the following members:
 
 | Member | Description |
 | --- | --- |
-| [getRectangle](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/PageAreaOptions#getRectangle())() | The rectangular area that contains a text area. |
-| [getExpression](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/PageTextAreaOptions#getExpression())() | The regular expression. |
-| [isMatchCase](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/PageTextAreaOptions#isMatchCase())() | The value that indicates whether a text case isn't ignored. |
-| [isUniteSegments](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/PageTextAreaOptions#isUniteSegments())() | The value that indicates whether segments are united. |
-| [isIgnoreFormatting](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/PageTextAreaOptions#isIgnoreFormatting())() | The value that indicates whether text formatting is ignored. |
+| [getRectangle](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/PageAreaOptions#getRectangle()) | The rectangular area that contains a text area. |
+| [getExpression](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/PageTextAreaOptions#getExpression()) | The regular expression. |
+| [isMatchCase](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/PageTextAreaOptions#isMatchCase()) | The value that indicates whether a text case isn't ignored. |
+| [isUniteSegments](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/PageTextAreaOptions#isUniteSegments()) | The value that indicates whether segments are united. |
+| [isIgnoreFormatting](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/PageTextAreaOptions#isIgnoreFormatting()) | The value that indicates whether text formatting is ignored. |
 
 Here are the steps to extract text areas from the upper-left corner:
 
 *   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
-*   Instantiate [PageTextAreaOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/PageTextAreaOptions "class in com.groupdocs.parser.options") with the rectangular area;
-*   Call [getTextAreas](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getTextAreas(int,%20com.groupdocs.parser.options.PageTextAreaOptions))(int pageIndex, [PageTextAreaOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/PageTextAreaOptions "class in com.groupdocs.parser.options") options) method and obtain collection of [PageTextArea](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea "class in com.groupdocs.parser.data") objects;
+*   Instantiate [PageTextAreaOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/PageTextAreaOptions) with the rectangular area;
+*   Call [getTextAreas(int, PageTextAreaOptions)](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getTextAreas(int,%20com.groupdocs.parser.options.PageTextAreaOptions)) method and obtain collection of [PageTextArea](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/PageTextArea) objects;
 *   Check if *collection* isn't *null* (text areas extraction is supported for the document);
 *   Iterate through the collection and get rectangles and text.
 
@@ -150,10 +148,8 @@ try (Parser parser = new Parser(Constants.SampleImagesPdf)) {
 
 You may easily run the code above and see the feature in action in our GitHub examples:
 
-*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)
-    
-*   [GroupDocs.Parser for Java examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java)
-    
+*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)    
+*   [GroupDocs.Parser for Java examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java)    
 
 ### Free online document parser App
 

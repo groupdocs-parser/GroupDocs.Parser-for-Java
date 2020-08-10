@@ -8,20 +8,20 @@ keywords:
 productName: GroupDocs.Parser for Java
 hideChildren: False
 ---
-[ILogger](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ILogger "interface in com.groupdocs.parser.options") interface is used to receive the information about errors, warnings and events which occur while data extraction. [ILogger](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ILogger "interface in com.groupdocs.parser.options") interface has the following members:
+[ILogger](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ILogger) interface is used to receive the information about errors, warnings and events which occur while data extraction. [ILogger](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ILogger) interface has the following members:
 
 | Member | Description |
 | --- | --- |
-| [error](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ILogger#error(java.lang.String,%20java.lang.Exception))([String](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true "class or interface in java.lang") message, [Exception](http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html?is-external=true "class or interface in java.lang") exception) | Logs an error that occurred during data extraction. |
-| [warning](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ILogger#warning(java.lang.String))([String](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true "class or interface in java.lang") message) | Logs a warning that occurred during data extraction. |
-| [trace](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ILogger#trace(java.lang.String))([String](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true "class or interface in java.lang") message) | Logs an event occurred during data extraction. |
+| [error(String, java.lang.Exception)](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ILogger#error(java.lang.String,%20java.lang.Exception)) | Logs an error that occurred during data extraction. |
+| [warning(String)](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ILogger#warning(java.lang.String)) | Logs a warning that occurred during data extraction. |
+| [trace(String)](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ILogger#trace(java.lang.String)) | Logs an event occurred during data extraction. |
 
-Here are the steps to receive the information via [ILogger](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ILogger "interface in com.groupdocs.parser.options") interface:
+Here are the steps to receive the information via [ILogger](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ILogger) interface:
 
-*   Implement the class with [ILogger](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ILogger "interface in com.groupdocs.parser.options") interface implementation;
-*   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object with [`ParserSettings`](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ParserSettings "class in com.groupdocs.parser.options") object.
+*   Implement the class with [ILogger](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ILogger) interface implementation;
+*   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object with [ParserSettings](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ParserSettings) object.
 
-The following example shows how to receive the information via [ILogger](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ILogger "interface in com.groupdocs.parser.options") interface.
+The following example shows how to receive the information via [ILogger](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ILogger) interface.
 
 ```java
 try {
@@ -67,10 +67,8 @@ class Logger implements ILogger {
 
 You may easily run the code above and see the feature in action in our GitHub examples:
 
-*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)
-    
-*   [GroupDocs.Parser for Java examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java)
-    
+*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)    
+*   [GroupDocs.Parser for Java examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java)    
 
 ### Free online document parser App
 

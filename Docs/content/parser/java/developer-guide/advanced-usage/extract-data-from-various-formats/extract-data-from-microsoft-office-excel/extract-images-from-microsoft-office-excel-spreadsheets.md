@@ -8,14 +8,14 @@ keywords:
 productName: GroupDocs.Parser for Java
 hideChildren: False
 ---
-To extract images from Microsoft Office Excel spreadsheets [getImages](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getImages())() methods are used. By default images are extracted with its original format. With using [ImageOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ImageOptions "class in com.groupdocs.parser.options") class it is possible to extract images from Microsoft Office Excel spreadsheets as bmp, gif, jpeg, png and webp formats.
+To extract images from Microsoft Office Excel spreadsheets [getImages](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getImages()) methods are used. By default images are extracted with its original format. With using [ImageOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/ImageOptions) class it is possible to extract images from Microsoft Office Excel spreadsheets as bmp, gif, jpeg, png and webp formats.
 
-{{< alert style="warning" >}}getImages() method returns null value if image extraction isn't supported for the document. For example, image extraction isn't supported for CSV files. Therefore, for CSV file getImages() method returns null. If Microsoft Office Excel spreadsheet has no images, getImages() method returns an empty collection.{{< /alert >}}
+{{< alert style="warning" >}}[getImages](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getImages()) method returns null value if image extraction isn't supported for the document. For example, image extraction isn't supported for CSV files. Therefore, for CSV file [getImages](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getImages()) method returns null. If Microsoft Office Excel spreadsheet has no images,[getImages](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getImages()) method returns an empty collection.{{< /alert >}}
 
 Here are the steps to extract images from Microsoft Office Excel spreadsheet to PNG-files:
 
 *   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial spreadsheet;
-*   Call [getImages](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getImages())() method and obtain the collection of image objects;
+*   Call [getImages](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getImages()) method and obtain the collection of image objects;
 *   Iterate through the collection and save image contents to the file.
 
 The following example demonstrates how to extract images from Microsoft Office Excel spreadsheet:
@@ -44,10 +44,8 @@ try (Parser parser = new Parser(Constants.SampleWithImagesXlsx)) {
 
 You may easily run the code above and see the feature in action in our GitHub examples:
 
-*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)
-    
-*   [GroupDocs.Parser for Java examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java)
-    
+*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)    
+*   [GroupDocs.Parser for Java examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java)    
 
 ### Free online document parser App
 

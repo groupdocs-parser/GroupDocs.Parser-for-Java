@@ -16,10 +16,10 @@ Using this feature is straightforward. Simply define a template programmatically
 
 # Parse data from documents
 
-GroupDocs.Parser provides the functionality to extract basic metadata from documents by the [parseByTemplate](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#parseByTemplate(com.groupdocs.parser.templates.Template))([Template](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/Template "class in com.groupdocs.parser.templates") template) method:
+GroupDocs.Parser provides the functionality to extract basic metadata from documents by the [parseByTemplate(Template)](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#parseByTemplate(com.groupdocs.parser.templates.Template)) method:
 
 ```java
-DocumentData parseByTemplate(Template template)
+DocumentData parseByTemplate(Template template);
 ```
 
 This method parses data from the document by a user-generated template.
@@ -27,8 +27,8 @@ This method parses data from the document by a user-generated template.
 Here are the steps to parse data from the document by user-generated template:
 
 *   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
-*   Instantiate [Template](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/Template "class in com.groupdocs.parser.templates") object with the user-generated template;
-*   Call [parseByTemplate](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#parseByTemplate(com.groupdocs.parser.templates.Template))([Template](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/Template "class in com.groupdocs.parser.templates") template) method and obtain [DocumentData](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/DocumentData "class in com.groupdocs.parser.data") object;
+*   Instantiate [Template](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/Template) object with the user-generated template;
+*   Call [parseByTemplate(Template)](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#parseByTemplate(com.groupdocs.parser.templates.Template)) method and obtain [DocumentData](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/DocumentData) object;
 *   Check if *data* isn't *null* (parse by template is supported for the document);
 *   Iterate over field data to obtain form data.
 
@@ -105,7 +105,6 @@ private static Template GetTemplate() {
     Template template = new Template(java.util.Arrays.asList(templateItems));
     return template;
 }
-
 ```
 
 ## More resources
@@ -115,16 +114,14 @@ private static Template GetTemplate() {
 To learn more about template building and working with extracted data please refer the following guides:
 
 *   [Working with templates]({{< ref "parser/java/developer-guide/advanced-usage/working-with-templates.md" >}})
-*   [Working With Extracted Data]({{< ref "parser/java/developer-guide/advanced-usage/working-with-data-extracted-by-template.md" >}})
+*   [Working with data extracted by template]({{< ref "parser/java/developer-guide/advanced-usage/working-with-data-extracted-by-template.md" >}})
 
 ### GitHub examples
 
 You may easily run the code above and see the feature in action in our GitHub examples:
 
-*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)
-    
-*   [GroupDocs.Parser for Java examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java)
-    
+*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)    
+*   [GroupDocs.Parser for Java examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java)    
 
 ### Free online document parser App
 

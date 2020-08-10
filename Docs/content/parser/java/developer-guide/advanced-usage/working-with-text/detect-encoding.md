@@ -16,22 +16,16 @@ GroupDocs.Parser provides the functionality to detect the encoding of a plain te
 *   UTF16 BE
 *   UTF8
 *   UTF7
-*   ANSI
+*   ANSI  
 
-  
-
-Encoding can be detected by BOM or by the content of the file (if BOM isn't presented).
-
-  
+Encoding can be detected by BOM or by the content of the file (if BOM isn't presented).  
 
 Here are the steps to detect the encoding of the document:
 
-*   Instantiate [LoadOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/LoadOptions "class in com.groupdocs.parser.options") object with the default ANSI encoding;
+*   Instantiate [LoadOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/LoadOptions) object with the default ANSI encoding;
 *   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
-*   Call [getDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getDocumentInfo())() method and cast the result to [TextDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextDocumentInfo) [](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/DocumentInfo "class in com.groupdocs.parser.options")
-*   Read the [getCharset](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextDocumentInfo#getCharset())() property.
-
-  
+*   Call [getDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getDocumentInfo()) method and cast the result to [TextDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextDocumentInfo)
+*   Read the [getCharset](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/TextDocumentInfo#getCharset()) property. 
 
 The following example shows how to detect the encoding of the document:
 
@@ -59,10 +53,8 @@ try (Parser parser = new Parser(Constants.SampleText, loadOptions)) {
 
 You may easily run the code above and see the feature in action in our GitHub examples:
 
-*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)
-    
+*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)    
 *   [GroupDocs.Parser for Java examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java)
-    
 
 ### Free online document parser App
 

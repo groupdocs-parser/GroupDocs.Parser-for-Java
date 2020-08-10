@@ -18,7 +18,7 @@ In some cases it's required to specify the document format manually to guarantee
 
 Here are the steps to specify the document format for Markup document.
 
-*   Instantiate the [LoadOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/LoadOptions "class in com.groupdocs.parser.options") object and pass the document format in [LoadOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/LoadOptions#LoadOptions(com.groupdocs.parser.options.FileFormat))([FileFormat](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/FileFormat "enum in com.groupdocs.parser.options") fileFormat) constructor;
+*   Instantiate the [LoadOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/LoadOptions) object and pass the document format in [LoadOptions(FileFormat)](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/LoadOptions#LoadOptions(com.groupdocs.parser.options.FileFormat)) constructor;
 *   Create [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object and call any method.
 
 The following example shows how to specify the document format for Markup document:  
@@ -39,7 +39,6 @@ try (InputStream stream = new FileInputStream(Constants.SampleMd)) {
         }
     }
 }
-
 ```
 
 ## More resources
@@ -48,10 +47,8 @@ try (InputStream stream = new FileInputStream(Constants.SampleMd)) {
 
 You may easily run the code above and see the feature in action in our GitHub examples:
 
-*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)
-    
-*   [GroupDocs.Parser for Java examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java)
-    
+*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)    
+*   [GroupDocs.Parser for Java examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java)    
 
 ### Free online document parser App
 

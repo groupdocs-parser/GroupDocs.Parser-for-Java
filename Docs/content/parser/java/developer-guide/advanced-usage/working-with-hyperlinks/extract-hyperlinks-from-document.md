@@ -10,7 +10,7 @@ hideChildren: False
 ---
 
 
-GroupDocs.Parser provides the functionality to extract hyperlinks from documents by the `getHyperlinks()` method:
+GroupDocs.Parser provides the functionality to extract hyperlinks from documents by the [getHyperlinks](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser/Parser#getHyperlinks()) method:
 
 ```java
 Iterable<PageHyperlinkArea> getHyperlinks();
@@ -18,19 +18,19 @@ Iterable<PageHyperlinkArea> getHyperlinks();
 
 This method returns a collection of [PageHyperlinkArea](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/PageHyperlinkArea) object:
 
-| Member                                                       | Description                                                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [getPage](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/PageArea#getPage())() | The page that contains the text area.                        |
-| [getRectangle](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/PageArea#getRectangle())() | The rectangular area on the page that contains the text area. |
-| [getText](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/PageHyperlinkArea#getText())() | The hyperlink text.                                          |
-| [getUrl](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/PageHyperlinkArea#getUrl())() | The hyperlink URL.                                           |
+| Member | Description |
+| --- | --- |
+| [getPage](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/PageArea#getPage()) | The page that contains the text area. |
+| [getRectangle](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/PageArea#getRectangle()) | The rectangular area on the page that contains the text area. |
+| [getText](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/PageHyperlinkArea#getText()) | The hyperlink text. |
+| [getUrl](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/PageHyperlinkArea#getUrl()) | The hyperlink URL. |
 
 Here are the steps to extract all hyperlinks from the whole document:
 
-- Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
-- Check if the document supports hyperlink extraction;
-- Call [getHyperlinks](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser/Parser#getHyperlinks())() method and obtain collection of [PageHyperlinkArea](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/PageHyperlinkArea) objects;
-- Iterate through the collection and get a hyperlink text and URL.
+* Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
+* Check if the document supports hyperlink extraction;
+* Call [getHyperlinks](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser/Parser#getHyperlinks()) method and obtain collection of [PageHyperlinkArea](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.data/PageHyperlinkArea) objects;
+* Iterate through the collection and get a hyperlink text and URL.
 
 The following example shows how to extract all hyperlinks from the whole document:
 

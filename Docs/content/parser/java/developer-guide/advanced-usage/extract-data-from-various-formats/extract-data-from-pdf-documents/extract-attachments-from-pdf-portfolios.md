@@ -12,12 +12,12 @@ hideChildren: False
 
 # Extract attachments from PDF portfolios
 
-To extract attachments from emails [getContainer](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getContainer())() method is used. This method returns the collection of [ContainerItem](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/ContainerItem "class in com.groupdocs.parser.data") objects.
+To extract attachments from emails [getContainer](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getContainer()) method is used. This method returns the collection of [ContainerItem](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/ContainerItem) objects.
 
 Here are the steps to extract an attachment text from PDF Portfolios:
 
 *   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
-*   Call [getContainer](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getContainer())() method and obtain collection of [ContainerItem](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/ContainerItem "class in com.groupdocs.parser.data") objects;
+*   Call [getContainer](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getContainer()) method and obtain collection of [ContainerItem](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/ContainerItem) objects;
 *   Check if *collection* isn't *null* (container extraction is supported for the document);
 *   Iterate through the collection and get container item names, sizes and obtain content.
 
@@ -61,8 +61,7 @@ try (Parser parser = new Parser(Constants.SamplePdfPortfolio)) {
 
 You may easily run the code above and see the feature in action in our GitHub examples:
 
-*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)
-    
+*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)    
 *   [GroupDocs.Parser for Java examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java)
     
 

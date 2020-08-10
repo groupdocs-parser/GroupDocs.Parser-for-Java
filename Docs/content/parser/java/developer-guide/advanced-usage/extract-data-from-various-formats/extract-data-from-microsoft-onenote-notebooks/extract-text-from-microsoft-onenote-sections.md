@@ -8,16 +8,20 @@ keywords:
 productName: GroupDocs.Parser for Java
 hideChildren: False
 ---
-To extract a text from Microsoft OneNote Sections [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText())() and [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText(int))(int pageIndex) methods are used. These methods allow to extract a text from the entire document or a text from the selected page. Raw mode is not supported for Microsoft OneNote.
+To extract a text from Microsoft OneNote Sections [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText()) and [getText(int)](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText(int)) methods are used. These methods allow to extract a text from the entire document or a text from the selected page. Raw mode is not supported for Microsoft OneNote.
+
 Here are the steps to extract a text from Microsoft OneNote Section:
+
 *   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial section;
-*   Call [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText())() method and obtain [TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data") object;
+*   Call [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText()) method and obtain [TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader) object;
 *   Read a text from *reader*.
+
 {{< alert style="warning" >}}
-[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText())() method returns *null* value if text extraction isn't supported for the document. For example, text extraction isn't supported for Zip archive. Therefore, for Zip archive [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText())() method returns *null*. For empty Microsoft OneNote Section [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText())() method returns an empty [TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data") object ([readToEnd](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader#readToEnd())() method returns an empty string).  
+[getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText()) method returns *null* value if text extraction isn't supported for the document. For example, text extraction isn't supported for Zip archive. Therefore, for Zip archive [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText()) method returns *null*. For empty Microsoft OneNote Section [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText()) method returns an empty [TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader) object ([readToEnd](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader#readToEnd()) method returns an empty string).  
 {{< /alert >}}
   
 The following example demonstrates how to extract a text from Microsoft OneNote Section:
+
 ```java
 // Create an instance of Parser class
 try (Parser parser = new Parser(Constants.SampleOne)) {
@@ -32,8 +36,8 @@ try (Parser parser = new Parser(Constants.SampleOne)) {
 Here are the steps to extract a text from the page of Microsoft OneNote Section:
 
 *   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial section;
-*   Call [getDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getDocumentInfo())() method and obtain [IDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo "interface in com.groupdocs.parser.options") object with [getPageCount](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo#getPageCount())() property;
-*   Call [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText(int))(int pageIndex) method with the page index and obtain [TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data") object;
+*   Call [getDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getDocumentInfo()) method and obtain [IDocumentInfo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo) object with [getPageCount](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/IDocumentInfo#getPageCount()) property;
+*   Call [getText(int)](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText(int)) method with the page index and obtain [TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader) object;
 *   Read a text from *reader*.
 
 The following example demonstrates how to extract a text from the page of Microsoft OneNote Section:
@@ -62,10 +66,8 @@ try (Parser parser = new Parser(Constants.SampleOne)) {
 
 You may easily run the code above and see the feature in action in our GitHub examples:
 
-*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)
-    
-*   [GroupDocs.Parser for Java examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java)
-    
+*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)    
+*   [GroupDocs.Parser for Java examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java)    
 
 ### Free online document parser App
 

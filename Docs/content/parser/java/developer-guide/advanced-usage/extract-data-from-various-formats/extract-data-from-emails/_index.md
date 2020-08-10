@@ -20,8 +20,6 @@ The following table provides the list of supported formats:
 | [PST](https://wiki.fileformat.com/email/pst/) | Microsoft Outlook Personal Information Store File |
 | [OST](https://wiki.fileformat.com/email/ost/) | Microsoft Outlook Offline Data File |
 
-The following examples demonstrate how to extract data from emails:
-
 ## More resources
 
 ### GitHub examples
@@ -38,3 +36,5 @@ You may easily run the code above and see the feature in action in our GitHub e
 Along with full featured .NET library we provide simple, but powerful free Apps.
 
 You are welcome to parse documents and extract data from PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, Emails and more with our free online [Free Online Document Parser App](https://products.groupdocs.app/parser).
+
+The following examples demonstrate how to extract data from emails:

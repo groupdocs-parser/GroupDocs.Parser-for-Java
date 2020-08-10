@@ -16,27 +16,25 @@ This article demonstrates how to implement the simplest scenario - extract text 
 
 # Extract text from documents
 
-To extract text from documents simply call the [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText())() method:
+To extract text from documents simply call the [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText()) method:
 
 ```java
 TextReader getText();
-
-
 ```
 
-This method returns an instance of [TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data") class with an extracted text. 
+This method returns an instance of [TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader) class with an extracted text. 
 
-[TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data") class extends *[java.io.Reader](http://docs.oracle.com/javase/7/docs/api/java/io/Reader.html?is-external=true "class or interface in java.io")* and adds the following members:
+[TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader) class extends [*java.io.Reader*](http://docs.oracle.com/javase/7/docs/api/java/io/Reader.html?is-external=true) and adds the following members:
 
 | Member | Description |
 | --- | --- |
-| [readLine](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader#readLine())() | Reads a line of characters from the text reader and returns the data as a string. |
-| [readToEnd](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader#readToEnd())() | Reads all characters from the current position to the end of the text reader and returns them as one string. |
+| [readLine](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader#readLine()) | Reads a line of characters from the text reader and returns the data as a string. |
+| [readToEnd](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader#readToEnd()) | Reads all characters from the current position to the end of the text reader and returns them as one string. |
 
 Here are the steps to extract a text from the document:
 
 *   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for the initial document;
-*   Call [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText())() method and obtain [TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader "class in com.groupdocs.parser.data") object;
+*   Call [getText](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getText()) method and obtain [TextReader](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/TextReader) object;
 *   Check if *reader* isn't *null* (text extraction is supported for the document);
 *   Read a text from *reader*.
 
@@ -52,7 +50,6 @@ try (Parser parser = new Parser(Constants.SamplePdf)) {
         System.out.println(reader == null ? "Text extraction isn't supported" : reader.readToEnd());
     }
 }
-
 ```
 
 ## More resources
@@ -65,10 +62,8 @@ To learn more about document data extraction features and get familiar how to ex
 
 You may easily run the code above and see the feature in action in our GitHub examples:
 
-*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)
-    
-*   [GroupDocs.Parser for Java examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java)
-    
+*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)    
+*   [GroupDocs.Parser for Java examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java)    
 
 ### Free online document parser App
 

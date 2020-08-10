@@ -17,32 +17,38 @@ GroupDocs.Parser provides the functionality to extract emails from remote server
 To create an instance of [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) class to extract emails from a remote server the following constructor is used:
 
 ```java
-Parser(String filePath, LoadOptions loadOptions);
-
+Parser(EmailConnection connection);
+Parser(EmailConnection connection, ParserSettings parserSettings)
 ```
+
+The second constructor allows to use [ParserSettings](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.options/ParserSettings) object to control the process; for example, by adding logging functionality.
+
+[EmailConnection](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.options/EmailConnection) is a base class. The following connection classes are used:
+
+| Protocol | Class |
+| --- | --- |
+| Exchange Web Services | [EmailEwsConnection](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.options/EmailEwsConnection) |
+| IMAP | [EmailImapConnection](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.options/EmailImapConnection) |
+| POP | [EmailPopConnection](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.options/EmailPopConnection) |
 
 Here are the steps to extract emails from the remote server:
 
 *   Prepare connection string (see table below);
 *   Instantiate [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object with connection string;
-*   Call [isContainer](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/Features#isContainer())()  property to check if container extraction is supported;
-*   Call [getContainer](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getContainer())() method and obtain collection of [ContainerItem](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/ContainerItem "class in com.groupdocs.parser.data") objects;
+*   Call [isContainer](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/Features#isContainer())  property to check if container extraction is supported;
+*   Call [getContainer](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser#getContainer()) method and obtain collection of [ContainerItem](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/ContainerItem) objects;
 *   Iterate through the collection and get [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object for each item.
 
 The following example shows how to extract emails from Exchange Server:
 
 ```java
-StringBuilder sb = new StringBuilder();
-sb.append("mode = exchange");
-sb.append('\n');
-sb.append("MailboxUri = https://outlook.office365.com/ews/exchange.asmx");
-sb.append('\n');
-sb.append("Username = email@server");
-sb.append('\n');
-sb.append("Password = password");
+// Create the connection object for Exchange Web Services protocol
+EmailConnection connection = new EmailEwsConnection(
+        "https://outlook.office365.com/ews/exchange.asmx",
+        "email@server",
+        "password");
 // Create an instance of Parser class to extract emails from the remote server
-// As filePath connection parameters are passed; LoadOptions is set to Email file format
-try (Parser parser = new Parser(sb.toString(), new LoadOptions(FileFormat.Email))) {
+try (Parser parser = new Parser(connection)) {
     // Check if container extraction is supported
     if (!parser.getFeatures().isContainer()) {
         System.out.println("Container extraction isn't supported.");
@@ -61,32 +67,8 @@ try (Parser parser = new Parser(sb.toString(), new LoadOptions(FileFormat.Email)
             }
         }
     }
-} 
+}
 ```
-
-The following connection parameters are used:
-
-| Protocol | Parameters |
-| --- | --- |
-| POP | mode = pop  
-Host = <url>  
-Port = <port>  
-Username = <user-name>  
-Password = <password>  
-  
- |
-| IMAP | mode = imap  
-Host = <url>  
-Port = <port>  
-Username = <user-name>  
-Password = <password>  
-  
- |
-| EWS | mode = exchange  
-MailboxUri = <url>  
-Username = <user-name>  
-Password = <password>
- |
 
 ## More resources
 
@@ -94,10 +76,8 @@ Password = <password>
 
 You may easily run the code above and see the feature in action in our GitHub examples:
 
-*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)
-    
-*   [GroupDocs.Parser for Java examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java)
-    
+*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)    
+*   [GroupDocs.Parser for Java examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java)    
 
 ### Free online document parser App
 

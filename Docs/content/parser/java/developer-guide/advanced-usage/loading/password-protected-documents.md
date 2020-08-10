@@ -12,8 +12,8 @@ GroupDocs.Parser provides the functionality to open the password-protected docum
 
 The following are the steps to work with password protected documents.
 
-*   Instantiate the [LoadOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/LoadOptions "class in com.groupdocs.parser.options") object;
-*   Set password in [LoadOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/LoadOptions#LoadOptions(java.lang.String))([String](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true "class or interface in java.lang") password) constructor;
+*   Instantiate the [LoadOptions](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/LoadOptions) object;
+*   Set password in [LoadOptions(String)](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.options/LoadOptions#LoadOptions(java.lang.String)) constructor;
 *   Create [Parser](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser/Parser) object and call any method.
 
 The following code sample shows how to process password protected documents.
@@ -37,10 +37,9 @@ try {
     // Print the message if the password is incorrect or empty
     System.out.println("Invalid password");
 }
-
 ```
 
-If the password is incorrect or empty [InvalidPasswordException](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.exceptions/InvalidPasswordException "class in com.groupdocs.parser.exceptions") exception is thrown.
+If the password is incorrect or empty [InvalidPasswordException](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.exceptions/InvalidPasswordException) exception is thrown.
 
 ## More resources
 
@@ -48,10 +47,8 @@ If the password is incorrect or empty [InvalidPasswordException](https://apirefe
 
 You may easily run the code above and see the feature in action in our GitHub examples:
 
-*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)
-    
-*   [GroupDocs.Parser for Java examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java)
-    
+*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)    
+*   [GroupDocs.Parser for Java examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java)    
 
 ### Free online document parser App
 

@@ -8,11 +8,11 @@ keywords:
 productName: GroupDocs.Parser for Java
 hideChildren: False
 ---
-Document template is set by [`Template`](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/Template "class in com.groupdocs.parser.templates") class. It contains template items - fields and tables. Each item has the unique (in the template bounds) name and optional page index - value that represents the index of the page where the template item is located; *null* if the template item is located on any page.
+Document template is set by [Template](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/Template) class. It contains template items - fields and tables. Each item has the unique (in the template bounds) name and optional page index - value that represents the index of the page where the template item is located; *null* if the template item is located on any page.
 
 ## Template fields
 
-The template field is set by [`TemplateField`](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateField "class in com.groupdocs.parser.templates") class with the following constructor:
+The template field is set by [TemplateField](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateField) class with the following constructor:
 
 ```java
 TemplateField(TemplatePosition position, String name, Integer pageIndex)
@@ -25,11 +25,11 @@ TemplateField(TemplatePosition position, String name, Integer pageIndex)
 | name | A unique template item name. |
 | pageIndex | The page index. An integer value that represents the index of the page where the template item is located; null if the template item is located on any page. |
 
-[TemplatePosition](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplatePosition "class in com.groupdocs.parser.templates") is an abstract base class. The following classes are used to set template positions:
+[TemplatePosition](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplatePosition) is an abstract base class. The following classes are used to set template positions:
 
-*   [`TemplateFixedPosition`](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateFixedPosition "class in com.groupdocs.parser.templates"). Provides a template field position which is defined by the rectangular area.
-*   [`TemplateRegexPosition`](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateRegexPosition "class in com.groupdocs.parser.templates"). Provides a template field position which uses the regular expression.
-*   [`TemplateLinkedPosition`](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateLinkedPosition "class in com.groupdocs.parser.templates"). Provides a template field position which uses the linked field.
+*   [TemplateFixedPosition](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateFixedPosition). Provides a template field position which is defined by the rectangular area.
+*   [TemplateRegexPosition](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateRegexPosition). Provides a template field position which uses the regular expression.
+*   [TemplateLinkedPosition](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateLinkedPosition). Provides a template field position which uses the linked field.
 
 ### TemplateFixedPosition
 
@@ -103,7 +103,7 @@ TemplateField invoiceNumber = new TemplateField(
 | --- | --- |
 | ![](parser/java/images/working-with-templates_3.png)) | Extracts a text on the right of "Invoice Number" field:INV-3337 
 
-To simplify the setting of the size of template field [isAutoScale](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateLinkedPosition#isAutoScale())() property is used. The size of template field is scaled according to the related field if [isAutoScale](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateLinkedPosition#isAutoScale())() is set to true. This is useful when the font size is not known in advance, but the proportions of the size of the value (the ratio of height to width) are approximately known:
+To simplify the setting of the size of template field [isAutoScale](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateLinkedPosition#isAutoScale()) property is used. The size of template field is scaled according to the related field if [isAutoScale](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateLinkedPosition#isAutoScale()) is set to true. This is useful when the font size is not known in advance, but the proportions of the size of the value (the ratio of height to width) are approximately known:
 
 ```java
 // Create a regex template field to find "Invoice Number" text
@@ -119,7 +119,7 @@ TemplateField invoiceNumber = new TemplateField(
 | --- | --- |
 | ![](parser/java/images/working-with-templates_4.png)) | Extracts a text on the right of "Invoice Number" field:INV-3337 
 
-The field value can be extracted from either side of the related field. The side of the value extraction is set by [getEdges](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateLinkedPosition#getEdges())() property. The size of rectangular area is set by [getSearchArea](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateLinkedPosition#getSearchArea())() property. The position of rectangular area depends on the side of the value extraction:
+The field value can be extracted from either side of the related field. The side of the value extraction is set by [getEdges](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateLinkedPosition#getEdges()) property. The size of rectangular area is set by [getSearchArea](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateLinkedPosition#getSearchArea()) property. The position of rectangular area depends on the side of the value extraction:
 
 ```java
 Left: (LinkedField.Rectangle.Left - SearchAreaSize.Width; LinkedField.Rectangle.Top)
@@ -157,7 +157,7 @@ A value of the field depends on the related field. The field is always empty if 
 
 ### Document template with fields
 
-An instance of [`Template`](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/Template "class in com.groupdocs.parser.templates") class is created by the constructor:
+An instance of [Template](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/Template) class is created by the constructor:
 
 ```java
 Template(IEnumerable<TemplateItem> items)
@@ -189,7 +189,7 @@ The field name is case-insensitive (Field and FIELD - the same names) and must b
 
 ## Template tables
 
-Template table is set by [`TemplateTable`](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateTable "class in com.groupdocs.parser.templates") class with the following constructors:
+Template table is set by [TemplateTable](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateTable) class with the following constructors:
 
 ```java
 TemplateTable(TemplateTableLayout layout, String name, Integer pageIndex)
@@ -199,7 +199,7 @@ TemplateTable(TemplateTableParameters parameters, String name, Integer pageIndex
 
 Template table can be set by detector parameters or table layout. If the page index is omitted, tables are extracted from every document page. It's useful in the cases when the document contains pages with the same layout (pages differ only by data).
 
-[`TemplateTableParameters`](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateTableParameters "class in com.groupdocs.parser.templates") class has the following constructors:
+[TemplateTableParameters](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateTableParameters) class has the following constructors:
 
 ```java
 TemplateTableParameters(Rectangle rectangle, Iterable<Double> verticalSeparators)
@@ -244,7 +244,7 @@ Template template = new Template(java.util.Arrays.asList(new TemplateItem[] { ta
 
 These collections represent bounds of columns and rows. For example, for 2x2 table there are 3 vertical and 3 horizontal separators:
 
-```java
+```
 ---------
 |   |   |
 ---------
@@ -253,13 +253,13 @@ These collections represent bounds of columns and rows. For example, for 2x2 tab
 
 ```
 
-[moveTo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateTableLayout#moveTo(com.groupdocs.parser.data.Point))([Point](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/Point "class in com.groupdocs.parser.data") point) method is used to move Table Layout. 
+[moveTo(Point)](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateTableLayout#moveTo(com.groupdocs.parser.data.Point)) method is used to move Table Layout. 
 
-For example, a document has tables on each page (or a set of documents with a table on the page). These tables differ by position and content, but have the same columns and rows. In this case a user can define [`TemplateTableLayout`](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateTableLayout "class in com.groupdocs.parser.templates") object at (0, 0) once and then move it to the location of the definite table.
+For example, a document has tables on each page (or a set of documents with a table on the page). These tables differ by position and content, but have the same columns and rows. In this case a user can define [TemplateTableLayout](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateTableLayout) object at (0, 0) once and then move it to the location of the definite table.
 
-If the table position depends on the other object of the page, a user can define [`TemplateTableLayout`](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateTableLayout "class in com.groupdocs.parser.templates") object based on template document and then move it according to an anchor object. For example, if this is a summary table and it is followed by details table (which can contain a different count of rows). In this case a user can define [`TemplateTableLayout`](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateTableLayout "class in com.groupdocs.parser.templates") object on template document (with the known details table rectangle) and then move [`TemplateTableLayout`](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateTableLayout "class in com.groupdocs.parser.templates") object according to the difference of details table rectangle of template and real document.
+If the table position depends on the other object of the page, a user can define [TemplateTableLayout](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateTableLayout) object based on template document and then move it according to an anchor object. For example, if this is a summary table and it is followed by details table (which can contain a different count of rows). In this case a user can define [TemplateTableLayout](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateTableLayout) object on template document (with the known details table rectangle) and then move [TemplateTableLayout](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateTableLayout) object according to the difference of details table rectangle of template and real document.
 
-[moveTo](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateTableLayout#moveTo(com.groupdocs.parser.data.Point))([Point](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.data/Point "class in com.groupdocs.parser.data") point) method returns a copy of the current object. A user can pass any coordinates (even negative - then layout will be moved to the left/top).
+[moveTo(Point)](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.templates/TemplateTableLayout#moveTo(com.groupdocs.parser.data.Point)) method returns a copy of the current object. A user can pass any coordinates (even negative - then layout will be moved to the left/top).
 
 ## Complex template example
 
@@ -326,10 +326,8 @@ Template template = new Template(java.util.Arrays.asList(templateItems));
 
 You may easily run the code above and see the feature in action in our GitHub examples:
 
-*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)
-    
-*   [GroupDocs.Parser for Java examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java)
-    
+*   [GroupDocs.Parser for .NET examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-.NET)    
+*   [GroupDocs.Parser for Java examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java)    
 
 ### Free online document parser App
 
