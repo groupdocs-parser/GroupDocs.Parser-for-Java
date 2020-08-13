@@ -2,7 +2,7 @@
 id: working-with-data-extracted-by-template
 url: parser/java/working-with-data-extracted-by-template
 title: Working with data extracted by template
-weight: 6
+weight: 102
 description: ""
 keywords: 
 productName: GroupDocs.Parser for Java

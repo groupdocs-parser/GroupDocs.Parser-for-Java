@@ -56,12 +56,16 @@ public class RunExamples {
 //            System.out.println(ex.getMessage());
 //        }
 
+//        GenerateDocumentPagesPreview.run();
+//        GenerateSpreadsheetPagesPreview.run();
+
         // Loading
 
 //        PasswordProtectedDocuments.run();
 //        LoadingSpecificFileFormats.run();
 //        LoadDocumentFromStream.run();
 //        LoadDocumentFromLocalDisk.run();
+
 
         // Working With Zip Archives and Attachments
 

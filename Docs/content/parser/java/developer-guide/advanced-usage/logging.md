@@ -2,7 +2,7 @@
 id: logging
 url: parser/java/logging
 title: Logging
-weight: 4
+weight: 103
 description: ""
 keywords: 
 productName: GroupDocs.Parser for Java

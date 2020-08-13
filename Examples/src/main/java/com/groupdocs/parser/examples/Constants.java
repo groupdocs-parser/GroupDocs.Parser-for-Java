@@ -72,7 +72,7 @@ public class Constants {
     public static String getOutputFilePath(String fileName) throws IOException {
         String outputDirectory = OutputPath + fileName;
 
-        java.io.File directory = new java.io.File(OutputPath);
+        java.io.File directory = new java.io.File(outputDirectory).getParentFile();
         if (!directory.exists())
             directory.mkdir();
 
