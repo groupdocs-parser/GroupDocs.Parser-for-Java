@@ -179,7 +179,7 @@ This improvement allows to set dpi to generate previews.
 
 #### Public API changes
 
-* Added Dpi property to com.groupdocs.parser.options.PreviewOptions class
+* Added [Dpi](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.options/PreviewOptions#setDpi(int)) property to [com.groupdocs.parser.options.PreviewOptions](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.options/PreviewOptions) class
 
 #### Usage
 
@@ -221,9 +221,9 @@ This improvement allows to generate previews for spreadsheets by tiles
 
 #### Public API changes
 
-* Added PageRenderInfo class to com.groupdocs.parser.options package
-* Added IPreviewPageRender interface to com.groupdocs.parser.options package
-* Added PreviewPageRender property to com.groupdocs.parser.options.PreviewOptions class
+* Added [PageRenderInfo](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.options/PageRenderInfo) class to [com.groupdocs.parser.options](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.options/package-summary) package
+* Added [IPreviewPageRender](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.options/IPreviewPageRender) interface to [com.groupdocs.parser.options](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.options/package-summary) package
+* Added [PreviewPageRende](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.options/PreviewOptions#setPreviewPageRender(com.groupdocs.parser.options.IPreviewPageRender)) property to [com.groupdocs.parser.options.PreviewOptions](https://apireference.groupdocs.com/parser/java/com.groupdocs.parser.options/PreviewOptions) class
 
 #### Usage
 
