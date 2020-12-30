@@ -2,7 +2,7 @@
 id: groupdocs-parser-for-java-20-6-release-notes
 url: parser/java/groupdocs-parser-for-java-20-6-release-notes
 title: GroupDocs.Parser for Java 20.6 Release Notes
-weight: 2
+weight: 3
 description: ""
 keywords: 
 productName: GroupDocs.Parser for Java

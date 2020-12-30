@@ -41,6 +41,15 @@ try {
 
 If the password is incorrect or empty [InvalidPasswordException](https://apireference.groupdocs.com/java/parser/com.groupdocs.parser.exceptions/InvalidPasswordException) exception is thrown.
 
+The following code shows how to check whether a file is password-protected:
+
+```java
+// Get a file info
+FileInfo info = Parser.getFileInfo(filePath);
+// Check IsEncrypted property
+System.out.println(info.isEncrypted() ? "Password is required" : "");
+```
+
 ## More resources
 
 ### GitHub examples
