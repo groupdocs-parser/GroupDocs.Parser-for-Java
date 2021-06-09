@@ -10,7 +10,6 @@ GroupDocs.Parser for Java is a [Document Parser & Data Extraction Library](https
 
 Directory | Description
 --------- | -----------
-[Docs](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java/tree/master/Docs)  | Product documentation containing the Developer's Guide, Release Notes and more.
 [Examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java/tree/master/Examples)  | Java examples and sample documents for you to get started quickly. 
 
 ## Parse Documents to Extract Text, Images & Metadata
