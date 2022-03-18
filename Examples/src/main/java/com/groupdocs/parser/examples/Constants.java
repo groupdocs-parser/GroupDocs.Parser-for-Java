@@ -1,5 +1,5 @@
 // <copyright company="Aspose Pty Ltd">
-//   Copyright (C) 2011-2020 GroupDocs. All Rights Reserved.
+//   Copyright (C) 2011-2022 GroupDocs. All Rights Reserved.
 // </copyright>
 
 package com.groupdocs.parser.examples;
@@ -64,6 +64,8 @@ public class Constants {
     public static final String SampleDocxWithToc = getFilePath("samplewithtoc.docx");
 
     public static final String SamplePdfWithToc = getFilePath("samplewithtoc.pdf");
+
+	public static final String SamplePdfWithBarcodes = getFilePath("Barcodes.pdf");
 
     private static String getFilePath(String fileName) {
         return SamplesPath + fileName;

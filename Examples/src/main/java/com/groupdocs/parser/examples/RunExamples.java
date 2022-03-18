@@ -1,5 +1,5 @@
 // <copyright company="Aspose Pty Ltd">
-//   Copyright (C) 2011-2020 GroupDocs. All Rights Reserved.
+//   Copyright (C) 2011-2022 GroupDocs. All Rights Reserved.
 // </copyright>
 package com.groupdocs.parser.examples;
 
@@ -12,7 +12,9 @@ import com.groupdocs.parser.examples.advanced_usage.working_with_data_extracted_
 import com.groupdocs.parser.examples.advanced_usage.working_with_images.*;
 import com.groupdocs.parser.examples.advanced_usage.working_with_templates.template_fields.*;
 import com.groupdocs.parser.examples.advanced_usage.working_with_templates.template_tables.*;
+import com.groupdocs.parser.examples.advanced_usage.working_with_templates.template_barcodes.*;
 import com.groupdocs.parser.examples.advanced_usage.working_with_text.*;
+import com.groupdocs.parser.examples.advanced_usage.working_with_barcodes.*;
 import com.groupdocs.parser.examples.advanced_usage.working_with_text.working_with_formatted_text.*;
 import com.groupdocs.parser.examples.quick_start.*;
 import com.groupdocs.parser.examples.basic_usage.*;
@@ -90,6 +92,12 @@ public class RunExamples {
 //        ExtractHyperlinksFromDocumentPage.Run();
 //        ExtractHyperlinksFromDocumentPageArea.Run();
 
+        // Working With Barcodes
+
+//        ExtractBarcodesFromDocument.run();
+//        ExtractBarcodesFromDocumentPage.run();
+//        ExtractBarcodesFromDocumentPageArea.run();
+
         // Working With Text
 
 //        DetectEncoding.run();
@@ -128,6 +136,10 @@ public class RunExamples {
 
 //        WorkingWithTableLayout.run();
 //        WorkingWithTableParameters.run();
+
+        // Template Barcodes
+
+        WorkingWithBarcodes.run();
 
         // Working with data extracted by template
 
