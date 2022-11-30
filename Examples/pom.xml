@@ -5,7 +5,7 @@
 
     <groupId>GroupDocs.Parser-for-Java</groupId>
     <artifactId>GroupDocs.Parser-for-Java</artifactId>
-    <version>22.6</version>
+    <version>22.11</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -42,12 +42,17 @@
         <dependency>
             <groupId>com.groupdocs</groupId>
             <artifactId>groupdocs-parser</artifactId>
-            <version>22.6</version>
+            <version>22.11</version>
         </dependency>
         <dependency>
             <groupId>org.xerial</groupId>
             <artifactId>sqlite-jdbc</artifactId>
             <version>3.23.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.aspose</groupId>
+            <artifactId>aspose-ocr</artifactId>
+            <version>22.11</version>
         </dependency>
     </dependencies>
     <repositories>
@@ -55,6 +60,11 @@
             <id>GroupDocsJavaAPI</id>
             <name>GroupDocs Java API</name>
             <url>https://repository.groupdocs.com/repo/</url>
+        </repository>
+        <repository>
+            <id>AsposeJavaAPI</id>
+            <name>Aspose Java API</name>
+            <url>https://repository.aspose.com/repo/</url>
         </repository>
     </repositories>
     <build>

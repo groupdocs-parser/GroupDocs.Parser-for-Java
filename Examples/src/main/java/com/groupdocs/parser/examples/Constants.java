@@ -11,6 +11,8 @@ public class Constants {
     public static final String SamplesPath = "..\\Examples\\Resources\\SampleFiles\\";
     public static final String OutputPath = "..\\Examples\\Output\\";
 
+    public static final String AsposeOcrLicensePath = "C:\\Licenses\\Aspose.OCR.Java.lic";
+
     public static final String SampleDocx = getFilePath("sample.docx");
 
     public static final String SampleWithImagesDocx = getFilePath("SampleWithImages.docx");
@@ -66,6 +68,8 @@ public class Constants {
     public static final String SamplePdfWithToc = getFilePath("samplewithtoc.pdf");
 
 	public static final String SamplePdfWithBarcodes = getFilePath("Barcodes.pdf");
+
+    public static final String SampleScan = getFilePath("SampleScan.jpg");
 
     private static String getFilePath(String fileName) {
         return SamplesPath + fileName;
