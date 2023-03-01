@@ -1,5 +1,5 @@
 // <copyright company="Aspose Pty Ltd">
-//   Copyright (C) 2011-2022 GroupDocs. All Rights Reserved.
+//   Copyright (C) 2011-2023 GroupDocs. All Rights Reserved.
 // </copyright>
 
 package com.groupdocs.parser.examples;
@@ -67,12 +67,14 @@ public class Constants {
 
     public static final String SamplePdfWithToc = getFilePath("samplewithtoc.pdf");
 
-	public static final String SamplePdfWithBarcodes = getFilePath("Barcodes.pdf");
+    public static final String SamplePdfWithBarcodes = getFilePath("Barcodes.pdf");
 
     public static final String SampleScan = getFilePath("SampleScan.jpg");
 
+    public static final String SampleHtmlWithImages = getFilePath("installation.html");
+
     private static String getFilePath(String fileName) {
-        return SamplesPath + fileName;
+        return System.getProperty("user.dir") + "\\" + SamplesPath + fileName;
     }
 
     public static String getOutputFilePath(String fileName) throws IOException {

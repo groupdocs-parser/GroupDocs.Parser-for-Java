@@ -1,5 +1,5 @@
 // <copyright company="Aspose Pty Ltd">
-//   Copyright (C) 2011-2022 GroupDocs. All Rights Reserved.
+//   Copyright (C) 2011-2023 GroupDocs. All Rights Reserved.
 // </copyright>
 package com.groupdocs.parser.examples;
 
@@ -68,7 +68,7 @@ public class RunExamples {
 //        LoadingSpecificFileFormats.run();
 //        LoadDocumentFromStream.run();
 //        LoadDocumentFromLocalDisk.run();
-
+//        HandleLoadingOfExternalResources.run();
 
         // Working With Zip Archives and Attachments
 
