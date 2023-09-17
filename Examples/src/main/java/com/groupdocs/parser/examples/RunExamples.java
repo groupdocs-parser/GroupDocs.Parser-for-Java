@@ -8,6 +8,7 @@ import com.groupdocs.parser.examples.advanced_usage.loading.*;
 import com.groupdocs.parser.examples.advanced_usage.using_ocr.*;
 import com.groupdocs.parser.examples.advanced_usage.working_with_hyperlinks.*;
 import com.groupdocs.parser.examples.advanced_usage.working_with_tables.*;
+import com.groupdocs.parser.examples.advanced_usage.working_with_templates.ParsePagesByTemplate;
 import com.groupdocs.parser.examples.advanced_usage.working_with_zip_archives_and_attachments.*;
 import com.groupdocs.parser.examples.advanced_usage.working_with_data_extracted_by_template.*;
 import com.groupdocs.parser.examples.advanced_usage.working_with_images.*;
@@ -74,6 +75,7 @@ public class RunExamples {
 
 //        DetectFileType.run();
 //        IterateThroughContainerItems.run();
+//        DistinguishInlineImagesInEmail.run();
 
         // Working With Images
 
@@ -127,6 +129,8 @@ public class RunExamples {
 
         // Working With Templates
 
+//        ParsePagesByTemplate.run();
+
         // Template Fields
 
 //        WorkingWithTemplateFixedPosition.run();
@@ -140,7 +144,7 @@ public class RunExamples {
 
         // Template Barcodes
 
-//        WorkingWithBarcodes.run();
+        WorkingWithBarcodes.run();
 
         // Working with data extracted by template
 

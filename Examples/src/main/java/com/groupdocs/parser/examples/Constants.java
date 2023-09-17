@@ -73,6 +73,8 @@ public class Constants {
 
     public static final String SampleHtmlWithImages = getFilePath("installation.html");
 
+    public static final String InlineImages = getFilePath("Embedded Image And Attachment.eml");
+
     private static String getFilePath(String fileName) {
         return System.getProperty("user.dir") + "\\" + SamplesPath + fileName;
     }

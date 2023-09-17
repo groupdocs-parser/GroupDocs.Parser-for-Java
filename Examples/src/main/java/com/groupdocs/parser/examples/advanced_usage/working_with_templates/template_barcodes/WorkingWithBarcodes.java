@@ -17,7 +17,7 @@ public class WorkingWithBarcodes {
     public static void run() {
         // Define a barcode field
         TemplateBarcode barcode = new TemplateBarcode(
-                new Rectangle(new Point(590, 80), new Size(150, 150)),
+                new Rectangle(new Point(405, 55), new Size(100, 50)),
                 "QR");
 
         // Create a template
