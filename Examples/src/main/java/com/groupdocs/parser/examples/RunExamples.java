@@ -144,7 +144,7 @@ public class RunExamples {
 
         // Template Barcodes
 
-        WorkingWithBarcodes.run();
+//        WorkingWithBarcodes.run();
 
         // Working with data extracted by template
 
