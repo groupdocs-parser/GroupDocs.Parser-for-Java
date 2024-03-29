@@ -1,5 +1,5 @@
 // <copyright company="Aspose Pty Ltd">
-//   Copyright (C) 2011-2023 GroupDocs. All Rights Reserved.
+//   Copyright (C) 2011-2024 GroupDocs. All Rights Reserved.
 // </copyright>
 package com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.word;
 

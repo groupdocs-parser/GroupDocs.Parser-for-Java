@@ -42,6 +42,11 @@
       <option name="url" value="https://repo1.maven.org/maven2" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="AsposeJavaAPI" />
+      <option name="name" value="Aspose Java API" />
+      <option name="url" value="https://releases.aspose.com/java/repo/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="GroupDocsJavaAPI" />
       <option name="name" value="GroupDocs Java API" />
       <option name="url" value="https://releases-qa.groupdocs.com/repo/" />
