@@ -75,6 +75,8 @@ public class Constants {
 
     public static final String InlineImages = getFilePath("Embedded Image And Attachment.eml");
 
+    public static final String SampleCorruptedBarcodes = getFilePath("corrupted.png");
+
     private static String getFilePath(String fileName) {
         return System.getProperty("user.dir") + "\\" + SamplesPath + fileName;
     }

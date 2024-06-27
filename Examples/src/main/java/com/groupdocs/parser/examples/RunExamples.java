@@ -52,6 +52,7 @@ public class RunExamples {
 
         // Advanced Usage
 
+//        Export.run();
 //        Logging.run();
 //        ExtractDataFromDatabases.run();
 //        try {
@@ -99,8 +100,10 @@ public class RunExamples {
         // Working With Barcodes
 
 //        ExtractBarcodesFromDocument.run();
+//        ExtractBarcodesFromDocumentCorrupted.run();
 //        ExtractBarcodesFromDocumentPage.run();
 //        ExtractBarcodesFromDocumentPageArea.run();
+//        ExtractBarcodesFromDocumentWithOptions.run();
 
         // Working With Text
 
