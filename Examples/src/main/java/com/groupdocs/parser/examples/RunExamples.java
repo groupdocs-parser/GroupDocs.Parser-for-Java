@@ -1,5 +1,5 @@
 // <copyright company="Aspose Pty Ltd">
-//   Copyright (C) 2011-2024 GroupDocs. All Rights Reserved.
+//   Copyright (C) 2011-2026 GroupDocs. All Rights Reserved.
 // </copyright>
 package com.groupdocs.parser.examples;
 
@@ -21,11 +21,9 @@ import com.groupdocs.parser.examples.advanced_usage.working_with_text.working_wi
 import com.groupdocs.parser.examples.quick_start.*;
 import com.groupdocs.parser.examples.basic_usage.*;
 
-import java.io.Console;
-
 public class RunExamples {
     public static void main(String[] args) throws Exception {
-        System.out.println("Open RunExamples.cs. \n In Main() method uncomment the example that you want to run.");
+        System.out.println("Open RunExamples.java. \n In Main() method uncomment the example that you want to run.");
         System.out.println("=====================================================");
 
         // NOTE: Please uncomment the example you want to try out
@@ -40,6 +38,7 @@ public class RunExamples {
         // Basic Usage
 
 //        ExtractDataFromAttachmentsAndZipArchives.run();
+//        ExtractAllPdfFormFields.run();
 //        ExtractFormattedTextFromDocuments.run();
 //        ExtractImagesFromDocuments.run();
 //        ExtractMetadataFromDocuments.run();
@@ -188,6 +187,8 @@ public class RunExamples {
 //        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.excel.ExtractTextFromSheetInRawMode.run();
 //        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.excel.SearchTextByKeyword.run();
 //        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.excel.SearchTextByRegularExpression.run();
+//        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.excel.ExtractCells.run();
+//        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.excel.ExtractCellsWithCustomization.run();
 
         // PowerPoint
 

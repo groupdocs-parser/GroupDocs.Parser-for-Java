@@ -4,7 +4,7 @@ GroupDocs.Parser for Java is a [Document Parser & Data Extraction Library](https
 
 <p align="center">
   <a title="Download complete GroupDocs.Parser for Java source code" href="https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java/archive/master.zip"> 
-    <img src="https://camo.githubusercontent.com/11839cd752a2d367f3149c7bee1742b68e4a4d37/68747470733a2f2f7261772e6769746875622e636f6d2f4173706f73654578616d706c65732f6a6176612d6578616d706c65732d64617368626f6172642f6d61737465722f696d616765732f646f776e6c6f61645a69702d427574746f6e2d4c617267652e706e67" data-canonical-src="https://raw.github.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" style="max-width:100%;">
+    <img src="https://raw.githubusercontent.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" style="max-width:100%;">
   </a>
 </p>
 
@@ -21,16 +21,20 @@ Directory | Description
 - Search text by a keyword or regular expression. Also get text around the found word.
 - Extract metadata from supported document formats.
 - Get information about document images and save them.
-- Extract data containers like ZIP archives, PDF portfolios, emails, OST and so on.
+- Extract data containers like ZIP, 7Z, RAR, TAR, GZ and BZ2 archives, PDF portfolios, emails, OST and so on.
+- Extract tables from a document, either automatically or by a predefined layout.
+- Extract cells of spreadsheet worksheets along with their row and column indexes.
+- Extract document annotations with an author, a timestamp and a text.
+- Generate page previews as images.
 - [Extract table of contents (ToC)](https://docs.groupdocs.com/parser/java/extract-table-of-contents/).
 - [Parse form data from PDF documents](https://docs.groupdocs.com/parser/java/extract-data-from-pdf-forms/).
 
 
 ## Get Started with GroupDocs.Parser for Java
 
-GroupDocs.Parser for Java requires J2SE 7.0 (1.7), J2SE 8.0 (1.8) or above. Please install Java first if you do not have it already. 
+GroupDocs.Parser for Java requires J2SE 8.0 (1.8) or above. Please install Java first if you do not have it already. 
 
-GroupDocs hosts all Java APIs on [GroupDocs Artifact Repository](https://artifact.groupdocs.com/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-parser), so simply [configure](https://docs.groupdocs.com/parser/java/installation/) your Maven project to fetch the dependencies automatically.
+GroupDocs hosts all Java APIs on [GroupDocs Artifact Repository](https://releases.groupdocs.com/java/repo/), so simply [configure](https://docs.groupdocs.com/parser/java/installation/) your Maven project to fetch the dependencies automatically.
 
 ## Extract Text from PDF Document
 
@@ -81,4 +85,4 @@ try (Parser parser = new Parser(Constants.SampleDocx)) {
 
 ```
 
-[Home](https://www.groupdocs.com/) | [Product Page](https://products.groupdocs.com/parser/java) | [Documentation](https://docs.groupdocs.com/parser/java/) | [Demos](https://products.groupdocs.app/parser/family) | [API Reference](https://apireference.groupdocs.com/java/parser) | [Examples](https://github.com/groupdocs-parser/GroupDocs.parser-for-Java/tree/master/Examples) | [Blog](https://blog.groupdocs.com/category/parser/) | [Search](https://search.groupdocs.com/) | [Free Support](https://forum.groupdocs.com/c/parser) | [Temporary License](https://purchase.groupdocs.com/temporary-license)
+[Home](https://www.groupdocs.com/) | [Product Page](https://products.groupdocs.com/parser/java) | [Documentation](https://docs.groupdocs.com/parser/java/) | [Demos](https://products.groupdocs.app/parser/family) | [API Reference](https://reference.groupdocs.com/parser/java/) | [Examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java/tree/master/Examples) | [Blog](https://blog.groupdocs.com/category/parser/) | [Search](https://search.groupdocs.com/) | [Free Support](https://forum.groupdocs.com/c/parser) | [Temporary License](https://purchase.groupdocs.com/temporary-license)
