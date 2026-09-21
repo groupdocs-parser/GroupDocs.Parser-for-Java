@@ -49,6 +49,8 @@ public class Constants {
 
     public static final String SampleHtml = getFilePath("sample.htm");
 
+    public static final String TablesHtml = getFilePath("Tables.html");
+
     public static final String SampleEpub = getFilePath("sample.epub");
 
     public static final String SampleOne = getFilePath("sample.one");

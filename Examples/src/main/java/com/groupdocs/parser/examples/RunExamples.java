@@ -70,6 +70,7 @@ public class RunExamples {
 //        LoadDocumentFromStream.run();
 //        LoadDocumentFromLocalDisk.run();
 //        HandleLoadingOfExternalResources.run();
+//        ExternalResourcesInEmailMessages.run();
 //        LoadDocumentFromUrl.run();
 
         // Working With Zip Archives and Attachments
@@ -238,6 +239,7 @@ public class RunExamples {
 
         // Html
 
+//        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.html.ExtractTables.run();
 //        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.html.ExtractText.run();
 //        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.html.SearchTextByKeyword.run();
 //        com.groupdocs.parser.examples.advanced_usage.extract_data_from_various_formats.html.SearchTextByRegularExpression.run();
