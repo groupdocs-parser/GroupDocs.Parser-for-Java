@@ -1,0 +1,5 @@
+# GroupDocs.Parser for Java examples
+Repo: https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java
+Docs: https://docs.groupdocs.com/parser/java/
+Formats: 65+
+Artifact: com.groupdocs:groupdocs-parser
