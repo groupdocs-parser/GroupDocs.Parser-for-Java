@@ -13,9 +13,9 @@ import java.io.IOException;
 public class ExtractDataFromDatabasesWithDbConnection {
     public static void Run() throws java.sql.SQLException, IOException {
         // Create DbConnection object
-        java.sql.Connection connection = java.sql.DriverManager.getConnection(String.format("jdbc:sqlite:%s", Constants.SampleDatabase));
-        // Create an instance of Parser class to extract tables from the database
-        try (Parser parser = new Parser(connection)) {
+        try (java.sql.Connection connection = java.sql.DriverManager.getConnection(String.format("jdbc:sqlite:%s", Constants.SampleDatabase));
+             // Create an instance of Parser class to extract tables from the database
+             Parser parser = new Parser(connection)) {
             // Check if text extraction is supported
             if (!parser.getFeatures().isText()) {
                 System.out.println("Text extraction isn't supported.");
@@ -32,7 +32,7 @@ public class ExtractDataFromDatabasesWithDbConnection {
             for(TocItem i : toc)
             {
                 // Print the table name
-                System.out.println(i.extractText());
+                System.out.println(i.getText());
                 // Extract a table content as a text
                 try(TextReader reader = parser.getText(i.getPageIndex().intValue()))
                 {
