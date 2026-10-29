@@ -19,12 +19,13 @@ public class DistinguishInlineImagesInEmail {
             // Check if container extraction is supported
             if (attachments == null) {
                 System.out.println("Container extraction isn't supported");
+                return;
             }
 
             // Iterate over attachments
             for (ContainerItem item : attachments) {
                 // Check metadata for 'disposition' item
-                if (item.getMetadataValue("disposition") == "inline") {
+                if ("inline".equals(item.getMetadataValue("disposition"))) {
                     // If it's 'inline' then print an item name
                     System.out.println(String.format("%s", item.getName()));
                 }
