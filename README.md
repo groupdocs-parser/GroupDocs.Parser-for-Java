@@ -2,11 +2,11 @@
 
 
 
-[Product Page](https://products.groupdocs.com/parser/java) | [Docs](https://docs.groupdocs.com/parser/java/) | [Demos](https://products.groupdocs.com/parser/java/demos) | [API Reference](https://reference.groupdocs.com/parser/java/) | [Examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java) | [Blog](https://blog.groupdocs.com/categories/groupdocs.parser-product-family/) | [Releases](https://releases.groupdocs.com/parser/java/) | [Free Support](https://forum.groupdocs.com/c/parser/17) | [Temporary License](https://purchase.groupdocs.com/temp-license)
+[Product Page](https://products.groupdocs.com/parser/java) | [Docs](https://docs.groupdocs.com/parser/java/) | [Demos](https://products.groupdocs.app/parser/family) | [API Reference](https://reference.groupdocs.com/parser/java/) | [Examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java) | [Blog](https://blog.groupdocs.com/categories/groupdocs.parser-product-family/) | [Releases](https://releases.groupdocs.com/parser/java/) | [Free Support](https://forum.groupdocs.com/c/parser/17) | [Temporary License](https://purchase.groupdocs.com/temp-license)
 
 
 
-GroupDocs.Parser for .NET is a powerful parsing class library that enables developers to extract text, images, metadata, structured and formatted content, barcodes, and attachments-including ZIP archives, emails, and PDF portfolios-from over 65 document formats, including PDF, Microsoft Office (DOC, DOCX, XLS, XLSX, PPT, PPTX), OpenDocument, email (EML, MSG, PST), e-books (EPUB, FB2), images, and more.
+GroupDocs.Parser for Java is a powerful parsing class library that enables developers to extract text, images, metadata, structured and formatted content, barcodes, and attachments-including ZIP archives, emails, and PDF portfolios-from over 65 document formats, including PDF, Microsoft Office (DOC, DOCX, XLS, XLSX, PPT, PPTX), OpenDocument, email (EML, MSG, PST), e-books (EPUB, FB2), images, and more.
 
 ### Features
 
@@ -18,15 +18,18 @@ GroupDocs.Parser for .NET is a powerful parsing class library that enables devel
 - Parse data from attachments and ZIP archives, including PDF portfolios and emails  
 - Extract barcodes from documents and document pages  
 - Extract data from PDF forms and detect document encoding
+- Extract tables automatically or by a predefined layout, and cells of spreadsheet worksheets
+- Extract the table of contents (ToC) and document annotations
+- Generate page previews as images
 
 See the [Features overview](https://docs.groupdocs.com/parser/java/features-overview/) documentation topic for more details.
 
 ### Supported formats
 
-## Supported Formats (high level)
-
 This API supports a broad set of document and media formats, including:
 
+- **Microsoft Office**: DOC, DOCX, XLS, XLSX, PPT, PPTX
+- **OpenDocument**: ODT, ODS, ODP
 - **PDF**: PDF
 - **Images**: JPG, PNG, TIFF, BMP, GIF, PSD
 - **Email**: EML, MSG, EMLX, OST, PST
@@ -43,26 +46,60 @@ Add the dependency via Maven or Gradle. See the [Java release hub](https://relea
 ```xml
 <dependency>
   <groupId>com.groupdocs</groupId>
-  <artifactId>groupdocs-metadata</artifactId>
+  <artifactId>groupdocs-parser</artifactId>
   <version>LATEST</version>
 </dependency>
 ```
 
 See [documentation](https://docs.groupdocs.com/parser/java/) and the examples in this repository for runnable samples.
 
-### Example 1
+### Example 1: Extract text from a PDF document
 
-```csharp
-## Extract Formatted Text from DOCX
+```java
+// create an instance of Parser class
+try (Parser parser = new Parser("sample.pdf")) {
+    // extract a text into the reader
+    try (TextReader reader = parser.getText()) {
+        // print a text from the document
+        // if text extraction isn't supported, a reader is null
+        System.out.println(reader == null ? "Text extraction isn't supported" : reader.readToEnd());
+    }
+}
 ```
 
-### Example 2
+### Example 2: Extract formatted text from a DOCX document
 
-```csharp
-## Extract Document Metadata via Java
+```java
+// create an instance of Parser class
+try (Parser parser = new Parser("sample.docx")) {
+    // extract a formatted text into the reader
+    try (TextReader reader = parser.getFormattedText(new FormattedTextOptions(FormattedTextMode.Html))) {
+        // print a formatted text from the document
+        // if formatted text extraction isn't supported, a reader is null
+        System.out.println(reader == null ? "Formatted text extraction isn't supported" : reader.readToEnd());
+    }
+}
 ```
 
+### Example 3: Extract document metadata
 
+```java
+// create an instance of Parser class
+try (Parser parser = new Parser("sample.docx")) {
+    // extract metadata from the document
+    Iterable<MetadataItem> metadata = parser.getMetadata();
+    // check if metadata extraction is supported
+    if (metadata == null) {
+        System.out.println("Metadata extraction isn't supported");
+        return;
+    }
+    // iterate over metadata items
+    for (MetadataItem item : metadata) {
+        // print an item name and value
+        System.out.println(String.format("%s: %s", item.getName(), item.getValue()));
+    }
+}
+```
 
 Explore the sample projects in this repository or open [documentation](https://docs.groupdocs.com/parser/java/) for more topics.
 
@@ -70,126 +107,4 @@ Explore the sample projects in this repository or open [documentation](https://d
 
 Our technical support is available to all users, including those evaluating our product. We offer assistance through our [Free Support Forum](https://forum.groupdocs.com/c/parser/17) and [Paid Support Helpdesk](https://helpdesk.groupdocs.com/). Let us know if you have any questions or issues, and we'll do our best to help you.
 
-[Product Page](https://products.groupdocs.com/parser/java) | [Docs](https://docs.groupdocs.com/parser/java/) | [Demos](https://products.groupdocs.com/parser/java/demos) | [API Reference](https://reference.groupdocs.com/parser/java/) | [Examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java) | [Blog](https://blog.groupdocs.com/categories/groupdocs.parser-product-family/) | [Releases](https://releases.groupdocs.com/parser/java/) | [Free Support](https://forum.groupdocs.com/c/parser/17) | [Temporary License](https://purchase.groupdocs.com/temp-license)
-
-### Parse Documents to Extract Text, Images & Metadata
-
-- Extract plain text from any of the supported documents.
-- Extract HTML or Markdown formatted text for a fast preview.
-- Extract structured text.
-- Extract text areas with coordinates, text style and other information.
-- Search text by a keyword or regular expression. Also get text around the found word.
-- Extract metadata from supported document formats.
-- Get information about document images and save them.
-- Extract data containers like ZIP, 7Z, RAR, TAR, GZ and BZ2 archives, PDF portfolios, emails, OST and so on.
-- Extract tables from a document, either automatically or by a predefined layout.
-- Extract cells of spreadsheet worksheets along with their row and column indexes.
-- Extract document annotations with an author, a timestamp and a text.
-- Generate page previews as images.
-- [Extract table of contents (ToC)](https://docs.groupdocs.com/parser/java/extract-table-of-contents/).
-- [Parse form data from PDF documents](https://docs.groupdocs.com/parser/java/extract-data-from-pdf-forms/).
-
-### Extract Text from PDF Document
-
-```java
-// create an instance of Parser class
-try (Parser parser = new Parser("output.samplepdf")) {
-    // extract a text into the reader
-    try (TextReader reader = parser.getText()) {
-        // print a text from the document
-        // if text extraction isn't supported, a reader is null
-        System.out.println(reader == null ? "Text extraction isn't supported" : reader.readToEnd());
-    }
-}
-```
-
-### Extract Document Metadata via Java
-
-```java
-// create an instance of Parser class
-try (Parser parser = new Parser("output.sampledocx")) {
-    // extract metadata from the document
-    Iterable<MetadataItem> metadata = parser.getMetadata();
-    // check if metadata extraction is supported
-    if (metadata == null) {
-        System.out.println("Metatada extraction isn't supported");
-    }
-    // iterate over metadata items
-    for (MetadataItem item : metadata) {
-        // print an item name and value
-        System.out.println(String.format("%s: %s", item.getName(), item.getValue()));
-    }
-}
-
-```
-
-[Home](https://www.groupdocs.com/) | [Product Page](https://products.groupdocs.com/parser/java) | [Documentation](https://docs.groupdocs.com/parser/java/) | [Demos](https://products.groupdocs.app/parser/family) | [API Reference](https://reference.groupdocs.com/parser/java/) | [Examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java/tree/master/Examples) | [Blog](https://blog.groupdocs.com/category/parser/) | [Search](https://search.groupdocs.com/) | [Free Support](https://forum.groupdocs.com/c/parser) | [Temporary License](https://purchase.groupdocs.com/temporary-license)
-
-### Example 1
-
-```csharp
-## Extract Formatted Text from DOCX
-```
-
-### Example 2
-
-```csharp
-## Extract Document Metadata via Java
-```
-
-
-
-Explore the sample projects in this repository or open [documentation](https://docs.groupdocs.com/parser/java/) for more topics.
-
-### Parse Documents to Extract Text, Images & Metadata
-
-- Extract plain text from any of the supported documents.
-- Extract HTML or Markdown formatted text for a fast preview.
-- Extract structured text.
-- Extract text areas with coordinates, text style and other information.
-- Search text by a keyword or regular expression. Also get text around the found word.
-- Extract metadata from supported document formats.
-- Get information about document images and save them.
-- Extract data containers like ZIP, 7Z, RAR, TAR, GZ and BZ2 archives, PDF portfolios, emails, OST and so on.
-- Extract tables from a document, either automatically or by a predefined layout.
-- Extract cells of spreadsheet worksheets along with their row and column indexes.
-- Extract document annotations with an author, a timestamp and a text.
-- Generate page previews as images.
-- [Extract table of contents (ToC)](https://docs.groupdocs.com/parser/java/extract-table-of-contents/).
-- [Parse form data from PDF documents](https://docs.groupdocs.com/parser/java/extract-data-from-pdf-forms/).
-
-### Extract Text from PDF Document
-
-```java
-// create an instance of Parser class
-try (Parser parser = new Parser("output.samplepdf")) {
-    // extract a text into the reader
-    try (TextReader reader = parser.getText()) {
-        // print a text from the document
-        // if text extraction isn't supported, a reader is null
-        System.out.println(reader == null ? "Text extraction isn't supported" : reader.readToEnd());
-    }
-}
-```
-
-### Extract Document Metadata via Java
-
-```java
-// create an instance of Parser class
-try (Parser parser = new Parser("output.sampledocx")) {
-    // extract metadata from the document
-    Iterable<MetadataItem> metadata = parser.getMetadata();
-    // check if metadata extraction is supported
-    if (metadata == null) {
-        System.out.println("Metatada extraction isn't supported");
-    }
-    // iterate over metadata items
-    for (MetadataItem item : metadata) {
-        // print an item name and value
-        System.out.println(String.format("%s: %s", item.getName(), item.getValue()));
-    }
-}
-
-```
-
-[Home](https://www.groupdocs.com/) | [Product Page](https://products.groupdocs.com/parser/java) | [Documentation](https://docs.groupdocs.com/parser/java/) | [Demos](https://products.groupdocs.app/parser/family) | [API Reference](https://reference.groupdocs.com/parser/java/) | [Examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java/tree/master/Examples) | [Blog](https://blog.groupdocs.com/category/parser/) | [Search](https://search.groupdocs.com/) | [Free Support](https://forum.groupdocs.com/c/parser) | [Temporary License](https://purchase.groupdocs.com/temporary-license)
+[Product Page](https://products.groupdocs.com/parser/java) | [Docs](https://docs.groupdocs.com/parser/java/) | [Demos](https://products.groupdocs.app/parser/family) | [API Reference](https://reference.groupdocs.com/parser/java/) | [Examples](https://github.com/groupdocs-parser/GroupDocs.Parser-for-Java) | [Blog](https://blog.groupdocs.com/categories/groupdocs.parser-product-family/) | [Releases](https://releases.groupdocs.com/parser/java/) | [Free Support](https://forum.groupdocs.com/c/parser/17) | [Temporary License](https://purchase.groupdocs.com/temp-license)

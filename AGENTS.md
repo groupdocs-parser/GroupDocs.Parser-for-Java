@@ -28,7 +28,7 @@ Maven artifact `com.groupdocs:groupdocs-parser` - set `<version>` from [https://
 ## License
 
 ```java
-import com.groupdocs.parser.License;
+import com.groupdocs.parser.licensing.License;
 
 new License().setLicense("path/to/GroupDocs.Parser.lic");
 ```
