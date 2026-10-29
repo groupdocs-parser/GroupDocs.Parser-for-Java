@@ -23,6 +23,12 @@ public class AsposeOcrOnPremise extends OcrConnectorBase {
     }
 
     @Override
+    public String recognizeText(java.io.InputStream imageStream, OcrOptions options) {
+        // This overload is called by the parser; the page index isn't passed to it
+        return recognizeText(imageStream, 0, options);
+    }
+
+    @Override
     public String recognizeText(java.io.InputStream imageStream, int pageIndex, OcrOptions options) {
         try {
             // Create an instance of Aspose OCR API
@@ -61,6 +67,12 @@ public class AsposeOcrOnPremise extends OcrConnectorBase {
         } catch (java.lang.Exception ex) {
             return null;
         }
+    }
+
+    @Override
+    public java.lang.Iterable<PageTextArea> recognizeTextAreas(java.io.InputStream imageStream, Size pageSize, OcrOptions options) {
+        // This overload is called by the parser for image files
+        return recognizeTextAreas(imageStream, 0, pageSize, options);
     }
 
     @Override
